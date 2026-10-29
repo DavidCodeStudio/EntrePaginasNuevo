@@ -1,10 +1,10 @@
 /* Actualizar este plan de forma editorial: no avanza según la fecha del navegador. */
 'use strict';
 const planMensual = Object.freeze({
-  semana: 2,
+  semana: 1,
   ejemplo: true,
   etapas: [
-    {titulo: 'Elegimos nuestra próxima historia.', meta: 'Tres propuestas para una nueva lectura compartida.', pregunta: '¿Qué historia te apetece descubrir este mes?', spoilers: 'Votación pendiente de apertura.', ayuda: 'Consulta la biblioteca mientras preparamos las propuestas y la votación.', accion: 'EXPLORAR PROPUESTAS', destino: 'index.html#lecturas'},
+    {titulo: 'Empezamos nuestra lectura compartida.', meta: 'Leemos la primera parte.', pregunta: '¿Qué hace que una amistad se convierta en una buena colaboración?', spoilers: 'Sin spoilers más allá de la primera parte propuesta.', ayuda: 'Consulta los espacios de la comunidad y el estado de sus accesos. Fechas y encuentros por confirmar.', accion: 'VER LA COMUNIDAD', destino: 'index.html#comunidad'},
     {titulo: 'Leemos y abrimos la conversación.', meta: 'Meta orientativa de ejemplo: primera parte.', pregunta: '¿Qué hace que una amistad se convierta en una buena colaboración?', spoilers: 'Sin spoilers más allá de la primera parte propuesta.', ayuda: 'El debate se comparte en WhatsApp. Consulta los espacios y el estado del acceso a la comunidad.', accion: 'VER COMUNIDAD EN WHATSAPP', destino: 'index.html#comunidad'},
     {titulo: 'Seguimos leyendo, sumamos miradas.', meta: 'Meta orientativa de ejemplo: siguiente parte.', pregunta: '¿Cómo cambia una amistad cuando creamos algo juntos?', spoilers: 'El tramo permitido para spoilers se confirmará junto con la meta.', ayuda: 'Comparte tus preguntas en el espacio de debate cuando el acceso esté disponible.', accion: 'VER EL ESPACIO DE DEBATE', destino: 'index.html#comunidad'},
     {titulo: 'Nos encontramos para compartir la lectura.', meta: 'Cierre de la lectura a tu ritmo.', pregunta: '¿Con qué idea te quedas después de esta historia?', spoilers: 'El encuentro final puede incluir spoilers de todo el libro.', ayuda: 'La videollamada será en Discord. Fecha, hora y duración pendientes de confirmar; necesitarás una cuenta.', accion: 'CONSULTAR EL ENCUENTRO', destino: 'index.html#proximos-eventos'}
@@ -24,3 +24,5 @@ document.querySelectorAll('[data-semana]').forEach(e => {
   e.classList.toggle('semana-destacada', actual);
   if (actual) e.setAttribute('aria-current', 'step');else e.removeAttribute('aria-current');
 });
+
+document.querySelectorAll('[data-plan-cronologia]').forEach(e => e.textContent = `CRONOLOGÍA · SEMANA ${planMensual.semana}`);
