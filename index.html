@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css?v=plan-mensual-14">
   <script src="script.js?v=comunidad-whatsapp-11" defer></script>
   <script src="plan-mensual.js?v=1" defer></script>
+  <link rel="stylesheet" href="eventos.css?v=1">
 </head>
 
 <body>
@@ -355,53 +356,14 @@
         </div>
       </div>
 
-      <!-- 07.2 Banda azul: eventos de ejemplo, no convocatorias reales -->
-      <div class="eventos-proximos" id="proximos-eventos">
-        <div class="contenedor proximos-distribucion">
-          <div class="proximos-presentacion">
-            <p class="etiqueta"><span aria-hidden="true">✳</span> PRÓXIMOS EVENTOS</p>
-            <h3>BUENAS<br>HISTORIAS.<br><span>MEJORES<br>ENCUENTROS.</span></h3>
-            <p>Ejemplos de actividades · fechas y plazas no confirmadas.</p>
-          </div>
-
-          <div class="proximos-tarjetas">
-            <article class="tarjeta-evento">
-              <div class="evento-fecha"><strong>15</strong><span>NOV<br>2026</span></div>
-              <div class="evento-datos">
-                <span class="evento-tipo evento-tipo-rosa">CLUB DE LECTURA</span>
-                <h4>La vegetariana</h4>
-                <p>Encuentro para comentar la novela de Han Kang.</p>
-                <button type="button" data-abrir-eventos-discord aria-haspopup="dialog" aria-controls="dialogo-eventos-discord"
-                  aria-label="Consultar el club de lectura La vegetariana">→</button>
-              </div>
-              <img src="assets/evento-vegetariana-aprobado.jpg" alt="Cubierta de La vegetariana"
-                loading="lazy">
-            </article>
-
-            <article class="tarjeta-evento">
-              <div class="evento-fecha"><strong>28</strong><span>NOV<br>2026</span></div>
-              <div class="evento-datos">
-                <span class="evento-tipo evento-tipo-lima">CHARLA</span>
-                <h4>Voces que inspiran</h4>
-                <p>Conversación con autoras contemporáneas.</p>
-                <button type="button" data-abrir-eventos-discord aria-haspopup="dialog" aria-controls="dialogo-eventos-discord"
-                  aria-label="Consultar la charla Voces que inspiran">→</button>
-              </div>
-              <img src="assets/evento-microfono-aprobado.jpg" alt="Micrófono en un escenario con público al fondo" loading="lazy">
-            </article>
-
-            <article class="tarjeta-evento">
-              <div class="evento-fecha"><strong>12</strong><span>DIC<br>2026</span></div>
-              <div class="evento-datos">
-                <span class="evento-tipo evento-tipo-rosa">TALLER</span>
-                <h4>Escritura creativa</h4>
-                <p>Un taller para dar forma a tus historias.</p>
-                <button type="button" data-abrir-eventos-discord aria-haspopup="dialog" aria-controls="dialogo-eventos-discord"
-                  aria-label="Consultar el taller Escritura creativa">→</button>
-              </div>
-              <img src="assets/evento-escritura-aprobado.jpg" alt="Mano escribiendo en un cuaderno" loading="lazy">
-            </article>
-          </div>
+      <!-- 07.2 Próximos eventos: propuestas para la próxima lectura -->
+      <div class="eventos-proximos agenda" id="proximos-eventos" aria-labelledby="agenda-titulo">
+        <div class="contenedor">
+          <p class="agenda-etiqueta agenda-regla">PRÓXIMOS EVENTOS</p>
+          <h3 id="agenda-titulo">Tres libros.<br>¿Cuál será tu próxima historia?</h3>
+          <div class="agenda-intro"><p>Un encuentro para descubrir, conversar y elegir juntos. No necesitas haberlos leído.</p><span class="agenda-etiqueta">ENCUENTRO EN PREPARACIÓN</span></div>
+          <div class="agenda-libros"><article class="propuesta"><div class="propuesta-imagen"><img src="assets/cubierta-lectura-3.jpg" alt="Cubierta de El infinito en un junco" loading="lazy"></div><p class="agenda-etiqueta">01 / DESCUBRIR</p><h4>El infinito en un junco</h4><p class="agenda-autor">Irene Vallejo</p><p>La aventura de los libros y quienes los hacen posibles.</p></article><article class="propuesta"><div class="propuesta-imagen"><img src="assets/cubierta-lectura-2.jpg" alt="Cubierta de La vegetariana" loading="lazy"></div><p class="agenda-etiqueta">02 / CUESTIONAR</p><h4>La vegetariana</h4><p class="agenda-autor">Han Kang</p><p>Libertad, cuerpo y expectativas sociales.</p></article><article class="propuesta"><div class="propuesta-imagen"><img src="assets/libro-mes-editorial.webp" alt="Cubierta de Mañana, y mañana, y mañana" loading="lazy"></div><p class="agenda-etiqueta">03 / CREAR</p><h4>Mañana, y mañana, y mañana</h4><p class="agenda-autor">Gabrielle Zevin</p><p>Amistad, creatividad y lo que construimos juntos.</p></article></div>
+          <div class="agenda-banda"><div><p class="agenda-etiqueta">ASÍ SERÁ EL ENCUENTRO</p><p class="agenda-recorrido">Votamos → Leemos → Nos encontramos</p><p>Fecha, duración y plataforma por confirmar.</p></div><div><a class="boton boton-negro" href="encuentro.html">VER EL ENCUENTRO <span aria-hidden="true">→</span></a><p class="agenda-nota">Propuesta de actividad · Votación e inscripción en demostración.</p></div></div>
         </div>
       </div>
     </section>

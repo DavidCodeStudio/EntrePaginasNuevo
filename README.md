@@ -46,3 +46,10 @@ El popup del club explica el futuro envío automático de una invitación al ser
 La página no registra votos ni conecta invitaciones externas. Sus enlaces llevan a la biblioteca, a Comunidad y a Próximos eventos, donde se informa del estado de los accesos. Metas por partes o capítulos, avisos de spoilers y participación flexible. La secuencia pasa a vertical en móvil.
 
 Verificado: navegación desde la portada y de vuelta, estado compartido, cuatro semanas, enlaces a comunidad y eventos; anchos 320, 390, 768 y 1440 px sin desbordamientos ni errores JavaScript.
+
+## Próximos eventos y onepage del encuentro
+La sección `#proximos-eventos` presenta tres lecturas y enlaza a `encuentro.html`: votación, resultado pendiente e inscripción. `eventos.css` aísla el diseño de la sección 03, que permanece sin cambios. Se utilizan cubiertas locales.
+
+El recorrido es una **demostración interactiva**, indicado antes de los formularios. La selección de libro funciona con ratón y teclado, sin opción preseleccionada. El voto de prueba no se almacena. El formulario pide datos de prueba, los borra al enviar y muestra una confirmación de demostración con 12 asistentes ilustrativos. No hay peticiones, almacenamiento local, envío de email, confirmación de plaza ni conteo compartido. Repetir la prueba no incrementa ese ejemplo.
+
+Para habilitar actividad real hace falta un servicio persistente con identificación de votantes, cierre de votación y desempate, resultado calculado en servidor y gestión privada de asistentes. El servidor debe normalizar correos, impedir duplicados por encuentro, registrar la inscripción antes de incrementar el total, ofrecer solo el contador público y gestionar errores y confirmaciones. Confirmar fecha, horario, formato y publicar la información de privacidad antes de abrir inscripciones. No activar mensajes de éxito real ni sustituir el contador ilustrativo sin conectar y validar ese servicio.
