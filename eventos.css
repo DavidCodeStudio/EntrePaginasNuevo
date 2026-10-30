@@ -1,5 +1,5 @@
 /* Agenda y onepage del encuentro: estilos aislados del libro del mes. */
-.agenda{background:var(--crema);color:var(--negro);padding:64px 0 0}
+.agenda{background:var(--crema);color:var(--negro);padding:64px 0 clamp(48px,6vw,88px)}
 .agenda-etiqueta{font:700 10px/1.6 Arial,sans-serif;letter-spacing:2px;margin:0 0 18px}
 .agenda-regla{display:flex;align-items:center;gap:24px}.agenda-regla:after{content:'';height:1px;flex:1;background:#14141280}
 .agenda h3,.encuentro-page h1{font:400 clamp(38px,4.8vw,68px)/1.04 Georgia,serif;letter-spacing:-.045em;margin:0 0 22px}
