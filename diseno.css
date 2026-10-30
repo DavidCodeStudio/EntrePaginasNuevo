@@ -1867,3 +1867,94 @@ button,a,input {
 #el-club .club-encabezado {gap:21px;margin-bottom:36px}
 #el-club.club-refinado .club-market {margin-top:18px}
 @media(min-width:1400px) {#el-club.club-refinado .ventaja-club h3{font-size:21px}}
+/* 04 / Lecturas: biblioteca editorial de la referencia. */
+#lecturas.biblioteca-editorial {padding:40px 0 30px;background:radial-gradient(ellipse at 45% 50%,#181814,#11110f);color:#f7f5ee}
+#lecturas.biblioteca-editorial>.contenedor {width:calc(100% - 104px);max-width:1600px}
+#lecturas .biblioteca-regla {display:flex;align-items:center;gap:18px;margin-bottom:22px}
+#lecturas .biblioteca-regla .etiqueta {font:400 13px/1.4 Arial,sans-serif;letter-spacing:4px;white-space:nowrap;margin:0}
+#lecturas .biblioteca-regla>span {height:1px;background:#f7f5eeaa;flex:1}
+#lecturas.biblioteca-editorial .biblioteca-cabecera {display:grid;grid-template-columns:minmax(0,1fr) 338px;gap:50px;align-items:end;margin:0 0 26px}
+#lecturas.biblioteca-editorial #titulo-lecturas {font:700 clamp(58px,6.12vw,94px)/.87 'Barlow Condensed',Arial,sans-serif;letter-spacing:-.03em;margin:0;white-space:nowrap;transform:scaleX(.8);transform-origin:left center;width:125%}
+#lecturas.biblioteca-editorial #titulo-lecturas span {color:#d9ff70}
+#lecturas.biblioteca-editorial .biblioteca-intro {max-width:none;padding:0 0 18px;border:0}
+#lecturas.biblioteca-editorial .biblioteca-intro p {font:400 18px/1.4 Arial,sans-serif;color:#f7f5ee;margin:0}
+#lecturas.biblioteca-editorial .biblioteca-herramientas {display:flex;align-items:center;justify-content:space-between;gap:25px;margin:0 0 23px;padding:0;border:0}
+#lecturas .filtros {display:flex;gap:15px;flex-wrap:wrap;margin:0}
+#lecturas .filtro {min-width:118px;min-height:38px;border:1px solid #f7f5ee;border-radius:5px;padding:8px 26px;background:transparent;color:#f7f5ee;font:400 14px/1.3 Arial,sans-serif}
+#lecturas .filtro.activo {background:#d9ff70;color:#141412;border-color:#d9ff70;font-weight:700}
+#lecturas .aviso-filtros {font:400 10px/1.5 Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;margin:0;white-space:nowrap}
+#lecturas.biblioteca-editorial .rejilla-libros {grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:stretch}
+#lecturas.biblioteca-editorial .tarjeta-libro {border:1px solid #f7f5ee33;border-radius:6px;background:transparent;box-shadow:none;min-width:0;overflow:hidden}
+#lecturas.biblioteca-editorial .libro-destacado {background:#f5f2e8;color:#141412;border-color:#f5f2e8}
+#lecturas.biblioteca-editorial .libro-abrir {display:flex;flex-direction:column;padding:20px 21px;height:100%;min-width:0}
+#lecturas.biblioteca-editorial .libro-visual {position:relative;height:300px;display:flex;align-items:center;justify-content:center;padding:3px 0 0;margin:0;background:none}
+#lecturas.biblioteca-editorial .cubierta-lectura {width:auto;max-width:100%;height:292px;object-fit:contain;margin:0;box-shadow:3px 7px 8px #0003}
+#lecturas.biblioteca-editorial .libro-distintivo {position:absolute;top:-9px;left:-6px;z-index:1;padding:6px 15px;border-radius:4px;background:#d9ff70;color:#141412;font:400 10px/1.4 Arial,sans-serif;letter-spacing:.5px}
+#lecturas.biblioteca-editorial .tarjeta-libro:last-child .libro-distintivo {left:auto;right:-6px}
+#lecturas.biblioteca-editorial .libro-contenido {display:flex;flex-direction:column;flex:1;padding:17px 0 0;min-width:0}
+#lecturas.biblioteca-editorial .libro-titulo {font:400 27px/1 Georgia,serif;letter-spacing:-.04em;min-height:32px;margin:0 0 10px;color:inherit}
+#lecturas.biblioteca-editorial .libro-autor {font:400 10px/1.5 Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;min-height:20px;margin:0 0 14px;color:inherit}
+#lecturas.biblioteca-editorial .libro-genero {font:400 10px/1.5 Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;border:0;border-left:1px solid;padding:1px 0 1px 22px;margin:0;color:inherit}
+#lecturas.biblioteca-editorial .libro-gancho {font:400 20px/1.05 Georgia,serif;letter-spacing:-.02em;min-height:54px;margin:16px 0 10px;color:inherit}
+#lecturas.biblioteca-editorial .libro-explorar {display:flex;justify-content:center;align-items:center;gap:16px;width:100%;min-height:44px;padding:10px 8px;margin-top:auto;border:1px solid #f7f5ee;border-radius:6px;background:transparent;color:inherit;font:400 12px/1.3 Arial,sans-serif;letter-spacing:0}
+#lecturas.biblioteca-editorial .libro-explorar svg {width:14px;height:14px}
+#lecturas.biblioteca-editorial .libro-destacado .libro-explorar {background:#11110f;color:#f7f5ee;border-color:#11110f}
+#lecturas.biblioteca-editorial .libro-eventos {display:flex;align-items:center;justify-content:center;gap:10px;padding:0;margin-top:10px;color:inherit;font:400 14px/1.4 Arial,sans-serif;text-decoration:underline;text-underline-offset:3px;border:0}
+#lecturas.biblioteca-editorial .libro-eventos svg {width:18px;height:18px}
+#lecturas.biblioteca-editorial .biblioteca-cierre {border-top:1px solid #f7f5ee88;padding-top:18px;margin:26px 0 0;font:400 28px/1.35 Georgia,serif;letter-spacing:-.02em;color:#f7f5ee;text-align:left}
+@media(min-width:1101px) and (max-width:1399px) {
+  #lecturas.biblioteca-editorial .libro-abrir {padding:18px 14px}
+  #lecturas.biblioteca-editorial .libro-titulo {font-size:24px}
+  #lecturas.biblioteca-editorial .libro-explorar {font-size:10px;gap:8px}
+  #lecturas.biblioteca-editorial .biblioteca-cabecera {grid-template-columns:minmax(0,1fr) 270px;gap:20px}
+  #lecturas.biblioteca-editorial .biblioteca-intro p {font-size:16px}
+}
+@media(max-width:1100px) {
+  #lecturas.biblioteca-editorial>.contenedor {width:calc(100% - 64px)}
+  #lecturas.biblioteca-editorial .biblioteca-cabecera {grid-template-columns:1fr;gap:20px}
+  #lecturas.biblioteca-editorial #titulo-lecturas {font-size:clamp(48px,7.5vw,78px)}
+  #lecturas.biblioteca-editorial .biblioteca-intro {padding:0;max-width:550px}
+  #lecturas.biblioteca-editorial .biblioteca-herramientas {align-items:start;flex-direction:column;gap:16px}
+  #lecturas.biblioteca-editorial .rejilla-libros {grid-template-columns:repeat(3,minmax(0,1fr))}
+  #lecturas.biblioteca-editorial .libro-abrir {padding:18px 15px}
+  #lecturas.biblioteca-editorial .libro-titulo {font-size:25px}
+  #lecturas.biblioteca-editorial .libro-explorar {font-size:10px;gap:8px}
+}
+@media(max-width:700px) {
+  #lecturas.biblioteca-editorial {padding:35px 0}
+  #lecturas.biblioteca-editorial>.contenedor {width:calc(100% - 40px)}
+  #lecturas.biblioteca-editorial #titulo-lecturas {font-size:clamp(39px,7.4vw,52px);transform:scaleX(.8)}
+  #lecturas .biblioteca-regla .etiqueta {font-size:11px;letter-spacing:3px}
+  #lecturas.biblioteca-editorial .biblioteca-intro p {font-size:17px}
+  #lecturas .filtros {gap:10px;width:100%;display:grid;grid-template-columns:1fr 1fr}
+  #lecturas .filtro {min-width:0;padding:10px 12px;min-height:44px}
+  #lecturas.biblioteca-editorial .rejilla-libros {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  #lecturas.biblioteca-editorial .libro-abrir {padding:15px 12px}
+  #lecturas.biblioteca-editorial .libro-visual {height:225px}
+  #lecturas.biblioteca-editorial .cubierta-lectura {height:auto;max-height:210px;width:100%;object-fit:contain}
+  #lecturas.biblioteca-editorial .libro-titulo {font-size:24px;min-height:48px}
+  #lecturas.biblioteca-editorial .libro-autor {font-size:9px;letter-spacing:1.5px;min-height:30px}
+  #lecturas.biblioteca-editorial .libro-genero {font-size:9px;letter-spacing:1px;padding-left:12px}
+  #lecturas.biblioteca-editorial .libro-gancho {font-size:18px;min-height:80px}
+  #lecturas.biblioteca-editorial .libro-explorar {font-size:9px;gap:4px}
+  #lecturas.biblioteca-editorial .libro-eventos {font-size:11px;gap:5px}
+  #lecturas.biblioteca-editorial .libro-distintivo {font-size:8px;padding:5px 8px;letter-spacing:0}
+  #lecturas.biblioteca-editorial .biblioteca-cierre {font-size:23px}
+}
+@media(max-width:380px) {
+  #lecturas.biblioteca-editorial .rejilla-libros {grid-template-columns:1fr}
+  #lecturas.biblioteca-editorial #titulo-lecturas {font-size:35px;transform:scaleX(.75);width:133.333%}
+  #lecturas.biblioteca-editorial .libro-visual {height:320px}
+  #lecturas.biblioteca-editorial .cubierta-lectura {height:292px;width:auto;max-height:none}
+  #lecturas.biblioteca-editorial .libro-titulo,#lecturas.biblioteca-editorial .libro-gancho {min-height:0}
+}
+/* Ajuste de altura de las tarjetas y jerarquía del cierre de la referencia. */
+#lecturas .biblioteca-regla {margin-bottom:15px}
+#lecturas.biblioteca-editorial .libro-eventos {min-height:20px}
+#lecturas.biblioteca-editorial .libro-gancho {min-height:42px;margin:14px 0 0}
+#lecturas.biblioteca-editorial .libro-autor {min-height:15px;margin-bottom:10px}
+#lecturas.biblioteca-editorial .libro-destacado .libro-genero {color:#141412}
+#lecturas.biblioteca-editorial .biblioteca-cierre {text-transform:none;display:block}
+@media(min-width:1101px) {#lecturas.biblioteca-editorial #titulo-lecturas{transform:scaleX(.92);width:108.7%}}
+@media(max-width:700px) {#lecturas.biblioteca-editorial .libro-gancho{min-height:70px}#lecturas.biblioteca-editorial .libro-autor{min-height:30px}}
+@media(max-width:380px) {#lecturas.biblioteca-editorial .libro-gancho{min-height:0}}
