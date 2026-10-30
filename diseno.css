@@ -1654,3 +1654,131 @@ button,a,input {
 .marca>span {
   font-family:Arial,sans-serif;
 }
+/* Header de la referencia: seis enlaces y acciones independientes. */
+.cabecera {
+  background:#fbfaf6;
+  border-bottom:1px solid #a5a5ab;
+}
+.cabecera .cabecera-interior {
+  width:100%;
+  min-height:114px;
+  margin:0;
+  padding:18px clamp(24px,3.125vw,48px) 18px clamp(24px,5.20833vw,80px);
+  display:flex;
+  flex-wrap:nowrap;
+  gap:20px;
+}
+.cabecera .marca-referencia {
+  display:block;
+  width:146px;
+  flex:0 0 146px;
+  padding:0;
+  margin:0 auto 0 0;
+  line-height:1;
+}
+.cabecera .marca-referencia img {
+  width:146px;
+  height:76px;
+  object-fit:contain;
+}
+.cabecera .navegacion {
+  display:flex;
+  position:static;
+  order:0;
+  width:auto;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:clamp(20px,2.28vw,35px);
+  padding:0;
+  border:0;
+  background:transparent;
+  margin:0 clamp(20px,5.86vw,90px) 0 0;
+}
+.cabecera .navegacion a {
+  white-space:nowrap;
+  padding:0;
+  font:400 14px/1.4 Arial,sans-serif;
+}
+.cabecera .navegacion a.activo {
+  color:#003cff;
+  font-weight:700;
+}
+.cabecera .navegacion a.activo:after {
+  bottom:-15px;
+  height:2px;
+  background:#003cff;
+}
+.cabecera .navegacion a:hover {color:#003cff}
+.cabecera .registro-cabecera {
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  gap:5px;
+  margin:0;
+  padding:6px 0;
+  font:400 14px/1 Arial,sans-serif;
+  color:#141412;
+}
+.cabecera .registro-icono {width:36px;height:36px}
+.cabecera .boton-marketplace {
+  min-height:50px;
+  width:190px;
+  flex-shrink:0;
+  justify-content:center;
+  gap:12px;
+  padding:14px 20px;
+  border:1px solid #141412;
+  border-radius:2px;
+  color:#141412;
+  background:transparent;
+  font:700 14px/1.3 Arial,sans-serif;
+  letter-spacing:1px;
+}
+.cabecera .boton-marketplace span {font-size:18px}
+.cabecera .boton-menu {display:none}
+@media(min-width:1101px) and (max-width:1399px) {
+  .cabecera .cabecera-interior {gap:16px;padding-inline:32px}
+  .cabecera .navegacion {gap:22px;margin-right:12px}
+  .cabecera .navegacion a,.cabecera .registro-cabecera {font-size:12px}
+  .cabecera .boton-marketplace {width:166px;font-size:12px}
+}
+@media(max-width:1100px) {
+  .cabecera .cabecera-interior {min-height:92px;flex-wrap:wrap;padding:12px 24px;gap:16px}
+  .cabecera .marca-referencia,.cabecera .marca-referencia img {width:115px;height:60px}
+  .cabecera .marca-referencia {flex-basis:115px}
+  .cabecera .boton-menu {display:block;order:4;margin:0;padding:6px 12px;background:transparent;color:#141412;border:1px solid;font-size:22px}
+  .cabecera .navegacion {display:none;order:5;width:100%;margin:0;padding:10px 0;flex-direction:column;align-items:stretch;gap:0}
+  .cabecera .navegacion.abierta {display:flex}
+  .cabecera .navegacion a {font-size:14px;padding:14px 0}
+  .cabecera .navegacion a.activo:after {bottom:6px;right:auto;width:44px}
+  .cabecera .boton-marketplace {width:170px;font-size:12px}
+}
+@media(max-width:600px) {
+  .cabecera .cabecera-interior {padding:10px 16px;gap:12px}
+  .cabecera .marca-referencia,.cabecera .marca-referencia img {width:96px;height:50px}
+  .cabecera .marca-referencia {flex-basis:96px}
+  .cabecera .registro-cabecera {font-size:0;gap:0}
+  .cabecera .registro-icono {width:30px;height:30px}
+  .cabecera .registro-cabecera {position:relative}
+  .cabecera .boton-marketplace {width:132px;font-size:10px;padding:10px;gap:8px;min-height:42px}
+  .cabecera .boton-menu {padding:4px 9px;font-size:20px}
+}
+@media(max-width:380px) {
+  .cabecera .cabecera-interior {gap:8px;padding-inline:12px}
+  .cabecera .marca-referencia,.cabecera .marca-referencia img {width:82px;height:43px}
+  .cabecera .marca-referencia {flex-basis:82px}
+  .cabecera .boton-marketplace {width:120px;font-size:9px}
+  .cabecera .registro-icono {width:26px;height:26px}
+}
+@media(min-width:1400px) {
+  .cabecera .navegacion {width:588px;flex-shrink:0;justify-content:space-between;gap:0}
+  .cabecera .navegacion a {font-size:13px;letter-spacing:0}
+  .cabecera .registro-cabecera {width:125px;font-size:12px;gap:5px}
+  .cabecera .registro-icono {width:34px;height:34px;flex-shrink:0}
+}
+.cabecera .boton-marketplace .marketplace-flecha {width:16px;height:16px;flex-shrink:0}
+.cabecera .boton:focus-visible,.cabecera a:focus-visible,.cabecera .boton-menu:focus-visible,.cabecera .registro-cabecera:focus-visible {outline-color:#003cff}
+.cabecera .boton:hover {box-shadow:3px 3px 0 #141412}
+@media(min-width:1101px) {
+  .cabecera .navegacion,.cabecera .registro-cabecera,.cabecera .boton-marketplace {position:relative;top:3px}
+}

@@ -11,7 +11,7 @@
   <script src="script.js?v=comunidad-whatsapp-11" defer></script>
   <script src="plan-mensual.js?v=1" defer></script>
   <link rel="stylesheet" href="eventos.css?v=2">
-  <link rel="stylesheet" href="diseno.css?v=1">
+  <link rel="stylesheet" href="diseno.css?v=header-2">
 </head>
 
 <body>
@@ -20,18 +20,16 @@
   <!-- 00 · CABECERA -->
   <header class="cabecera" id="inicio">
     <div class="contenedor cabecera-interior">
-      <a class="marca" href="#inicio" aria-label="Entre Páginas, inicio">ENTRE<br>PÁGINAS<span
-          aria-hidden="true">✳︎</span></a>
+      <a class="marca marca-referencia" href="#inicio" aria-label="Entre Líneas, inicio"><img src="assets/logo-entre-lineas.png" alt="ENTRE LÍNEAS" width="146" height="76"></a>
       <button class="boton-menu" type="button" aria-label="Abrir menú" aria-controls="navegacion"
         aria-expanded="false">☰</button>
       <nav class="navegacion" id="navegacion" aria-label="Navegación principal">
-        <a class="activo" href="#inicio">INICIO</a><a href="#el-club">EL CLUB</a><a href="#libro-mes">LIBRO DEL
-          MES</a><a href="#lecturas">LECTURAS</a><a href="#comunidad">COMUNIDAD</a><a href="#inclusion">INCLUSIÓN</a><a
+        <a class="activo" href="#inicio" aria-current="location">INICIO</a><a href="#el-club">EL CLUB</a><a href="#libro-mes">LIBRO DEL
+          MES</a><a href="#lecturas">LECTURAS</a><a href="#comunidad">COMUNIDAD</a><a
           href="#eventos">EVENTOS</a>
       </nav>
-      <button class="registro-cabecera" type="button" data-abrir-inscripcion><span aria-hidden="true">◎</span> REGISTRARSE</button>
-      <button class="boton boton-lima boton-marketplace" type="button" aria-haspopup="dialog" aria-controls="dialogo-marketplace" data-abrir-marketplace>MARKETPLACE <span
-          aria-hidden="true">→</span></button>
+      <button class="registro-cabecera" type="button" data-abrir-inscripcion aria-haspopup="dialog" aria-controls="dialogo-inscripcion"><svg class="registro-icono" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><circle cx="18" cy="12.2" r="4.3"/><path d="M8.7 29v-3.1a9.3 9.3 0 0 1 18.6 0V29"/></svg> REGISTRARSE</button>
+      <button class="boton boton-lima boton-marketplace" type="button" aria-haspopup="dialog" aria-controls="dialogo-marketplace" data-abrir-marketplace>MARKETPLACE <svg class="marketplace-flecha" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></button>
     </div>
   </header>
 
