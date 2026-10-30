@@ -1,0 +1,1656 @@
+/* Adaptación de las propuestas de Archivo.zip. Se carga tras los estilos base. */
+:root {
+  --crema:#f7f5ee;
+  --negro:#141412;
+  --azul:#173dff;
+  --rosa:#ffb3cc;
+  --lima:#d9ff55;
+}
+body {
+  background:var(--crema);
+}
+.contenedor {
+  width:min(1424px,calc(100% - 96px));
+}
+main h2,.boletin h2 {
+  font-family:'Barlow Condensed',Arial,sans-serif;
+  font-weight:700;
+  letter-spacing:-.025em;
+}
+button,a,input {
+  touch-action:manipulation;
+}
+.seccion {
+  padding:64px 0;
+}
+.etiqueta {
+  letter-spacing:3px;
+  font-size:12px;
+}
+.seccion-cierre {
+  border-top:1px solid #14141270;
+  padding-top:24px;
+  margin:32px auto 0;
+  font:clamp(20px,2.3vw,32px)/1.3 Georgia,serif;
+  text-align:center;
+}
+.seccion-cierre em {
+  background:var(--rosa);
+  font-style:italic;
+}
+.nota-acceso {
+  font-size:11px!important;
+  letter-spacing:1px;
+  text-align:center;
+  margin:12px 0!important;
+}
+/* Cabecera y portada */
+.cabecera {
+  background:var(--crema);
+  color:var(--negro);
+  border-bottom:1px solid #14141255;
+}
+.cabecera-interior {
+  min-height:104px;
+  gap:22px;
+}
+.cabecera .marca {
+  font:700 34px/.8 'Barlow Condensed',sans-serif;
+  letter-spacing:-1px;
+}
+.cabecera .marca span {
+  color:var(--azul);
+}
+.navegacion {
+  gap:20px;
+}
+.navegacion a {
+  font-size:11px;
+  font-weight:400;
+}
+.registro-cabecera {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:0;
+  background:none;
+  padding:12px 0;
+  font-size:11px;
+  white-space:nowrap;
+}
+.registro-cabecera span {
+  font-size:31px;
+  line-height:1;
+}
+.cabecera .boton-marketplace {
+  background:transparent;
+  color:var(--negro);
+  border:1px solid var(--negro);
+  font-size:12px;
+  min-height:50px;
+}
+.portada {
+  padding:32px 0 60px;
+}
+.cuadricula-portada {
+  grid-template-columns:1.05fr 1fr;
+  gap:0;
+  align-items:center;
+}
+.portada h1 {
+  font:800 clamp(52px,6.15vw,94px)/.99 Arial,sans-serif;
+  letter-spacing:-.075em;
+  margin-bottom:30px;
+}
+.portada-texto .etiqueta {
+  font-size:12px;
+  margin:25px 0;
+}
+.portada-texto>p:not(.etiqueta) {
+  max-width:590px;
+  font-size:clamp(21px,2.4vw,35px);
+  line-height:1.25;
+  color:var(--negro);
+}
+.portada-texto>.portada-detalle {
+  font-size:clamp(15px,1.5vw,21px)!important;
+  line-height:1.5!important;
+  color:#4f4f52!important;
+  max-width:580px!important;
+}
+.portada .grupo-botones {
+  flex-wrap:nowrap;
+  gap:14px;
+}
+.portada .boton {
+  font-size:12px;
+  gap:12px;
+  min-height:55px;
+  padding:14px 18px;
+}
+.portada-composicion {
+  padding:0!important;
+  margin:0;
+  transform:none!important;
+}
+.portada-composicion img {
+  border:0!important;
+  transform:none!important;
+  width:100%;
+  height:auto;
+  max-height:820px;
+  object-fit:contain;
+}
+.portada-composicion:before,.portada-composicion:after {
+  display:none;
+}
+/* Club: presentación, tres propuestas y collage. */
+#el-club.club-refinado {
+  padding:52px 0;
+  background:#141412;
+  color:var(--crema);
+}
+#el-club.club-refinado .club-distribucion {
+  display:grid;
+  grid-template-columns:1fr .85fr 1.05fr;
+  gap:40px;
+  align-items:center;
+}
+#el-club.club-refinado .club-presentacion {
+  align-self:start;
+}
+#el-club.club-refinado h2 {
+  font:700 clamp(48px,5.2vw,80px)/.97 'Barlow Condensed',sans-serif;
+  letter-spacing:-.02em;
+  margin-top:40px;
+}
+#el-club.club-refinado h2 span {
+  color:var(--lima);
+}
+#el-club.club-refinado .club-descripcion {
+  font-size:20px;
+  line-height:1.55;
+  max-width:440px;
+}
+#el-club.club-refinado .ventajas-club {
+  display:flex;
+  flex-direction:column;
+  border:0;
+  padding:65px 0 0;
+  gap:0;
+}
+#el-club.club-refinado .ventaja-club {
+  display:flex;
+  align-items:start;
+  gap:24px;
+  border:0;
+  border-bottom:1px solid #f7f5ee77;
+  padding:32px 0;
+  min-height:150px;
+  background:none;
+}
+#el-club.club-refinado .ventaja-club:last-child {
+  border:0;
+}
+#el-club.club-refinado .club-icono {
+  width:65px;
+  height:65px;
+  margin:0;
+  color:var(--lima);
+}
+#el-club.club-refinado .ventaja-club h3 {
+  font:700 21px/1.3 Arial,sans-serif;
+  letter-spacing:0;
+  margin:0 0 10px;
+}
+#el-club.club-refinado .ventaja-club p {
+  font:18px/1.5 Arial,sans-serif;
+  margin:0;
+  color:#ddd;
+}
+#el-club.club-refinado .club-imagen {
+  grid-column:auto;
+  width:100%;
+  max-width:none;
+  padding:0;
+  margin:0;
+  border:0;
+}
+#el-club.club-refinado .club-imagen img {
+  aspect-ratio:auto;
+  max-height:700px;
+  mask:none;
+  -webkit-mask:none;
+}
+.club-market {
+  display:flex;
+  align-items:center;
+  gap:40px;
+  border-block:1px solid #f7f5ee80;
+  padding:24px 0;
+  margin-top:30px;
+}
+.club-market p {
+  font-size:16px;
+  line-height:1.5;
+  color:var(--lima);
+  margin:0;
+  flex-shrink:0;
+}
+.club-market button {
+  color:var(--crema);
+  background:none;
+  border:0;
+  border-bottom:3px solid var(--lima);
+  padding:0 0 8px;
+  text-align:left;
+  font:700 clamp(26px,4vw,60px)/1 'Barlow Condensed',sans-serif;
+}
+.club-market button span {
+  color:var(--lima);
+}
+/* Biblioteca de cinco columnas en escritorio. */
+#lecturas.biblioteca-editorial {
+  padding:44px 0;
+  background:#141412;
+}
+#lecturas.biblioteca-editorial .biblioteca-cabecera {
+  grid-template-columns:1fr 310px;
+  align-items:end;
+}
+#lecturas.biblioteca-editorial h2 {
+  font-size:clamp(44px,5.2vw,78px);
+  line-height:1;
+  margin-bottom:20px;
+}
+#lecturas.biblioteca-editorial .biblioteca-intro {
+  font-size:17px;
+}
+#lecturas.biblioteca-editorial .rejilla-libros {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+#lecturas.biblioteca-editorial .tarjeta-libro {
+  background:transparent;
+  border:1px solid #f7f5ee40;
+  border-radius:5px;
+  overflow:hidden;
+  min-width:0;
+  padding:0;
+  color:var(--crema);
+}
+#lecturas.biblioteca-editorial .tarjeta-libro.libro-destacado {
+  background:var(--crema);
+  color:var(--negro);
+}
+#lecturas.biblioteca-editorial .libro-abrir {
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  padding:16px;
+}
+#lecturas.biblioteca-editorial .libro-visual {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:285px;
+  min-height:0;
+  padding:12px 0;
+  background:none!important;
+  border:0;
+  position:relative;
+}
+#lecturas.biblioteca-editorial .libro-visual:before,#lecturas.biblioteca-editorial .libro-visual:after {
+  display:none;
+}
+#lecturas.biblioteca-editorial .cubierta-lectura {
+  height:245px;
+  width:auto;
+  max-width:100%;
+  object-fit:contain;
+  box-shadow:4px 6px 8px #0003;
+}
+#lecturas.biblioteca-editorial .libro-contenido {
+  display:flex;
+  flex-direction:column;
+  padding:14px 0 0;
+  flex:1;
+}
+#lecturas.biblioteca-editorial .libro-titulo {
+  font:26px/1.05 Georgia,serif;
+  min-height:55px;
+}
+#lecturas.biblioteca-editorial .libro-autor {
+  font-size:9px;
+  letter-spacing:2px;
+  min-height:30px;
+}
+#lecturas.biblioteca-editorial .libro-genero {
+  font-size:10px;
+  letter-spacing:2px;
+  border-left:1px solid;
+  padding-left:16px;
+}
+#lecturas.biblioteca-editorial .libro-gancho {
+  font:18px/1.25 Georgia,serif;
+  margin:15px 0 20px;
+  min-height:70px;
+}
+#lecturas.biblioteca-editorial .libro-explorar {
+  font-size:10px;
+  min-height:44px;
+  margin-top:auto;
+  padding:10px 8px;
+  color:inherit;
+  border:1px solid currentColor;
+  background:none;
+}
+#lecturas.biblioteca-editorial .libro-destacado .libro-explorar {
+  background:var(--negro);
+  color:var(--crema);
+}
+#lecturas.biblioteca-editorial .libro-eventos {
+  font-size:12px;
+  justify-content:center;
+}
+#lecturas.biblioteca-editorial .libro-distintivo {
+  top:0;
+  left:0;
+  font-size:9px;
+  background:var(--lima);
+  color:var(--negro);
+}
+/* Comunidad: imagen a la izquierda y contenido a la derecha. */
+#comunidad.comunidad-editorial {
+  padding:46px 0;
+}
+#comunidad .comunidad-escena {
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+#comunidad figure {
+  margin:0;
+  min-width:0;
+}
+#comunidad figure img {
+  width:100%;
+  height:auto;
+}
+#comunidad figcaption {
+  font-size:10px;
+  letter-spacing:2px;
+  margin-top:12px;
+}
+#comunidad .comunidad-relato {
+  max-width:none;
+}
+#comunidad h2 {
+  font-size:clamp(56px,6.2vw,94px);
+  line-height:1;
+  letter-spacing:-.02em;
+  margin:0 0 20px;
+}
+#comunidad h2 span {
+  color:var(--azul);
+}
+#comunidad .comunidad-relato>p:not(.nota-acceso) {
+  font:clamp(20px,2.1vw,30px)/1.3 Georgia,serif;
+  max-width:none;
+}
+#comunidad .comunidad-formas {
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  margin:28px 0;
+  gap:0;
+  list-style:none;
+}
+#comunidad .comunidad-formas li {
+  display:flex;
+  gap:24px;
+  align-items:center;
+  border:0;
+  border-bottom:1px solid #14141277;
+  padding:20px 0;
+  min-height:0;
+}
+#comunidad .comunidad-formas li:last-child {
+  border:0;
+}
+#comunidad .comunidad-formas svg {
+  width:48px;
+  height:48px;
+  color:var(--azul);
+  margin:0;
+}
+#comunidad .comunidad-formas h3 {
+  font:700 12px/1.4 Arial,sans-serif;
+  letter-spacing:2px;
+  margin:0 0 6px;
+}
+#comunidad .comunidad-formas p {
+  font:18px/1.4 Georgia,serif;
+  margin:0;
+}
+#comunidad .comunidad-pregunta {
+  background:var(--rosa);
+  padding:8px 12px;
+  border:0;
+  display:block;
+  margin:15px 0 22px;
+}
+#comunidad .comunidad-unirse {
+  display:flex;
+  margin:auto;
+  font:700 24px/1.1 'Barlow Condensed',sans-serif;
+  padding:18px 24px;
+}
+/* Inclusión: dos columnas y panel de contacto. */
+#inclusion.inclusion-abierta {
+  background:var(--rosa);
+  padding:44px 0;
+}
+#inclusion>.contenedor>.etiqueta {
+  border-bottom:1px solid;
+  padding-bottom:14px;
+}
+.inclusion-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+#inclusion .inclusion-cabecera {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  align-items:stretch;
+}
+#inclusion h2 {
+  font-size:clamp(52px,5.7vw,86px);
+  line-height:.97;
+  margin:0 0 20px;
+}
+#inclusion h2 span {
+  color:var(--azul);
+}
+#inclusion .inclusion-intro {
+  font-size:20px;
+  line-height:1.5;
+  max-width:650px;
+}
+#inclusion .inclusion-ilustracion {
+  max-height:none;
+  max-width:none;
+  margin:0;
+  width:100%;
+}
+#inclusion .inclusion-compromisos {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  margin:0;
+  padding:0;
+}
+#inclusion .inclusion-compromiso {
+  display:grid;
+  grid-template-columns:115px 1fr;
+  column-gap:30px;
+  border:0;
+  border-bottom:1px solid #14141288;
+  background:none;
+  padding:32px 0;
+  box-shadow:none;
+  transform:none;
+}
+#inclusion .inclusion-compromiso:last-child {
+  border:0;
+}
+#inclusion .inclusion-compromiso:before {
+  display:none;
+}
+#inclusion .inclusion-compromiso svg {
+  grid-row:1/3;
+  width:105px;
+  height:105px;
+  color:var(--azul);
+  margin:0;
+}
+#inclusion .inclusion-compromiso h3 {
+  font:700 34px/1.05 'Barlow Condensed',sans-serif;
+  margin-bottom:12px;
+}
+#inclusion .inclusion-compromiso p {
+  font-size:19px;
+  line-height:1.5;
+  margin:0;
+}
+#inclusion .inclusion-escucha {
+  margin-top:25px;
+  background:var(--crema);
+  border:0;
+  border-top:1px solid;
+  padding:30px 35px;
+  display:flex;
+  gap:30px;
+  align-items:center;
+  justify-content:space-between;
+}
+#inclusion .inclusion-escucha>p {
+  font:clamp(28px,3.2vw,48px)/1.15 Georgia,serif;
+  margin:0;
+}
+#inclusion .inclusion-escucha .etiqueta {
+  display:block;
+  font:700 10px/1.4 Arial,sans-serif;
+  margin-bottom:16px;
+}
+#inclusion .inclusion-escucha small {
+  display:block;
+  font:16px/1.5 Arial,sans-serif;
+  margin-top:12px;
+}
+#inclusion .inclusion-contacto {
+  background:none;
+  color:var(--azul);
+  border:1px solid var(--azul);
+  white-space:nowrap;
+  font-size:20px;
+}
+#inclusion .inclusion-escucha>div>p {
+  font-size:11px;
+  margin:12px 0 0;
+}
+/* Eventos: modalidades integradas bajo el texto. */
+#eventos {
+  padding-top:50px;
+  background:var(--crema);
+}
+#eventos .eventos-cabecera {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:20px 40px;
+  align-items:start;
+}
+#eventos .eventos-presentacion {
+  grid-column:1;
+  grid-row:1;
+  padding:0;
+}
+#eventos h2 {
+  font:700 clamp(52px,5.8vw,88px)/.96 'Barlow Condensed',sans-serif;
+  letter-spacing:-.02em;
+}
+#eventos h2 span {
+  color:var(--azul);
+}
+#eventos .eventos-presentacion>p:not(.etiqueta) {
+  font:clamp(22px,2.5vw,36px)/1.2 Georgia,serif;
+}
+#eventos .eventos-collage {
+  grid-column:2;
+  grid-row:1/3;
+  padding:0;
+  margin:0;
+}
+#eventos .eventos-collage img {
+  width:100%;
+  transform:none;
+}
+#eventos .eventos-modalidades {
+  grid-column:1;
+  grid-row:2;
+  margin:0;
+  padding:20px 0;
+  border-block:1px solid #14141280;
+}
+#eventos .eventos-modalidades ul {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+#eventos .eventos-modalidades li {
+  display:flex;
+  gap:14px;
+  border:0;
+  padding:0;
+  align-items:start;
+}
+#eventos .icono-modalidad {
+  font-size:45px;
+  line-height:1;
+  color:var(--azul);
+}
+#eventos .eventos-modalidades strong {
+  font:700 18px/1.3 Georgia,serif;
+}
+#eventos .eventos-modalidades p {
+  font:16px/1.3 Georgia,serif;
+  margin:10px 0 0;
+}
+#eventos .eventos-boton {
+  font:700 27px/1.1 'Barlow Condensed',sans-serif;
+  margin-top:10px;
+}
+.agenda {
+  border-top:1px solid #14141255;
+  margin-top:50px;
+}
+/* Newsletter y pie de página. */
+.boletin {
+  background:var(--lima);
+  padding:42px 0 32px;
+  overflow:hidden;
+}
+.boletin>.contenedor>.etiqueta {
+  border-bottom:1px solid;
+  padding-bottom:15px;
+}
+.boletin .boletin-distribucion {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.boletin .boletin-collage {
+  grid-row:auto;
+  grid-column:auto;
+  max-width:none;
+  width:100%;
+  transform:none;
+  margin:0;
+}
+.boletin h2 {
+  font-size:clamp(60px,6.9vw,104px);
+  line-height:.96;
+  margin:0 0 24px;
+}
+.boletin h2 span {
+  color:var(--azul);
+}
+.boletin-contenido>p {
+  font-size:22px;
+  line-height:1.45;
+}
+.boletin .formulario-boletin {
+  grid-column:auto;
+  max-width:none;
+  width:100%;
+  margin:30px 0 0;
+}
+.boletin .formulario-boletin>label:first-child {
+  font-size:16px;
+  font-weight:700;
+}
+.boletin #correo-boletin {
+  width:100%;
+  background:var(--crema);
+  border:1px solid var(--negro);
+  border-radius:0;
+  padding:16px;
+  margin:8px 0 12px;
+  min-height:55px;
+}
+.boletin .formulario-boletin>.boton {
+  width:100%;
+  font:700 23px/1.2 'Barlow Condensed',sans-serif;
+  letter-spacing:2px;
+}
+.boletin .aceptacion {
+  display:flex;
+  align-items:start;
+  gap:12px;
+  font-size:13px;
+  line-height:1.5;
+  margin-top:18px;
+}
+.boletin .aceptacion input {
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+  accent-color:var(--negro);
+  margin:0;
+}
+.boletin .mensaje-boletin {
+  font-size:14px;
+}
+.boletin-asterisco {
+  display:none;
+}
+.pie-pagina {
+  background:#141412;
+  color:var(--crema);
+  padding:40px 0 20px;
+}
+.pie-manifiesto {
+  font:clamp(30px,4.4vw,64px)/1.2 Georgia,serif;
+  padding-bottom:28px;
+  border-bottom:1px solid #f7f5ee77;
+  margin-bottom:40px;
+}
+.pie-manifiesto em {
+  background:var(--rosa);
+  color:var(--negro);
+  font-style:normal;
+}
+.pie-pagina .pie-columnas {
+  grid-template-columns:1.4fr repeat(4,1fr);
+  gap:30px;
+}
+.pie-pagina .pie-inferior {
+  margin-top:30px;
+}
+.ficha-enlace {
+  display:inline-block;
+  font-size:11px;
+  letter-spacing:2px;
+  border-bottom:1px solid;
+  padding-bottom:4px;
+  margin-bottom:20px;
+}
+/* Libro del mes: escena azul y ficha editorial. */
+#libro-mes.resumen-mensual .libro-distribucion {
+  grid-template-columns:1fr 1fr;
+  gap:0;
+}
+#libro-mes .libro-escena {
+  min-height:560px;
+}
+#libro-mes .libro-escena img {
+  height:450px;
+  max-width:78%;
+  object-fit:contain;
+}
+#libro-mes .resumen-mensual-ficha {
+  padding:40px 50px;
+}
+#libro-mes #titulo-libro {
+  font:clamp(38px,4.5vw,66px)/1.04 Georgia,serif;
+  letter-spacing:-.04em;
+}
+#libro-mes .resumen-autor {
+  font:32px/1.2 Georgia,serif;
+  color:var(--azul);
+}
+#libro-mes .mensual-cronograma {
+  grid-column:1/-1;
+  background:var(--rosa);
+  padding:25px 35px;
+}
+/* Páginas secundarias: continuidad de color y tipografía. */
+.pagina-plan .plan-cabecera {
+  background:var(--crema);
+  color:var(--negro);
+  border-bottom:1px solid #14141280;
+}
+.pagina-plan .plan-cabecera .marca span {
+  color:var(--azul);
+}
+.pagina-plan .plan-presentacion h1 {
+  font:clamp(40px,4.8vw,70px)/1.02 Georgia,serif;
+  letter-spacing:-.04em;
+}
+.pagina-plan .plan-presentacion h1 span {
+  color:inherit;
+}
+.pagina-plan .plan-presentacion {
+  grid-template-columns:1fr 210px;
+}
+.pagina-plan .plan-presentacion>img {
+  height:290px;
+  transform:none;
+}
+.pagina-plan .plan-ahora {
+  background:var(--azul);
+  color:var(--crema);
+  border:0;
+  border-radius:0;
+  padding:45px;
+  margin-top:30px;
+}
+.pagina-plan .plan-ahora h2 {
+  font:clamp(38px,4.6vw,65px)/1.05 Georgia,serif;
+  max-width:900px;
+}
+.pagina-plan .plan-fecha,.pagina-plan .plan-flexible,.pagina-plan .plan-ahora-accion p {
+  color:var(--crema);
+}
+.pagina-plan .plan-meta {
+  display:inline-block;
+  background:var(--lima);
+  color:var(--negro);
+  padding:5px 10px;
+  font:25px/1.2 Georgia,serif;
+}
+.pagina-plan .plan-ahora-grid {
+  grid-template-columns:1fr;
+  border-color:#fff8;
+}
+.pagina-plan .plan-pregunta {
+  border:0;
+  border-top:1px solid #fff8;
+  padding:22px 0 0;
+}
+.pagina-plan .plan-pregunta>[data-plan-pregunta] {
+  font:28px/1.3 Georgia,serif;
+  max-width:850px;
+}
+.pagina-plan .plan-ahora-accion {
+  border-color:#fff8;
+}
+.pagina-plan .plan-ahora-accion .boton {
+  background:var(--crema);
+  color:var(--negro);
+}
+.pagina-plan .plan-ritmo>h2,.pagina-plan .plan-canales>h2 {
+  font:clamp(32px,4vw,55px)/1.1 Georgia,serif;
+}
+.pagina-plan .plan-semanas {
+  gap:18px;
+  margin-top:65px;
+}
+.pagina-plan .plan-semanas li {
+  border-radius:0;
+  padding:25px 20px;
+  background:transparent;
+}
+.pagina-plan .plan-semanas .semana-destacada {
+  background:var(--lima);
+  border:1px solid var(--lima);
+}
+.pagina-plan .plan-semana-numero {
+  position:absolute;
+  top:-50px;
+  left:calc(50% - 22px);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--azul);
+  background:var(--crema);
+  color:var(--azul);
+  font-size:25px;
+}
+.pagina-plan .semana-destacada .plan-semana-numero {
+  background:var(--lima);
+  color:var(--negro);
+  border-color:var(--negro);
+}
+.pagina-plan .plan-semanas h3 {
+  font:25px/1.1 Georgia,serif;
+}
+.plan-cuidados {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:35px 0;
+  border-top:1px solid #14141266;
+  margin-top:35px;
+}
+.plan-cuidados h2 {
+  font:30px/1.2 Georgia,serif;
+}
+.plan-cuidados p {
+  font:18px/1.5 Georgia,serif;
+}
+.plan-final {
+  background:var(--negro);
+  color:var(--crema);
+  padding:35px;
+  margin-top:25px;
+}
+.plan-final h2 {
+  font:40px/1.1 Georgia,serif;
+}
+.plan-final dl {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.plan-final dt {
+  font-weight:bold;
+}
+.plan-final dd {
+  margin:0;
+}
+.plan-final a {
+  color:var(--lima);
+  display:inline-block;
+  border-bottom:1px solid;
+  padding:10px 0;
+}
+.encuentro-page .encuentro-cabecera {
+  min-height:100px;
+}
+.encuentro-page .voto-opcion {
+  padding:30px 32px 30px 20px;
+}
+.encuentro-page .voto-opcion img {
+  width:100px;
+  height:165px;
+}
+.encuentro-page .encuentro-resultado {
+  padding:65px 0;
+}
+.encuentro-page .resultado-portada img {
+  height:360px;
+}
+.encuentro-page .encuentro-info {
+  background:var(--rosa);
+  padding:35px;
+}
+.encuentro-page #form-asistencia {
+  padding:25px;
+  border:1px solid #14141266;
+}
+.encuentro-page .encuentro-pasos a[aria-current="step"] {
+  color:var(--azul);
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+.encuentro-page .encuentro-pasos a:not([aria-current]) {
+  color:var(--negro);
+}
+/* Ficha del libro basada en download-11. */
+.fiche-cabecera {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:105px;
+  border-bottom:1px solid;
+}
+.fiche-cabecera>a:last-child {
+  text-decoration:underline;
+}
+.fiche-hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+}
+.fiche-visuel {
+  background:var(--azul);
+  padding:65px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.fiche-visuel:before,.fiche-visuel:after {
+  content:'';
+  position:absolute;
+  inset:18% 4%;
+  border:1px solid white;
+  border-radius:50%;
+  transform:rotate(-28deg);
+  z-index:-1;
+}
+.fiche-visuel:after {
+  transform:rotate(30deg);
+  inset:8% 20%;
+}
+.fiche-visuel img {
+  height:540px;
+  width:100%;
+  object-fit:contain;
+  filter:drop-shadow(12px 18px 10px #0005);
+}
+.fiche-intro {
+  padding:45px;
+}
+.fiche-intro h1 {
+  font:clamp(40px,4.5vw,66px)/1.05 Georgia,serif;
+  letter-spacing:-.04em;
+}
+.fiche-auteur {
+  font:30px/1.3 Georgia,serif;
+  color:var(--azul);
+}
+.fiche-intro>p:not(.etiqueta) {
+  font:23px/1.4 Georgia,serif;
+}
+.fiche-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:25px 0;
+}
+.fiche-tags span {
+  border:1px solid #14141288;
+  padding:8px 12px;
+}
+.fiche-bande {
+  background:var(--rosa);
+  padding:30px;
+  text-align:center;
+  font:clamp(28px,3.8vw,55px)/1.2 Georgia,serif;
+  margin:0;
+}
+.fiche-chapitre {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:60px;
+  padding:50px 0;
+}
+.fiche-chapitre h2 {
+  font:clamp(36px,4.5vw,60px)/1.05 'Barlow Condensed',sans-serif;
+}
+.fiche-chapitre>div+div {
+  border-left:1px solid #14141266;
+  padding-left:50px;
+}
+.fiche-chapitre p,.fiche-chapitre li {
+  font:22px/1.5 Georgia,serif;
+}
+.fiche-themes {
+  background:var(--negro);
+  color:var(--crema);
+  padding:45px 0;
+}
+.fiche-themes>.contenedor {
+  display:grid;
+  grid-template-columns:1.2fr repeat(3,1fr);
+  gap:30px;
+}
+.fiche-themes h2 {
+  font:48px/1 'Barlow Condensed',sans-serif;
+}
+.fiche-themes article {
+  border-left:1px solid #fff8;
+  padding-left:25px;
+}
+.fiche-themes article>span {
+  color:var(--lima);
+  font-size:40px;
+}
+.fiche-themes h3 {
+  font:24px/1.2 Georgia,serif;
+  margin:20px 0 15px;
+}
+.fiche-themes p {
+  font:18px/1.4 Georgia,serif;
+}
+.fiche-chapitre ol {
+  padding-left:25px;
+}
+.fiche-chapitre li {
+  padding:15px 0;
+  border-bottom:1px solid #14141266;
+}
+.fiche-appel {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  padding:35px 0;
+}
+.fiche-appel p {
+  font:35px/1.3 Georgia,serif;
+  margin:0;
+}
+.fiche-appel mark {
+  background:var(--rosa);
+}
+@media(max-width:1150px) {
+  .cabecera-interior {
+    flex-wrap:wrap;
+    gap:15px;
+    padding:18px 0;
+  }
+  .cabecera .navegacion {
+    order:3;
+    width:100%;
+    justify-content:center;
+  }
+  .registro-cabecera {
+    margin-left:auto;
+  }
+  .portada h1 {
+    font-size:6.2vw;
+  }
+  .portada .grupo-botones {
+    flex-wrap:wrap;
+  }
+  #el-club.club-refinado .club-distribucion {
+    gap:22px;
+    grid-template-columns:1fr 1fr;
+  }
+  #el-club.club-refinado .club-imagen {
+    grid-column:2;
+    grid-row:1/3;
+    align-self:center;
+  }
+  #el-club.club-refinado .ventajas-club {
+    grid-column:1;
+    padding-top:0;
+  }
+  #el-club.club-refinado .ventaja-club {
+    min-height:0;
+    padding:20px 0;
+  }
+  #el-club.club-refinado h2 {
+    font-size:65px;
+  }
+  #lecturas.biblioteca-editorial .rejilla-libros {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .inclusion-grid {
+    gap:30px;
+  }
+  #inclusion .inclusion-compromiso {
+    grid-template-columns:65px 1fr;
+    gap:15px;
+  }
+  #inclusion .inclusion-compromiso svg {
+    width:60px;
+    height:60px;
+  }
+  #inclusion .inclusion-compromiso h3 {
+    font-size:28px;
+  }
+  #inclusion .inclusion-compromiso p {
+    font-size:16px;
+  }
+  .boletin .boletin-distribucion {
+    gap:25px;
+  }
+  .boletin h2 {
+    font-size:7vw;
+  }
+  .fiche-visuel {
+    padding:35px;
+  }
+  .fiche-visuel img {
+    height:440px;
+  }
+  .fiche-intro {
+    padding:30px;
+  }
+  .encuentro-page .voto-opcion img {
+    width:85px;
+    height:140px;
+  }
+}
+@media(max-width:760px) {
+  .contenedor {
+    width:calc(100% - 40px);
+  }
+  .seccion {
+    padding:40px 0;
+  }
+  .cabecera-interior {
+    min-height:80px;
+    padding:15px 0;
+    flex-wrap:wrap;
+  }
+  .cabecera .marca {
+    font-size:28px;
+  }
+  .cabecera .boton-menu {
+    display:block;
+    margin-left:auto;
+    color:var(--negro);
+    background:none;
+    border:1px solid;
+    padding:5px 10px;
+  }
+  .registro-cabecera {
+    display:none;
+  }
+  .cabecera .boton-marketplace {
+    font-size:9px;
+    padding:10px;
+    min-height:40px;
+    gap:8px;
+  }
+  .cabecera .navegacion {
+    display:none;
+    position:static;
+    order:4;
+    width:100%;
+    padding:15px 0;
+    background:var(--crema);
+  }
+  .cabecera .navegacion.abierta {
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .cabecera .navegacion a {
+    padding:12px;
+    font-size:13px;
+  }
+  .cuadricula-portada {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .portada {
+    padding:15px 0 35px;
+  }
+  .portada h1 {
+    font-size:clamp(45px,10.8vw,78px);
+  }
+  .portada-texto .etiqueta {
+    font-size:9px;
+    letter-spacing:1.5px;
+  }
+  .portada-texto>p:not(.etiqueta) {
+    font-size:23px;
+  }
+  .portada-composicion {
+    max-width:530px;
+    margin:auto;
+  }
+  .portada .boton {
+    font-size:10px;
+    min-height:48px;
+  }
+  .portada .grupo-botones {
+    margin-top:20px;
+  }
+  #el-club.club-refinado .club-distribucion {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  #el-club.club-refinado .club-imagen {
+    grid-column:auto;
+    grid-row:auto;
+    max-width:420px;
+    margin:auto;
+  }
+  #el-club.club-refinado h2 {
+    font-size:60px;
+    margin-top:20px;
+  }
+  #el-club.club-refinado .club-descripcion {
+    font-size:18px;
+  }
+  #el-club.club-refinado .club-icono {
+    width:50px;
+    height:50px;
+  }
+  #el-club.club-refinado .ventaja-club p {
+    font-size:16px;
+  }
+  .club-market {
+    flex-direction:column;
+    align-items:start;
+    gap:18px;
+    margin-top:25px;
+  }
+  .club-market button {
+    font-size:35px;
+  }
+  .club-market p {
+    font-size:13px;
+  }
+  #lecturas.biblioteca-editorial .biblioteca-cabecera {
+    display:block;
+  }
+  #lecturas.biblioteca-editorial h2 {
+    font-size:45px;
+  }
+  #lecturas.biblioteca-editorial .rejilla-libros {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+  }
+  #lecturas.biblioteca-editorial .libro-abrir {
+    padding:12px;
+  }
+  #lecturas.biblioteca-editorial .libro-visual {
+    height:205px;
+  }
+  #lecturas.biblioteca-editorial .cubierta-lectura {
+    height:175px;
+  }
+  #lecturas.biblioteca-editorial .libro-titulo {
+    font-size:21px;
+  }
+  #lecturas.biblioteca-editorial .libro-gancho {
+    font-size:16px;
+    min-height:90px;
+  }
+  #lecturas.biblioteca-editorial .libro-explorar {
+    font-size:9px;
+    gap:5px;
+  }
+  #lecturas.biblioteca-editorial .libro-eventos {
+    font-size:10px;
+  }
+  #comunidad .comunidad-escena {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  #comunidad h2 {
+    font-size:65px;
+  }
+  #comunidad .comunidad-formas p {
+    font-size:17px;
+  }
+  #comunidad .comunidad-relato>p:not(.nota-acceso) {
+    font-size:24px;
+  }
+  .inclusion-grid {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  #inclusion h2 {
+    font-size:60px;
+  }
+  #inclusion .inclusion-intro {
+    font-size:18px;
+  }
+  #inclusion .inclusion-compromiso {
+    padding:24px 0;
+  }
+  #inclusion .inclusion-escucha {
+    flex-direction:column;
+    align-items:stretch;
+    padding:25px 20px;
+  }
+  #inclusion .inclusion-contacto {
+    white-space:normal;
+    width:100%;
+    font-size:21px;
+  }
+  #eventos .eventos-cabecera {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  #eventos .eventos-presentacion,#eventos .eventos-collage,#eventos .eventos-modalidades {
+    grid-column:1;
+    grid-row:auto;
+  }
+  #eventos h2 {
+    font-size:65px;
+  }
+  #eventos .eventos-modalidades ul {
+    gap:15px;
+  }
+  #eventos .eventos-modalidades li {
+    flex-direction:column;
+  }
+  #eventos .eventos-modalidades p {
+    font-size:15px;
+  }
+  .boletin .boletin-distribucion {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .boletin .boletin-collage {
+    max-width:480px;
+    margin:auto;
+  }
+  .boletin h2 {
+    font-size:clamp(58px,12vw,85px);
+  }
+  .boletin-contenido>p {
+    font-size:18px;
+  }
+  .boletin .formulario-boletin>.boton {
+    font-size:20px;
+    letter-spacing:1px;
+  }
+  .pie-pagina .pie-columnas {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:30px;
+  }
+  .pie-pagina .pie-identidad {
+    grid-column:1/-1;
+  }
+  .pie-pagina .pie-inferior {
+    flex-direction:column;
+    align-items:start;
+  }
+  .pie-manifiesto {
+    font-size:34px;
+  }
+  #libro-mes.resumen-mensual .libro-distribucion {
+    grid-template-columns:1fr;
+  }
+  #libro-mes .libro-escena {
+    min-height:430px;
+  }
+  #libro-mes .libro-escena img {
+    height:340px;
+  }
+  #libro-mes .resumen-mensual-ficha {
+    padding:30px 20px;
+  }
+  #libro-mes .mensual-cronograma {
+    padding:25px 20px;
+  }
+  .pagina-plan .plan-presentacion {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .pagina-plan .plan-ahora {
+    padding:25px 20px;
+  }
+  .pagina-plan .plan-presentacion h1 {
+    font-size:42px;
+  }
+  .pagina-plan .plan-semanas {
+    display:grid;
+    grid-template-columns:1fr;
+    margin:30px 0 0 20px;
+    padding-left:25px;
+    gap:20px;
+  }
+  .pagina-plan .plan-semana-numero {
+    top:18px;
+    left:-48px;
+    width:36px;
+    height:36px;
+    font-size:22px;
+  }
+  .pagina-plan .plan-semanas li:before {
+    display:none;
+  }
+  .plan-cuidados {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .plan-final {
+    padding:25px 20px;
+  }
+  .plan-final h2 {
+    font-size:32px;
+  }
+  .plan-final dl {
+    grid-template-columns:1fr;
+  }
+  .encuentro-page .voto-opcion {
+    padding:25px 35px 25px 16px;
+  }
+  .encuentro-page .voto-opcion img {
+    height:140px;
+    width:85px;
+  }
+  .encuentro-page .resultado-portada img {
+    height:280px;
+  }
+  .fiche-hero {
+    grid-template-columns:1fr;
+  }
+  .fiche-visuel {
+    padding:35px;
+  }
+  .fiche-visuel img {
+    height:380px;
+  }
+  .fiche-intro {
+    padding:30px 20px;
+  }
+  .fiche-intro h1 {
+    font-size:42px;
+  }
+  .fiche-chapitre {
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:35px 0;
+  }
+  .fiche-chapitre>div+div {
+    padding:0;
+    border:0;
+  }
+  .fiche-chapitre p,.fiche-chapitre li {
+    font-size:19px;
+  }
+  .fiche-themes>.contenedor {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .fiche-themes article {
+    border:0;
+    border-top:1px solid #fff8;
+    padding:20px 0 0;
+  }
+  .fiche-themes article>span {
+    font-size:28px;
+  }
+  .fiche-appel {
+    flex-direction:column;
+    align-items:start;
+  }
+  .fiche-appel p {
+    font-size:30px;
+  }
+  .fiche-cabecera {
+    gap:20px;
+  }
+  .fiche-cabecera>a:last-child {
+    font-size:12px;
+  }
+}
+@media(max-width:380px) {
+  #lecturas.biblioteca-editorial .rejilla-libros {
+    grid-template-columns:1fr;
+  }
+  #lecturas.biblioteca-editorial .libro-visual {
+    height:290px;
+  }
+  #lecturas.biblioteca-editorial .cubierta-lectura {
+    height:260px;
+  }
+  #lecturas.biblioteca-editorial .libro-gancho {
+    min-height:0;
+  }
+  .portada h1 {
+    font-size:44px;
+  }
+  .cabecera .marca {
+    font-size:24px;
+  }
+  .cabecera .boton-marketplace {
+    font-size:8px;
+  }
+  .contenedor {
+    width:calc(100% - 32px);
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+  *,*:before,*:after {
+    transition:none!important;
+  }
+}
+/* Los adornos del pie permanecen dentro de su columna. */
+.pie-pagina .pie-grupo {
+  min-width:0;
+}
+.pie-pagina .pie-lema-subrayado {
+  max-width:100%;
+}
+.pie-pagina .pie-redes {
+  flex-wrap:wrap;
+}
+.pie-pagina .pie-lema-subrayado {
+  width:calc(100% - 40px);
+  max-width:145px;
+  margin-left:20px;
+}
+/* Acabados editoriales: contraste, cronología conectada y páginas del libro. */
+.cabecera .navegacion a.activo {
+  color:var(--azul);
+}
+.pagina-plan .plan-cabecera .marca span {
+  color:var(--azul);
+}
+.pagina-plan .plan-spoilers {
+  color:var(--negro);
+}
+.pagina-plan .plan-semanas {
+  position:relative;
+}
+.pagina-plan .plan-semanas:before {
+  content:'';
+  position:absolute;
+  left:12.5%;
+  right:12.5%;
+  top:-29px;
+  height:1px;
+  background:var(--azul);
+}
+.pagina-plan .plan-semana-numero {
+  z-index:1;
+}
+.pagina-plan .plan-ejemplo {
+  background:var(--rosa);
+  border:0;
+  color:var(--negro);
+}
+.pagina-ficha .fiche-auteur {
+  color:var(--azul);
+  font-size:32px;
+}
+.pagina-ficha .fiche-chapitre:has(ol) h2 {
+  font-family:Georgia,serif;
+  font-weight:400;
+}
+.pagina-ficha .fiche-appel .boton {
+  font:700 23px/1.2 'Barlow Condensed',sans-serif;
+}
+@media(max-width:760px) {
+  .pagina-plan .plan-semanas:before {
+    display:none;
+  }
+  .pagina-ficha footer.fiche-cabecera {
+    flex-wrap:wrap;
+    padding:20px 0;
+    gap:18px;
+  }
+  .pagina-ficha footer.fiche-cabecera p {
+    font-size:12px;
+    margin:0;
+  }
+}
+/* Navegación de tableta en una segunda fila, sobre el mismo fondo claro. */
+@media(min-width:761px) and (max-width:1150px) {
+  .cabecera .boton-menu {
+    display:none;
+  }
+  .cabecera .navegacion {
+    display:flex;
+    position:static;
+    flex-wrap:wrap;
+    background:var(--crema);
+    border:0;
+    padding:4px 0;
+    gap:12px;
+  }
+  .cabecera .navegacion a {
+    font-size:11px;
+    padding:6px;
+  }
+}
+.marca>span {
+  font-family:Arial,sans-serif;
+}

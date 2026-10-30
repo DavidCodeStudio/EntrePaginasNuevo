@@ -28,3 +28,17 @@ document.getElementById('volver-formulario').addEventListener('click', () => {
   asistencia.hidden = false;
   document.getElementById('asistencia-nombre').focus();
 });
+
+// Indica el paso visible sin alterar la selección ni enviar datos.
+const enlacesPasos = document.querySelectorAll('.encuentro-pasos a');
+if ('IntersectionObserver' in window) {
+  const pasosObserver = new IntersectionObserver(entradas => {
+    const visible = entradas.filter(entrada => entrada.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    enlacesPasos.forEach(enlace => {
+      if (enlace.hash === '#' + visible.target.id) enlace.setAttribute('aria-current', 'step');
+      else enlace.removeAttribute('aria-current');
+    });
+  }, {rootMargin: '-10% 0px -45% 0px', threshold: [0, 0.2, 0.5]});
+  document.querySelectorAll('#votacion, #resultado, #asistentes').forEach(paso => pasosObserver.observe(paso));
+}
