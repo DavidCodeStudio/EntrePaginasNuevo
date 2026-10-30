@@ -129,7 +129,9 @@ if ('IntersectionObserver' in window) {
 }
 // Acceso independiente al futuro marketplace; no utiliza el registro del club.
 const dialogoMarketplace = document.getElementById('dialogo-marketplace');
-document.querySelector('[data-abrir-marketplace]')?.addEventListener('click', () => dialogoMarketplace?.showModal());
+document.querySelectorAll('[data-abrir-marketplace]').forEach(boton => {
+  boton.addEventListener('click', () => dialogoMarketplace?.showModal());
+});
 dialogoMarketplace?.querySelectorAll('.cerrar-dialogo, [data-cerrar-marketplace]').forEach(boton => {
   boton.addEventListener('click', () => dialogoMarketplace.close());
 });
