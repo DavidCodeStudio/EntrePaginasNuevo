@@ -1958,3 +1958,45 @@ button,a,input {
 @media(min-width:1101px) {#lecturas.biblioteca-editorial #titulo-lecturas{transform:scaleX(.92);width:108.7%}}
 @media(max-width:700px) {#lecturas.biblioteca-editorial .libro-gancho{min-height:70px}#lecturas.biblioteca-editorial .libro-autor{min-height:30px}}
 @media(max-width:380px) {#lecturas.biblioteca-editorial .libro-gancho{min-height:0}}
+
+/* Próximos eventos: composición editorial aislada de la referencia aprobada. */
+#eventos.eventos-referencia{padding:30px 0 0;background:var(--crema);overflow:clip}
+#eventos.eventos-referencia .eventos-nueva-cabecera{display:grid;grid-template-columns:42% 58%;gap:0;align-items:center}
+#eventos.eventos-referencia .eventos-nuevo-texto{position:relative;z-index:1;padding:0 0 24px}
+#eventos.eventos-referencia .eventos-antetitulo{display:flex;align-items:center;gap:16px;font:700 10px/1.5 Arial,sans-serif;letter-spacing:2px;margin:0 0 18px}
+#eventos.eventos-referencia .eventos-antetitulo:after{content:'';width:170px;height:1px;background:#14141270}
+#eventos.eventos-referencia h2{font:700 clamp(52px,7.5vw,108px)/.87 'Barlow Condensed',sans-serif;letter-spacing:-.035em;margin:0 0 18px}
+#eventos.eventos-referencia h2 span{color:#0731eb}
+#eventos.eventos-referencia .eventos-lema{font:400 clamp(20px,2.25vw,32px)/1.15 Georgia,serif;letter-spacing:-.045em;margin:0 0 10px;white-space:nowrap}
+#eventos.eventos-referencia .eventos-descripcion{font:400 17px/1.4 Georgia,serif;margin:0 0 22px}
+#eventos.eventos-referencia .eventos-detalles{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 22px;gap:18px}
+#eventos.eventos-referencia .eventos-detalles>div+div{border-left:1px solid #14141255;padding-left:22px}
+#eventos.eventos-referencia dt{font:700 11px/1.5 Arial,sans-serif;letter-spacing:.7px}
+#eventos.eventos-referencia dd{font:16px/1.5 Georgia,serif;margin:0}
+#eventos.eventos-referencia .eventos-propuestas-boton{font:700 14px/1.4 Arial,sans-serif;letter-spacing:2px;padding:14px 28px;min-height:48px;border:0;border-radius:0;gap:14px;clip-path:polygon(0 3%,99% 0,100% 95%,1% 100%)}
+#eventos.eventos-referencia .eventos-nuevo-collage{position:relative;align-self:stretch;min-width:0;margin:-12px -25px 0 15px}
+#eventos.eventos-referencia .eventos-nuevo-collage>img{width:100%;height:100%;max-height:560px;object-fit:contain}
+#eventos.eventos-referencia .eventos-nota-papel{position:absolute;right:2%;top:0;transform:rotate(-6deg);background:#f6eedf;box-shadow:0 3px 5px #14141220;padding:16px 25px;font:italic 24px/1.2 Georgia,serif;text-align:center;clip-path:polygon(2% 4%,96% 0,100% 92%,5% 100%)}
+#eventos.eventos-referencia .eventos-seleccion{border-top:1px solid #14141270;padding-top:12px;padding-bottom:30px;scroll-margin-top:110px}
+#eventos.eventos-referencia h3{font:400 clamp(30px,3.5vw,49px)/1.15 Georgia,serif;letter-spacing:-.05em;margin:0 0 24px}
+#eventos.eventos-referencia .eventos-tres-libros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#eventos.eventos-referencia .evento-propuesta{display:grid;grid-template-columns:48% 1fr;gap:16px;position:relative;min-width:0}
+#eventos.eventos-referencia .evento-propuesta+.evento-propuesta{border-left:1px solid #14141245;padding-left:24px}
+#eventos.eventos-referencia figure{margin:0;min-width:0;align-self:start}
+#eventos.eventos-referencia figure img{height:255px;width:100%;object-fit:contain;filter:drop-shadow(4px 7px 4px #14141225)}
+#eventos.eventos-referencia figcaption{font:10px/1.4 Georgia,serif;margin:8px 0 0}
+#eventos.eventos-referencia .evento-libro-texto{display:flex;flex-direction:column;padding:12px 0;min-width:0}
+#eventos.eventos-referencia h4{font:400 clamp(23px,2.1vw,30px)/1.03 Georgia,serif;letter-spacing:-.05em;margin:0 0 12px}
+#eventos.eventos-referencia .evento-autor{font:700 10px/1.5 Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 20px}
+#eventos.eventos-referencia .evento-libro-texto>p:not(.evento-autor){font:16px/1.25 Georgia,serif;margin:0 0 18px}
+#eventos.eventos-referencia .evento-libro-texto button{align-self:start;background:none;border:0;border-bottom:1px solid;padding:4px 0;margin-top:auto;color:inherit;font:18px/1.2 Georgia,serif;text-align:left}
+#eventos.eventos-referencia .eventos-pasos-banda{background:var(--rosa);padding:30px 0 22px;clip-path:polygon(0 5px,3% 0,7% 6px,12% 1px,20% 6px,27% 0,35% 6px,42% 2px,50% 6px,58% 0,66% 5px,74% 1px,82% 6px,90% 0,96% 5px,100% 1px,100% 100%,0 100%)}
+#eventos.eventos-referencia .eventos-tres-pasos{display:flex;justify-content:space-between;gap:28px;list-style:none;padding:0;margin:0 0 16px}
+#eventos.eventos-referencia .eventos-tres-pasos li{display:flex;align-items:center;gap:20px;flex:1;font:400 clamp(22px,2.7vw,38px)/1.2 Georgia,serif;letter-spacing:-.045em;white-space:nowrap}
+#eventos.eventos-referencia .eventos-tres-pasos li>span:first-child{display:flex;align-items:center;gap:20px}
+#eventos.eventos-referencia .eventos-tres-pasos li>span:first-child:after{content:'';width:clamp(20px,5vw,80px);height:1px;background:currentColor}
+#eventos.eventos-referencia .eventos-tres-pasos li:not(:last-child):after{content:'→';margin-left:auto}
+#eventos.eventos-referencia .eventos-demo-enlace{display:block;text-align:center;font:11px/1.5 monospace;text-underline-offset:4px}
+#eventos.eventos-referencia .eventos-demo-enlace:hover{text-decoration:underline}
+@media(max-width:1100px){#eventos.eventos-referencia .eventos-lema{white-space:normal}#eventos.eventos-referencia .eventos-tres-libros{gap:14px}#eventos.eventos-referencia .evento-propuesta{gap:10px}#eventos.eventos-referencia .evento-propuesta+.evento-propuesta{padding-left:14px}#eventos.eventos-referencia figure img{height:220px}#eventos.eventos-referencia .evento-libro-texto>p:not(.evento-autor){font-size:14px}#eventos.eventos-referencia .eventos-tres-pasos li{gap:12px}#eventos.eventos-referencia .eventos-tres-pasos li>span:first-child{gap:12px}}
+@media(max-width:760px){#eventos.eventos-referencia .eventos-nueva-cabecera{grid-template-columns:1fr}#eventos.eventos-referencia h2{font-size:clamp(58px,13.5vw,100px)}#eventos.eventos-referencia .eventos-nuevo-collage{margin:0 0 20px}#eventos.eventos-referencia .eventos-nuevo-collage>img{max-height:none;height:auto}#eventos.eventos-referencia .eventos-nota-papel{font-size:20px}#eventos.eventos-referencia .eventos-tres-libros{grid-template-columns:1fr;gap:24px}#eventos.eventos-referencia .evento-propuesta{grid-template-columns:42% 1fr;gap:20px}#eventos.eventos-referencia .evento-propuesta+.evento-propuesta{border-left:0;border-top:1px solid #14141245;padding:24px 0 0}#eventos.eventos-referencia figure img{height:240px}#eventos.eventos-referencia h4{font-size:28px}#eventos.eventos-referencia .evento-libro-texto>p:not(.evento-autor){font-size:16px}#eventos.eventos-referencia .eventos-tres-pasos{flex-direction:column;gap:20px}#eventos.eventos-referencia .eventos-tres-pasos li{font-size:30px}#eventos.eventos-referencia .eventos-tres-pasos li>span:first-child:after{width:45px}#eventos.eventos-referencia .eventos-tres-pasos li:not(:last-child):after{content:'↓'}#eventos.eventos-referencia .eventos-detalles{gap:10px}#eventos.eventos-referencia .eventos-detalles>div+div{padding-left:10px}#eventos.eventos-referencia .eventos-propuestas-boton{font-size:12px;padding:14px 18px}}

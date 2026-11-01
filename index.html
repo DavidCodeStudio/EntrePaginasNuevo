@@ -235,38 +235,25 @@
     <!-- ==========================================================
          07. EVENTOS — DISEÑO EDITORIAL APROBADO
          ========================================================== -->
-    <section class="eventos" id="eventos" aria-labelledby="titulo-eventos">
-      <!-- 07.1 Presentación, collage y actividades -->
-      <div class="contenedor eventos-cabecera">
-        <div class="eventos-presentacion">
-          <p class="etiqueta"><strong>07 /</strong> EVENTOS</p>
+    <section class="eventos eventos-referencia" id="eventos" aria-labelledby="titulo-eventos">
+      <div class="contenedor eventos-nueva-cabecera">
+        <div class="eventos-nuevo-texto">
+          <p class="eventos-antetitulo">PRÓXIMOS EVENTOS</p>
           <h2 id="titulo-eventos">LAS HISTORIAS<br><span>SIGUEN FUERA</span><br>DEL LIBRO.</h2>
-          <p>Encuentros para conversar, descubrir y crear a partir de lo que leemos.</p>
-          <a class="boton boton-lima eventos-boton" href="#proximos-eventos">VER PRÓXIMOS EVENTOS <span aria-hidden="true">↓</span></a>
+          <p class="eventos-lema">Una lectura. Muchas formas de encontrarnos.</p>
+          <p class="eventos-descripcion">Elegimos un libro, leemos a nuestro ritmo y volvemos para compartirlo.</p>
+          <dl class="eventos-detalles"><div><dt>FECHA</dt><dd>Por confirmar</dd></div><div><dt>FORMATO</dt><dd>Por confirmar</dd></div><div><dt>ACCESO</dt><dd>En preparación</dd></div></dl>
+          <a class="boton boton-lima eventos-propuestas-boton" href="#proximos-eventos">CONOCER LAS PROPUESTAS <span aria-hidden="true">↓</span></a>
         </div>
-
-        <!-- El collage original ya contiene pegatina y garabatos.
-             No duplicamos esas decoraciones con CSS. -->
-        <div class="eventos-collage">
-          <img src="assets/collage-eventos-aprobado.jpg"
-            alt="Encuentro de lectores en una librería y detalle de una persona escribiendo, en un collage de papel" loading="lazy" width="846"
-            height="839">
-        </div>
-
-<div class="eventos-modalidades"><ul><li><span class="icono-modalidad" aria-hidden="true">▱</span><div><strong>Encuentros online</strong><p>La propuesta de encuentro por Discord está en preparación.</p></div></li><li><span class="icono-modalidad" aria-hidden="true">⌖</span><div><strong>Encuentros presenciales</strong><p>Actividades en Barcelona, pendientes de confirmar.</p></div></li></ul></div>
+        <div class="eventos-nuevo-collage"><img src="assets/collage-eventos-aprobado.jpg" alt="Lectores compartiendo una conversación en una librería y detalle de escritura, en un collage de papel" loading="lazy" width="846" height="839"><p class="eventos-nota-papel">Las buenas historias<br>se comparten.</p></div>
       </div>
-
-      <p class="contenedor seccion-cierre">Una conversación puede ser el comienzo de <em>tu próxima historia.</em></p>
-      <!-- 07.2 Próximos eventos: propuestas para la próxima lectura -->
-      <div class="eventos-proximos agenda" id="proximos-eventos" aria-labelledby="agenda-titulo">
-        <div class="contenedor">
-          <p class="agenda-etiqueta agenda-regla">PRÓXIMOS EVENTOS</p>
-          <h3 id="agenda-titulo">Tres libros.<br>¿Cuál será tu próxima historia?</h3>
-          <div class="agenda-intro"><p>Un encuentro para descubrir, conversar y elegir juntos. No necesitas haberlos leído.</p><span class="agenda-etiqueta">ENCUENTRO EN PREPARACIÓN</span></div>
-          <div class="agenda-libros"><article class="propuesta"><div class="propuesta-imagen"><img src="assets/cubierta-lectura-3.jpg" alt="Cubierta de El infinito en un junco" loading="lazy"></div><p class="agenda-etiqueta">01 / DESCUBRIR</p><h4>El infinito en un junco</h4><p class="agenda-autor">Irene Vallejo</p><p>La aventura de los libros y quienes los hacen posibles.</p></article><article class="propuesta"><div class="propuesta-imagen"><img src="assets/cubierta-lectura-2.jpg" alt="Cubierta de La vegetariana" loading="lazy"></div><p class="agenda-etiqueta">02 / CUESTIONAR</p><h4>La vegetariana</h4><p class="agenda-autor">Han Kang</p><p>Libertad, cuerpo y expectativas sociales.</p></article><article class="propuesta"><div class="propuesta-imagen"><img src="assets/libro-mes-editorial.webp" alt="Cubierta de Mañana, y mañana, y mañana" loading="lazy"></div><p class="agenda-etiqueta">03 / CREAR</p><h4>Mañana, y mañana, y mañana</h4><p class="agenda-autor">Gabrielle Zevin</p><p>Amistad, creatividad y lo que construimos juntos.</p></article></div>
-          <div class="agenda-banda"><div><p class="agenda-etiqueta">ASÍ SERÁ EL ENCUENTRO</p><p class="agenda-recorrido">Votamos → Leemos → Nos encontramos</p><p>Fecha, duración y plataforma por confirmar.</p></div><div><a class="boton boton-negro" href="encuentro.html">VER EL ENCUENTRO <span aria-hidden="true">→</span></a><p class="agenda-nota">Propuesta de actividad · Votación e inscripción en demostración.</p></div></div>
-        </div>
+      <div class="contenedor eventos-seleccion" id="proximos-eventos" aria-labelledby="agenda-titulo">
+        <h3 id="agenda-titulo">Tres libros. ¿Cuál te apetece compartir?</h3>
+        <div class="eventos-tres-libros"><article class="evento-propuesta"><figure><img src="assets/lectura-junco.webp" alt="Cubierta ilustrativa de El infinito en un junco" loading="lazy"><figcaption>Cubierta ilustrativa</figcaption></figure><div class="evento-libro-texto"><h4>El infinito<br>en un junco</h4><p class="evento-autor">Irene Vallejo</p><p>Un viaje fascinante por la historia de los libros y las personas que los hicieron posibles.</p><button type="button" data-libro="junco" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article>
+<article class="evento-propuesta"><figure><img src="assets/lectura-vegetariana.webp" alt="Cubierta ilustrativa de La vegetariana" loading="lazy"><figcaption>Cubierta ilustrativa</figcaption></figure><div class="evento-libro-texto"><h4>La vegetariana</h4><p class="evento-autor">Han Kang</p><p>Una novela intensa y luminosa sobre el cuerpo, la libertad y lo que significa no encajar.</p><button type="button" data-libro="vegetariana" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article>
+<article class="evento-propuesta"><figure><img src="assets/lectura-manana.webp" alt="Cubierta ilustrativa de Mañana, y mañana, y mañana" loading="lazy"><figcaption>Cubierta ilustrativa</figcaption></figure><div class="evento-libro-texto"><h4>Mañana, y mañana,<br>y mañana</h4><p class="evento-autor">Gabrielle Zevin</p><p>Una historia inolvidable sobre la amistad, la creatividad y los videojuegos.</p><button type="button" data-libro="manana" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article></div>
       </div>
+      <div class="eventos-pasos-banda"><div class="contenedor"><ol class="eventos-tres-pasos"><li><span>01</span><span>Elegimos</span></li><li><span>02</span><span>Leemos</span></li><li><span>03</span><span>Nos encontramos</span></li></ol><a href="encuentro.html" class="eventos-demo-enlace">Encuentro en preparación · Votación e inscripción demostrativas <span aria-hidden="true">↗</span></a></div></div>
     </section>
   </main>
 
