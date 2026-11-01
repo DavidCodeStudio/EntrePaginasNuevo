@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="ENTRE PÁGINAS: un club de lectura abierto para descubrir historias, compartir ideas y conectar personas.">
-  <title>ENTRE PÁGINAS · Libros que conectan</title>
+    content="CAPÍTULO ABIERTO: un club de lectura abierto para descubrir historias, compartir ideas y conectar personas.">
+  <title>CAPÍTULO ABIERTO · Libros que conectan</title>
   <link rel="stylesheet" href="styles.css?v=plan-mensual-14">
   <script src="script.js?v=lecturas-4" defer></script>
   <script src="plan-mensual.js?v=1" defer></script>
   <link rel="stylesheet" href="eventos.css?v=2">
-  <link rel="stylesheet" href="diseno.css?v=lecturas-4">
+  <link rel="stylesheet" href="diseno.css?v=capitulo-abierto-1">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
   <!-- 00 · CABECERA -->
   <header class="cabecera" id="inicio">
     <div class="contenedor cabecera-interior">
-      <a class="marca marca-referencia" href="#inicio" aria-label="Entre Líneas, inicio"><img src="assets/logo-entre-lineas.png" alt="ENTRE LÍNEAS" width="146" height="76"></a>
+      <a class="marca marca-referencia marca-capitulo" href="#inicio" aria-label="Capítulo Abierto, inicio"><img src="assets/logo-capitulo-abierto.svg" alt="Capítulo Abierto" width="146" height="86"></a>
       <button class="boton-menu" type="button" aria-label="Abrir menú" aria-controls="navegacion"
         aria-expanded="false">☰</button>
       <nav class="navegacion" id="navegacion" aria-label="Navegación principal">
@@ -265,7 +265,7 @@
     <div class="contenedor">
       <p class="pie-manifiesto">Las buenas historias siguen <em>en compañía.</em></p><div class="pie-columnas">
         <div class="pie-identidad">
-          <a class="marca marca-pie" href="#inicio" aria-label="Entre Páginas, volver al inicio">ENTRE<span aria-hidden="true">✳︎</span><br>PÁGINAS</a>
+          <a class="marca marca-pie marca-capitulo" href="#inicio" aria-label="Capítulo Abierto, volver al inicio"><img src="assets/logo-capitulo-abierto.svg" alt="Capítulo Abierto" width="146" height="86"></a>
           <p>Buenos libros.<br>Mejores conversaciones.</p>
           <span class="pie-subrayado" aria-hidden="true"></span>
         </div>
@@ -304,7 +304,7 @@
         </div>
       </div>
       <div class="pie-inferior">
-        <p>© 2026 ENTRE PÁGINAS · Proyecto demostrativo</p>
+        <p>© 2026 CAPÍTULO ABIERTO · Proyecto demostrativo</p>
         <div class="pie-legal"><span>Textos legales pendientes</span><a href="#inclusion">Accesibilidad</a><a href="mailto:contacto@example.com">Contacto</a></div>
         <a class="volver-arriba" href="#inicio"><span aria-hidden="true">↑</span> VOLVER ARRIBA</a>
       </div>
@@ -316,7 +316,7 @@
     <button type="button" class="cerrar-dialogo" aria-label="Cerrar inscripción al club">×</button>
     <p class="etiqueta"><span class="telegram-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-</svg><span>ENTRE PÁGINAS · TELEGRAM</span></span></p>
+</svg><span>CAPÍTULO ABIERTO · TELEGRAM</span></span></p>
     <h2 id="titulo-dialogo">TU PRÓXIMA HISTORIA SE COMPARTE.</h2>
     <p id="discord-descripcion">Recibe en tu correo una invitación para unirte al club en Telegram.</p>
     <p class="discord-contexto" hidden></p>
@@ -340,20 +340,20 @@
   </dialog>
   <dialog id="dialogo-marketplace" class="dialogo-inscripcion" aria-labelledby="titulo-marketplace" aria-describedby="descripcion-marketplace">
     <button type="button" class="cerrar-dialogo" aria-label="Cerrar marketplace">×</button>
-    <p class="etiqueta"><strong>✳︎ /</strong> ENTRE PÁGINAS</p>
+    <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
     <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
-    <p id="descripcion-marketplace">Estamos preparando el marketplace de Entre Páginas. Muy pronto podrás crear tu cuenta, acceder a la tienda y gestionar tus compras desde un mismo lugar.</p>
+    <p id="descripcion-marketplace">Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás crear tu cuenta, acceder a la tienda y gestionar tus compras desde un mismo lugar.</p>
     <p class="marketplace-estado">PRÓXIMAMENTE</p>
     <button class="boton boton-lima" type="button" data-cerrar-marketplace>SEGUIR EXPLORANDO <span aria-hidden="true">→</span></button>
   </dialog>
 <dialog id="dialogo-lectura" class="dialogo-lectura" aria-labelledby="lectura-titulo">
     <button type="button" class="cerrar-dialogo" aria-label="Cerrar ficha de lectura">×</button>
-    <div class="lectura-ficha"><div class="lectura-portada"><img id="lectura-imagen" src="assets/cubierta-lectura-3.jpg" alt="" width="267" height="360"><span>ENTRE PÁGINAS / LECTURAS</span></div>
+    <div class="lectura-ficha"><div class="lectura-portada"><img id="lectura-imagen" src="assets/cubierta-lectura-3.jpg" alt="" width="267" height="360"><span>CAPÍTULO ABIERTO / LECTURAS</span></div>
     <div class="lectura-detalle"><p class="etiqueta" id="lectura-genero"></p><h2 id="lectura-titulo"></h2><p id="lectura-autor"></p><p id="lectura-sinopsis"></p><h3>POR QUÉ LEERLO EN EL CLUB</h3><p id="lectura-motivo"></p><h3>HABLEMOS DE…</h3><ul id="lectura-temas"></ul><blockquote id="lectura-pregunta"></blockquote><button type="button" class="boton boton-lima" data-lectura-comunidad>CONOCE LA COMUNIDAD <span aria-hidden="true">→</span></button></div></div>
   </dialog>
 <dialog id="dialogo-inclusion" class="dialogo-inscripcion dialogo-inclusion" aria-labelledby="inclusion-dialogo-titulo" aria-describedby="inclusion-dialogo-aviso">
     <button class="cerrar-dialogo" type="button" aria-label="Cerrar formulario de inclusión">×</button>
-    <p class="etiqueta">ENTRE PÁGINAS / TE ESCUCHAMOS</p><h2 id="inclusion-dialogo-titulo">¿QUÉ NECESITAS PARA PARTICIPAR?</h2>
+    <p class="etiqueta">CAPÍTULO ABIERTO / TE ESCUCHAMOS</p><h2 id="inclusion-dialogo-titulo">¿QUÉ NECESITAS PARA PARTICIPAR?</h2>
     <p id="inclusion-dialogo-aviso">Este formulario es una demostración: todavía no envía ni guarda mensajes. El canal de contacto estará disponible próximamente.</p>
     <form id="formulario-inclusion"><label for="inclusion-mensaje">¿Qué te ayudaría a disfrutar del club?</label><textarea id="inclusion-mensaje" name="mensaje" rows="4" maxlength="2000" required placeholder="Por ejemplo, información sobre los formatos de lectura…"></textarea><p class="inclusion-privacidad">Evita incluir datos personales o información de salud.</p><button class="boton boton-lima" type="submit">PROBAR FORMULARIO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></button><p class="mensaje-inclusion" role="status" aria-live="polite"></p></form>
   </dialog>
@@ -361,7 +361,7 @@
     <button class="cerrar-dialogo" type="button" aria-label="Cerrar invitación a Discord">×</button>
     <p class="etiqueta eventos-discord-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
   <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-</svg><span>ENTRE PÁGINAS · DISCORD</span></p>
+</svg><span>CAPÍTULO ABIERTO · DISCORD</span></p>
     <h2 id="eventos-discord-titulo">LEEMOS Y CONVERSAMOS EN <span>DISCORD.</span></h2>
     <p id="eventos-discord-descripcion">Las lecturas online del club se realizarán mediante <strong>videollamadas en Discord</strong>. Para participar, necesitarás una cuenta gratuita de Discord e incorporarte al servidor del club.</p>
     <p>Déjanos tu correo y te enviaremos la invitación para unirte.</p>
@@ -382,7 +382,7 @@
     <button type="button" class="cerrar-dialogo" aria-label="Cerrar comunidad de WhatsApp">×</button>
     <p class="etiqueta whatsapp-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
   <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg><span>ENTRE PÁGINAS · WHATSAPP</span></p>
+</svg><span>CAPÍTULO ABIERTO · WHATSAPP</span></p>
     <h2 id="whatsapp-titulo">UNA COMUNIDAD.<br><span>MUCHAS CONVERSACIONES.</span></h2>
     <p id="whatsapp-descripcion">Únete a nuestra comunidad de WhatsApp y encuentra tu espacio para leer, conversar y conectar.</p>
     <ul class="whatsapp-espacios" aria-label="Espacios de la comunidad"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8h13v7a6 6 0 0 1-12 0V8Zm13 1h2a3 3 0 0 1 0 6h-2M2 22h17M6 2v3M10 1v4M14 2v3"/></svg><div><h3>Cafe&amp;Brunch&amp;Charla Libre</h3><p>Conversaciones más allá de los libros.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="17" rx="2"/><path d="M7 2v6M17 2v6M3 11h18"/></svg><div><h3>Organización y Quedadas</h3><p>Propuestas para encontrarnos.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 9C8 7 5 7 2 8v13c3-1 6-1 9 1 3-2 6-2 9-1V11M11 9v13M20 2c-3 0-5 2-5 4s2 4 5 4l3 2-1-3c1-1 1-2 1-3 0-2-1-4-3-4Z"/></svg><div><h3>El Debate (Lectura Actual)</h3><p>Comparte tu mirada sobre la lectura del club.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="6" r="4"/><path d="M2 22v-3a6 6 0 0 1 12 0v3H2Zm12-8a7 7 0 0 1 9 6v2h-9"/></svg><div><h3>Lectura inclusiva</h3><p>Distintas formas de leer y participar.</p></div></li></ul>

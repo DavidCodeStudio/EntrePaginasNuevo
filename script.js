@@ -1,5 +1,5 @@
 /* ==========================================================
-   ENTRE PÁGINAS · INTERACCIONES
+   CAPÍTULO ABIERTO · INTERACCIONES
    01 Menú | 02 Filtros | 03 Inscripción | 04 Boletín
    ========================================================== */
 'use strict';

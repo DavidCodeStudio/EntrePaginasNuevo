@@ -1,4 +1,4 @@
-# Entre Páginas
+# Capítulo Abierto
 
 Web estática responsive. Abre index.html directamente o ejecuta desde esta carpeta:
 
@@ -62,7 +62,7 @@ Se han sustituido los seis collages de portada, club, comunidad, inclusión, eve
 
 Las composiciones de `download-1` a `download-8` se trasladan a elementos HTML reales y a `diseno.css`, cargado después de los estilos base: cabecera clara y registro, portada, club de tres ventajas con acceso al marketplace, biblioteca de cinco columnas en escritorio, comunidad con imagen a la izquierda, inclusión rosa con compromisos en columna, eventos, newsletter y pie editorial. La sección adicional «Cómo funciona» conserva su contenido y sus enlaces. En móvil las columnas se apilan; los filtros y las fichas siguen disponibles.
 
-`libro-del-mes.html` incorpora la ficha de la referencia `download-11`, con sinopsis, temas y preguntas sin spoilers. Se enlaza desde Libro del mes y el plan mensual. `lectura-del-mes.html` adapta `download-10`: panel azul, cuatro etapas conectadas, cuidados de la conversación y encuentro final. `encuentro.html` adapta `download-9`; JavaScript actualiza el paso visible de su navegación. Se conserva la marca Entre Páginas del proyecto. Las capturas contienen cubiertas ilustrativas; se mantienen los títulos, autores y categorías contrastados del contenido existente.
+`libro-del-mes.html` incorpora la ficha de la referencia `download-11`, con sinopsis, temas y preguntas sin spoilers. Se enlaza desde Libro del mes y el plan mensual. `lectura-del-mes.html` adapta `download-10`: panel azul, cuatro etapas conectadas, cuidados de la conversación y encuentro final. `encuentro.html` adapta `download-9`; JavaScript actualiza el paso visible de su navegación. Se conserva la marca Capítulo Abierto del proyecto. Las capturas contienen cubiertas ilustrativas; se mantienen los títulos, autores y categorías contrastados del contenido existente.
 
 Validación con Chromium: cuatro páginas en 320, 390, 768 y 1440 px, sin desbordamiento horizontal, imágenes rotas ni errores JavaScript. Probados filtros (2 ensayos, 3 ficciones y estado vacío de ciencia ficción), ficha y Escape, diálogos de inscripción/marketplace/WhatsApp/inclusión, newsletter de prueba, menú móvil y Escape, voto e inscripción demostrativos. Se mantienen los avisos de que no hay envíos, almacenamiento ni reservas reales. No se ha configurado un despliegue externo.
 
