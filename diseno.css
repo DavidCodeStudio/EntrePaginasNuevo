@@ -448,6 +448,12 @@ button,a,input {
   font:700 24px/1.1 'Barlow Condensed',sans-serif;
   padding:18px 24px;
 }
+#comunidad .comunidad-unirse + .nota-acceso {
+  max-width:none;
+  width:100%;
+  text-align:center;
+  margin:12px 0 0;
+}
 /* Inclusión: dos columnas y panel de contacto. */
 #inclusion.inclusion-abierta {
   background:var(--rosa);
