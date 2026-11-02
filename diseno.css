@@ -2059,3 +2059,21 @@ body .linea-seccion strong{margin:0;flex-shrink:0}
 body .linea-seccion:after{content:none}
 #comunidad>.contenedor>.linea-seccion,#inclusion>.contenedor>.linea-seccion{display:flex}
 @media(max-width:600px){body .linea-seccion{gap:10px;font-size:10px;letter-spacing:1.4px;margin-bottom:24px}}
+
+/* Comunidad: diálogo compacto y acceso siempre visible. */
+#dialogo-comunidad-whatsapp{width:min(740px,calc(100% - 32px));max-height:calc(100dvh - 40px);padding:0 30px 0;overscroll-behavior:contain;scrollbar-gutter:stable}
+#dialogo-comunidad-whatsapp::backdrop{background:#14141299;backdrop-filter:blur(4px)}
+#dialogo-comunidad-whatsapp .cerrar-dialogo{position:sticky;top:12px;float:right;z-index:3;display:grid;place-items:center;width:44px;height:44px;margin:12px -14px -56px 0;border:1px solid #14141240;border-radius:50%;background:var(--crema);line-height:1;font-size:28px;cursor:pointer}
+#dialogo-comunidad-whatsapp .whatsapp-marca{margin:28px 0 22px;padding-right:40px;font-size:10px;letter-spacing:1.4px}
+#dialogo-comunidad-whatsapp h2{font-size:clamp(32px,4vw,46px);margin:0 0 14px;line-height:1.02}
+#dialogo-comunidad-whatsapp #whatsapp-descripcion{font-size:16px;line-height:1.5;margin:0;max-width:580px}
+#dialogo-comunidad-whatsapp .whatsapp-espacios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}
+#dialogo-comunidad-whatsapp .whatsapp-espacios li{align-items:flex-start;gap:12px;padding:16px;border:1px solid #14141225;background:#fff8;min-width:0}
+#dialogo-comunidad-whatsapp .whatsapp-espacios li>svg{width:30px;height:30px;color:var(--azul)}
+#dialogo-comunidad-whatsapp .whatsapp-espacios h3{font:700 18px/1.2 'Barlow Condensed',Arial,sans-serif;letter-spacing:0;margin:0 0 6px;overflow-wrap:normal}
+#dialogo-comunidad-whatsapp .whatsapp-espacios p{font-size:13px;line-height:1.45}
+#dialogo-comunidad-whatsapp .whatsapp-pie{position:sticky;bottom:0;background:var(--crema);padding:16px 0 20px;border-top:1px solid #14141225;z-index:2}
+#dialogo-comunidad-whatsapp .whatsapp-aviso{background:none;border:0;padding:0;font-size:12px;margin:0 0 10px;color:#55554c}
+#dialogo-comunidad-whatsapp .whatsapp-acceso{display:flex;align-items:center;justify-content:center;min-height:56px;padding:14px 20px;font-size:23px;white-space:normal}
+#dialogo-comunidad-whatsapp .whatsapp-ayuda{font-size:11px;margin:10px 0 0}
+@media(max-width:520px){#dialogo-comunidad-whatsapp{padding:0 20px;max-height:calc(100dvh - 24px)}#dialogo-comunidad-whatsapp .whatsapp-marca{font-size:9px;letter-spacing:.7px;gap:8px;margin-top:22px}#dialogo-comunidad-whatsapp .whatsapp-marca>.bi-whatsapp{width:25px;height:25px}#dialogo-comunidad-whatsapp .whatsapp-espacios{grid-template-columns:1fr;gap:8px;margin:20px 0}#dialogo-comunidad-whatsapp .whatsapp-espacios li{padding:12px}#dialogo-comunidad-whatsapp .whatsapp-espacios h3{font-size:19px}#dialogo-comunidad-whatsapp .whatsapp-acceso{font-size:21px}#dialogo-comunidad-whatsapp .cerrar-dialogo{margin-right:-8px}}
