@@ -460,8 +460,8 @@ button,a,input {
   padding:44px 0;
 }
 #inclusion>.contenedor>.etiqueta {
-  border-bottom:1px solid;
-  padding-bottom:14px;
+  border-bottom:0;
+  padding-bottom:0;
 }
 .inclusion-grid {
   display:grid;
