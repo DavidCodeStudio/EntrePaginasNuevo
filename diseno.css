@@ -2043,3 +2043,10 @@ button,a,input {
 #libro-mes.mes-editorial .mes-aviso{font:11px/1.6 monospace;letter-spacing:1px;margin:16px 0 0}
 @media(max-width:900px){#libro-mes.mes-editorial .mes-composicion{gap:28px;grid-template-columns:40% minmax(0,1fr)}#libro-mes.mes-editorial .mes-collage{padding:25px 16px 0}#libro-mes.mes-editorial .mes-temas li{font-size:14px;padding:4px 12px}}
 @media(max-width:700px){#libro-mes.mes-editorial{padding:34px 0 40px}#libro-mes.mes-editorial .mes-composicion{grid-template-columns:minmax(0,1fr);gap:32px}#libro-mes.mes-editorial .mes-collage{max-width:420px;width:100%;margin:auto}#libro-mes.mes-editorial .mes-collage img{max-height:440px}#libro-mes.mes-editorial #titulo-libro{font-size:clamp(38px,9.2vw,64px)}#libro-mes.mes-editorial .mes-encabezado{gap:14px;margin-bottom:26px}#libro-mes.mes-editorial .mes-encabezado .etiqueta{font-size:10px;letter-spacing:1.4px}#libro-mes.mes-editorial .mes-autor{letter-spacing:3px}#libro-mes.mes-editorial .mes-acciones{align-items:flex-start;flex-direction:column}}
+
+/* Regla editorial junto a los encabezados principales de sección. */
+body .linea-seccion{display:flex;align-items:center;gap:18px;width:100%;margin:0 0 32px;max-width:none}
+body .linea-seccion strong{margin:0;flex-shrink:0}
+body .linea-seccion:after{content:'';display:block;flex:1 0 24px;height:1px;background:currentColor;opacity:.65}
+#comunidad>.contenedor>.linea-seccion,#inclusion>.contenedor>.linea-seccion{display:flex}
+@media(max-width:600px){body .linea-seccion{gap:10px;font-size:10px;letter-spacing:1.4px;margin-bottom:24px}}
