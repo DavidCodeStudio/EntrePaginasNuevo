@@ -1800,7 +1800,7 @@ button,a,input {
 #el-club.club-refinado>.contenedor {width:calc(100% - 112px);max-width:1600px}
 #el-club .club-encabezado {display:flex;align-items:center;gap:28px;margin-bottom:46px}
 #el-club .club-encabezado .etiqueta {margin:0;font:400 12px/1.5 monospace;letter-spacing:3px;white-space:nowrap}
-#el-club .club-encabezado>span {height:1px;background:#f7f5ee99;flex:1}
+#el-club .club-encabezado>span {display:none}
 #el-club.club-refinado .club-distribucion {display:grid;grid-template-columns:36.5% 29% 34.5%;gap:0;align-items:start}
 #el-club.club-refinado .club-presentacion {padding:12px 50px 0 0}
 #el-club.club-refinado #titulo-club {font:700 clamp(80px,9.4vw,144px)/.87 'Barlow Condensed',Arial,sans-serif;letter-spacing:-.035em;margin:0 0 30px;white-space:nowrap}
@@ -1881,7 +1881,7 @@ button,a,input {
 #lecturas.biblioteca-editorial>.contenedor {width:calc(100% - 104px);max-width:1600px}
 #lecturas .biblioteca-regla {display:flex;align-items:center;gap:18px;margin-bottom:22px}
 #lecturas .biblioteca-regla .etiqueta {font:400 13px/1.4 Arial,sans-serif;letter-spacing:4px;white-space:nowrap;margin:0}
-#lecturas .biblioteca-regla>span {height:1px;background:#f7f5eeaa;flex:1}
+#lecturas .biblioteca-regla>span {display:none}
 #lecturas.biblioteca-editorial .biblioteca-cabecera {display:grid;grid-template-columns:minmax(0,1fr) 338px;gap:50px;align-items:end;margin:0 0 26px}
 #lecturas.biblioteca-editorial #titulo-lecturas {font:700 clamp(58px,6.12vw,94px)/.87 'Barlow Condensed',Arial,sans-serif;letter-spacing:-.03em;margin:0;white-space:nowrap;transform:scaleX(.8);transform-origin:left center;width:125%}
 #lecturas.biblioteca-editorial #titulo-lecturas span {color:#d9ff70}
@@ -2022,7 +2022,7 @@ button,a,input {
 #libro-mes.mes-editorial{background:var(--crema);padding:48px 0 50px;color:var(--negro)}
 #libro-mes.mes-editorial .mes-encabezado{display:flex;align-items:center;gap:20px;margin-bottom:36px}
 #libro-mes.mes-editorial .mes-encabezado .etiqueta{margin:0;white-space:nowrap;font:700 11px/1.5 Arial,sans-serif;letter-spacing:3px}
-#libro-mes.mes-editorial .mes-encabezado>span{height:1px;background:#141412b0;flex:1}
+#libro-mes.mes-editorial .mes-encabezado>span{display:none}
 #libro-mes.mes-editorial .mes-composicion{display:grid;grid-template-columns:45% minmax(0,1fr);gap:55px;align-items:center}
 #libro-mes.mes-editorial .mes-collage{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;margin:0;padding:28px 32px 0;min-width:0}
 #libro-mes.mes-editorial .mes-papel{position:absolute;inset:0 0 35px;background:#1238ef;z-index:-1;transform:rotate(-3deg);clip-path:polygon(4% 2%,20% 0,35% 3%,58% 0,80% 2%,96% 0,99% 23%,97% 44%,100% 67%,96% 98%,73% 100%,47% 97%,26% 100%,3% 97%,0 78%,3% 52%,0 30%)}
@@ -2045,9 +2045,9 @@ button,a,input {
 @media(max-width:900px){#libro-mes.mes-editorial .mes-composicion{gap:28px;grid-template-columns:40% minmax(0,1fr)}#libro-mes.mes-editorial .mes-collage{padding:25px 16px 0}#libro-mes.mes-editorial .mes-temas li{font-size:14px;padding:4px 12px}}
 @media(max-width:700px){#libro-mes.mes-editorial{padding:34px 0 40px}#libro-mes.mes-editorial .mes-composicion{grid-template-columns:minmax(0,1fr);gap:32px}#libro-mes.mes-editorial .mes-collage{max-width:420px;width:100%;margin:auto}#libro-mes.mes-editorial .mes-collage img{max-height:440px}#libro-mes.mes-editorial #titulo-libro{font-size:clamp(38px,9.2vw,64px)}#libro-mes.mes-editorial .mes-encabezado{gap:14px;margin-bottom:26px}#libro-mes.mes-editorial .mes-encabezado .etiqueta{font-size:10px;letter-spacing:1.4px}#libro-mes.mes-editorial .mes-autor{letter-spacing:3px}#libro-mes.mes-editorial .mes-acciones{align-items:flex-start;flex-direction:column}}
 
-/* Regla editorial junto a los encabezados principales de sección. */
+/* Encabezados principales de sección sin línea decorativa. */
 body .linea-seccion{display:flex;align-items:center;gap:18px;width:100%;margin:0 0 32px;max-width:none}
 body .linea-seccion strong{margin:0;flex-shrink:0}
-body .linea-seccion:after{content:'';display:block;flex:1 0 24px;height:1px;background:currentColor;opacity:.65}
+body .linea-seccion:after{content:none}
 #comunidad>.contenedor>.linea-seccion,#inclusion>.contenedor>.linea-seccion{display:flex}
 @media(max-width:600px){body .linea-seccion{gap:10px;font-size:10px;letter-spacing:1.4px;margin-bottom:24px}}
