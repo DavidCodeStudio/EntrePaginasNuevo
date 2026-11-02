@@ -2014,7 +2014,8 @@ button,a,input {
 .marca.marca-capitulo{display:block;width:146px;flex-shrink:0;line-height:1;padding:0}
 .marca.marca-capitulo img{display:block;width:100%;height:auto;object-fit:contain}
 .marca.marca-capitulo:before,.marca.marca-capitulo:after{content:none}
-.pie-pagina .marca.marca-capitulo{width:190px;background:var(--crema);padding:12px}
+.pie-pagina .marca.marca-capitulo{width:190px;background:transparent;padding:12px}
+.pie-pagina .marca-capitulo img{filter:invert(1) hue-rotate(180deg)}
 @media(max-width:600px){.marca.marca-capitulo{width:116px}.pie-pagina .marca.marca-capitulo{width:170px}}
 
 /* 03 / Libro del mes: propuesta editorial aprobada. */
