@@ -1,0 +1,1410 @@
+/*
+ * styles.css — Estilos generales compartidos por todo el sitio.
+ * ÍNDICE
+ * 01. Variables y tipografía
+ * 02. Base: documento y etiquetas
+ * 03. Estructura y utilidades compartidas
+ * 04. Botones y acciones
+ * 05. Cabecera, marca y menú
+ * 06. Diálogos y formularios compartidos
+ * 07. Footer y redes sociales
+ * 08. Accesibilidad y movimiento reducido
+ * Cada bloque incluye sus media queries junto a los estilos que adapta.
+ * Cargar styles.css antes de diseno.css.
+ */
+
+/* ==========================================================
+   01. Variables y tipografía
+   ========================================================== */
+@font-face {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/barlow-condensed-700.woff2") format("woff2");
+}
+:root {
+  --blanco: #fff;
+  --fuente-titulos: Arial, sans-serif;
+  --fuente-texto: Arial, sans-serif;
+  --crema: #f7f5ee;
+  --negro: #141412;
+  --azul: #173dff;
+  --rosa: #ffb3cc;
+  --lima: #d9ff55;
+}
+
+/* ==========================================================
+   02. Base: documento y etiquetas
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #f7f5ee;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  color: var(--negro);
+  font: 16px/1.6 var(--fuente-texto);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0 0 20px;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: clamp(32px, 4vw, 60px);
+}
+h3 {
+  font-size: 25px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+}
+/*
+ Accesibilidad: respetar la preferencia de movimiento reducido.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+  }
+}
+body {
+  background: var(--crema);
+}
+main h2 {
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+button,
+a,
+input {
+  touch-action: manipulation;
+}
+/*
+ Accesibilidad: respetar la preferencia de movimiento reducido.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+  }
+}
+
+/* ==========================================================
+   03. Estructura y utilidades compartidas
+   ========================================================== */
+.contenedor {
+  margin: auto;
+}
+.seccion {
+  overflow: clip;
+}
+.etiqueta {
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.etiqueta strong {
+  margin-right: 12px;
+}
+.seccion-negra {
+  background: var(--negro);
+  color: var(--crema);
+}
+.seccion-negra h2 span {
+  color: var(--lima);
+}
+.encabezado-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+}
+.encabezado-seccion > p {
+  max-width: 320px;
+  color: #626259;
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .etiqueta {
+    margin-bottom: 24px;
+  }
+  .encabezado-seccion {
+    display: block;
+  }
+  .encabezado-seccion > p {
+    max-width: 100%;
+  }
+}
+.contenedor {
+  width: min(1424px, calc(100% - 96px));
+}
+.seccion {
+  padding: 64px 0;
+}
+.etiqueta {
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+.seccion-cierre {
+  border-top: 1px solid #14141270;
+  padding-top: 24px;
+  margin: 32px auto 0;
+  font:
+    clamp(20px, 2.3vw, 32px) / 1.3 Georgia,
+    serif;
+  text-align: center;
+}
+.seccion-cierre em {
+  background: var(--rosa);
+  font-style: italic;
+}
+.nota-acceso {
+  font-size: 11px !important;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 12px 0 !important;
+}
+/*
+ Adaptación responsive: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .contenedor {
+    width: calc(100% - 40px);
+  }
+  .seccion {
+    padding: 40px 0;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .contenedor {
+    width: calc(100% - 32px);
+  }
+}
+body .linea-seccion {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin: 0 0 32px;
+  max-width: none;
+}
+body .linea-seccion strong {
+  margin: 0;
+  flex-shrink: 0;
+}
+body .linea-seccion:after {
+  content: none;
+}
+/*
+ Adaptación responsive: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  body .linea-seccion {
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    margin-bottom: 24px;
+  }
+}
+
+/* ==========================================================
+   04. Botones y acciones
+   ========================================================== */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 52px;
+  padding: 15px 22px;
+  border: 1px solid var(--negro);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.boton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--negro);
+}
+.boton span {
+  font-size: 22px;
+}
+.boton-lima {
+  background: var(--lima);
+  color: var(--negro);
+}
+.boton-contorno {
+  background: transparent;
+}
+.boton-negro {
+  background: var(--negro);
+  color: white;
+}
+.boton-blanco {
+  background: var(--crema);
+  color: var(--negro);
+}
+.grupo-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .boton-unirse {
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+  .grupo-botones {
+    gap: 10px;
+  }
+  .boton {
+    font-size: 10px;
+    padding: 14px 16px;
+    gap: 14px;
+  }
+}
+.boton-marketplace {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.enlace-texto {
+  border: 0;
+  border-bottom: 1px solid;
+  background: transparent;
+  padding: 12px 0;
+  color: var(--azul);
+}
+
+/* ==========================================================
+   05. Cabecera, marca y menú
+   ========================================================== */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.cabecera-interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.marca {
+  position: relative;
+  font-size: 22px;
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -1px;
+  padding-right: 30px;
+}
+.marca span {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  color: var(--azul);
+  font-size: 33px;
+}
+.navegacion {
+  display: flex;
+}
+.navegacion a {
+  position: relative;
+}
+.navegacion a:hover,
+.navegacion a.activo {
+  color: var(--azul);
+}
+.navegacion a.activo:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+}
+.boton-menu {
+  display: none;
+}
+/*
+ Adaptación responsive: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .boton-menu {
+    display: block;
+    margin-left: auto;
+    background: none;
+    border: 1px solid;
+    padding: 5px 12px;
+    font-size: 22px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .navegacion {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background: var(--crema);
+    border-bottom: 1px solid;
+    padding: 25px;
+    flex-wrap: wrap;
+  }
+  .navegacion.abierta {
+    display: flex;
+  }
+  .navegacion a {
+    padding: 10px;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .marca {
+    font-size: 19px;
+  }
+  .navegacion {
+    top: 75px;
+  }
+}
+.cabecera {
+  border-bottom-color: #ffffff33;
+}
+.cabecera .boton-menu {
+  color: #fff;
+  border-color: #fff8;
+}
+/*
+ Adaptación responsive: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .cabecera .navegacion {
+    border-bottom-color: #fff5;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .cabecera .marca {
+    padding-right: 25px;
+  }
+  .cabecera .marca span {
+    font-size: 27px;
+  }
+  .cabecera .boton-menu {
+    padding: 5px 8px;
+  }
+}
+.cabecera {
+  color: var(--negro);
+}
+.cabecera-interior {
+  min-height: 104px;
+  gap: 22px;
+}
+.cabecera .marca {
+  font:
+    700 34px/0.8 "Barlow Condensed",
+    sans-serif;
+  letter-spacing: -1px;
+}
+.cabecera .marca span {
+  color: var(--azul);
+}
+.navegacion {
+  gap: 20px;
+}
+.navegacion a {
+  font-size: 11px;
+  font-weight: 400;
+}
+.registro-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  padding: 12px 0;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.registro-cabecera span {
+  font-size: 31px;
+  line-height: 1;
+}
+.cabecera .boton-marketplace {
+  font-size: 12px;
+}
+/*
+ Adaptación responsive: (max-width: 1150px).
+ */
+@media (max-width: 1150px) {
+  .cabecera-interior {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 0;
+  }
+  .cabecera .navegacion {
+    justify-content: center;
+  }
+  .registro-cabecera {
+    margin-left: auto;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .cabecera-interior {
+    min-height: 80px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+  }
+  .cabecera .marca {
+    font-size: 28px;
+  }
+  .cabecera .boton-menu {
+    margin-left: auto;
+    color: var(--negro);
+    background: none;
+    border: 1px solid;
+    padding: 5px 10px;
+  }
+  .registro-cabecera {
+    display: none;
+  }
+  .cabecera .boton-marketplace {
+    font-size: 9px;
+  }
+  .cabecera .navegacion.abierta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .cabecera .navegacion a {
+    font-size: 13px;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .cabecera .marca {
+    font-size: 24px;
+  }
+}
+/*
+ Adaptación responsive: (min-width: 761px) and (max-width: 1150px).
+ */
+@media (min-width: 761px) and (max-width: 1150px) {
+  .cabecera .navegacion a {
+    font-size: 11px;
+  }
+}
+.marca > span {
+  font-family: Arial, sans-serif;
+}
+.cabecera {
+  background: #fbfaf6;
+  border-bottom: 1px solid #a5a5ab;
+}
+.cabecera .cabecera-interior {
+  width: 100%;
+  min-height: 114px;
+  margin: 0;
+  padding: 18px clamp(24px, 3.125vw, 48px) 18px clamp(24px, 5.20833vw, 80px);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.cabecera .marca-referencia {
+  display: block;
+  width: 146px;
+  flex: 0 0 146px;
+  padding: 0;
+  margin: 0 auto 0 0;
+  line-height: 1;
+}
+.cabecera .marca-referencia img {
+  width: 146px;
+  height: 76px;
+  object-fit: contain;
+}
+.cabecera .navegacion {
+  display: flex;
+  position: static;
+  order: 0;
+  width: auto;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: clamp(20px, 2.28vw, 35px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  margin: 0 clamp(20px, 5.86vw, 90px) 0 0;
+}
+.cabecera .navegacion a {
+  white-space: nowrap;
+  padding: 0;
+  font:
+    400 14px/1.4 Arial,
+    sans-serif;
+}
+.cabecera .navegacion a.activo {
+  color: #003cff;
+  font-weight: 700;
+}
+.cabecera .navegacion a.activo:after {
+  bottom: -15px;
+  height: 2px;
+  background: #003cff;
+}
+.cabecera .navegacion a:hover {
+  color: #003cff;
+}
+.cabecera .registro-cabecera {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 5px;
+  margin: 0;
+  padding: 6px 0;
+  font:
+    400 14px/1 Arial,
+    sans-serif;
+  color: #141412;
+}
+.cabecera .registro-icono {
+  width: 36px;
+  height: 36px;
+}
+.cabecera .boton-marketplace {
+  min-height: 50px;
+  width: 190px;
+  flex-shrink: 0;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1px solid #141412;
+  border-radius: 2px;
+  color: #141412;
+  background: transparent;
+  font:
+    700 14px/1.3 Arial,
+    sans-serif;
+  letter-spacing: 1px;
+}
+.cabecera .boton-marketplace span {
+  font-size: 18px;
+}
+.cabecera .boton-menu {
+  display: none;
+}
+/*
+ Adaptación responsive: (min-width: 1101px) and (max-width: 1399px).
+ */
+@media (min-width: 1101px) and (max-width: 1399px) {
+  .cabecera .cabecera-interior {
+    gap: 16px;
+    padding-inline: 32px;
+  }
+  .cabecera .navegacion {
+    gap: 22px;
+    margin-right: 12px;
+  }
+  .cabecera .navegacion a,
+  .cabecera .registro-cabecera {
+    font-size: 12px;
+  }
+  .cabecera .boton-marketplace {
+    width: 166px;
+    font-size: 12px;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .cabecera .cabecera-interior {
+    min-height: 92px;
+    flex-wrap: wrap;
+    padding: 12px 24px;
+    gap: 16px;
+  }
+  .cabecera .marca-referencia,
+  .cabecera .marca-referencia img {
+    width: 115px;
+    height: 60px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 115px;
+  }
+  .cabecera .boton-menu {
+    display: block;
+    order: 4;
+    margin: 0;
+    padding: 6px 12px;
+    background: transparent;
+    color: #141412;
+    border: 1px solid;
+    font-size: 22px;
+  }
+  .cabecera .navegacion {
+    display: none;
+    order: 5;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .cabecera .navegacion.abierta {
+    display: flex;
+  }
+  .cabecera .navegacion a {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+  .cabecera .navegacion a.activo:after {
+    bottom: 6px;
+    right: auto;
+    width: 44px;
+  }
+  .cabecera .boton-marketplace {
+    width: 170px;
+    font-size: 12px;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .cabecera .cabecera-interior {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .cabecera .marca-referencia,
+  .cabecera .marca-referencia img {
+    width: 96px;
+    height: 50px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 96px;
+  }
+  .cabecera .registro-icono {
+    width: 30px;
+    height: 30px;
+  }
+  .cabecera .registro-cabecera {
+    font-size: 0;
+    gap: 0;
+    position: relative;
+  }
+  .cabecera .boton-marketplace {
+    width: 132px;
+    font-size: 10px;
+    padding: 10px;
+    gap: 8px;
+    min-height: 42px;
+  }
+  .cabecera .boton-menu {
+    padding: 4px 9px;
+    font-size: 20px;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .cabecera .cabecera-interior {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+  .cabecera .marca-referencia,
+  .cabecera .marca-referencia img {
+    width: 82px;
+    height: 43px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 82px;
+  }
+  .cabecera .boton-marketplace {
+    width: 120px;
+    font-size: 9px;
+  }
+  .cabecera .registro-icono {
+    width: 26px;
+    height: 26px;
+  }
+}
+/*
+ Adaptación responsive: (min-width: 1400px).
+ */
+@media (min-width: 1400px) {
+  .cabecera .navegacion {
+    width: 588px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .cabecera .navegacion a {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .cabecera .registro-cabecera {
+    width: 125px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .cabecera .registro-icono {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+}
+.cabecera .boton-marketplace .marketplace-flecha {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.cabecera .boton:focus-visible,
+.cabecera a:focus-visible,
+.cabecera .boton-menu:focus-visible,
+.cabecera .registro-cabecera:focus-visible {
+  outline-color: #003cff;
+}
+.cabecera .boton:hover {
+  box-shadow: 3px 3px 0 #141412;
+}
+/*
+ Adaptación responsive: (min-width: 1101px).
+ */
+@media (min-width: 1101px) {
+  .cabecera .navegacion,
+  .cabecera .registro-cabecera,
+  .cabecera .boton-marketplace {
+    position: relative;
+    top: 3px;
+  }
+}
+.marca.marca-capitulo {
+  display: block;
+  width: 146px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+}
+.marca.marca-capitulo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.marca.marca-capitulo:before,
+.marca.marca-capitulo:after {
+  content: none;
+}
+/*
+ Adaptación responsive: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .marca.marca-capitulo {
+    width: 116px;
+  }
+}
+
+/* ==========================================================
+   06. Diálogos y formularios compartidos
+   ========================================================== */
+.aceptacion {
+  display: flex !important;
+  align-items: start;
+  gap: 8px;
+  font-size: 11px !important;
+  margin-top: 15px;
+}
+.aceptacion input {
+  margin: 3px 0;
+}
+.mensaje-inscripcion {
+  font-size: 13px;
+  margin-top: 16px;
+}
+.dialogo-inscripcion {
+  width: min(500px, calc(100% - 32px));
+  padding: 40px;
+  border: 1px solid;
+  background: var(--crema);
+  max-height: 90dvh;
+  overflow: auto;
+}
+.dialogo-inscripcion::backdrop {
+  background: #141412bb;
+  backdrop-filter: blur(5px);
+}
+.cerrar-dialogo {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: none;
+  border: 0;
+  font-size: 30px;
+}
+.dialogo-inscripcion h2 {
+  font-size: 35px;
+}
+.dialogo-inscripcion label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+.dialogo-inscripcion input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  background: white;
+}
+.dialogo-inscripcion .boton {
+  width: 100%;
+}
+.dialogo-inscripcion small {
+  font-size: 11px;
+  color: #626259;
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .dialogo-inscripcion {
+    padding: 32px 24px;
+  }
+  .dialogo-inscripcion h2 {
+    font-size: 30px;
+  }
+}
+.campo-opcional {
+  font-size: 11px;
+  color: #626259;
+}
+#dialogo-inscripcion .boton-telegram > .bi-telegram {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+#dialogo-inscripcion .telegram-marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+#dialogo-inscripcion .telegram-marca > .bi-telegram {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--azul);
+  fill: currentColor;
+}
+#dialogo-inscripcion .boton-telegram {
+  gap: 12px;
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  #dialogo-inscripcion .telegram-marca {
+    gap: 8px;
+  }
+  #dialogo-inscripcion .telegram-marca > span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  #dialogo-inscripcion .boton-telegram {
+    gap: 8px;
+  }
+}
+
+/* ==========================================================
+   07. Footer y redes sociales
+   ========================================================== */
+.pie-columnas {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.7fr 1fr;
+  gap: 40px;
+}
+.marca-pie {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.marca-pie span {
+  color: var(--lima);
+}
+.pie-columnas p {
+  font-size: 11px;
+  color: #b9b9af;
+}
+.pie-columnas h2 {
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+.pie-enlaces {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.pie-columnas a:not(.marca) {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+.pie-columnas a:hover {
+  color: var(--lima);
+}
+.redes-lista {
+  list-style: none;
+  padding: 0;
+}
+.redes-lista a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+.redes-lista svg {
+  width: 17px;
+  height: 17px;
+}
+.nota-legal {
+  margin-top: 20px;
+}
+.pie-inferior {
+  border-top: 1px solid #fff3;
+  padding-top: 25px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+/*
+ Adaptación responsive: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .pie-columnas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .pie-columnas {
+    gap: 35px 20px;
+  }
+  .pie-columnas > div:first-child,
+  .pie-columnas > div:last-child {
+    grid-column: 1/-1;
+  }
+  .pie-inferior {
+    flex-direction: column;
+  }
+}
+.pie-pagina .pie-columnas {
+  display: grid;
+}
+.pie-pagina .pie-columnas > * {
+  min-width: 0;
+}
+.pie-pagina .pie-identidad {
+  padding-right: 10px;
+}
+.pie-pagina .pie-subrayado {
+  display: block;
+  height: 5px;
+  width: 120px;
+  margin: 12px 0 0 35px;
+  background: var(--rosa);
+  transform: rotate(-5deg);
+  border-radius: 50%;
+}
+.pie-pagina .pie-lema-subrayado {
+  display: block;
+  height: 5px;
+  margin: 12px 0 0 35px;
+  background: var(--rosa);
+  transform: rotate(-5deg);
+  border-radius: 50%;
+}
+.pie-pagina .pie-grupo {
+  border-left: 1px solid #555;
+  padding-left: clamp(12px, 1.5vw, 26px);
+}
+.pie-pagina .pie-grupo h2 {
+  border: 0;
+  padding: 0;
+  margin: 0 0 21px;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 800;
+}
+.pie-pagina .pie-grupo > a {
+  display: block;
+  width: fit-content;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+.pie-pagina .pie-grupo a:hover {
+  color: var(--lima);
+}
+.pie-pagina .pie-redes {
+  display: flex;
+  gap: 10px;
+}
+.pie-pagina .pie-lema {
+  font: 700 clamp(15px, 1.4vw, 23px) / 1.18 var(--fuente-titulos);
+  color: var(--lima);
+  font-style: italic;
+  transform: rotate(-5deg);
+  margin: 35px 0 0;
+}
+.pie-pagina .pie-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid #666;
+  font-size: 11px;
+}
+.pie-pagina .pie-inferior p {
+  margin: 0;
+}
+.pie-pagina .pie-legal {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+  color: #ddd;
+}
+.pie-pagina .pie-legal a:hover {
+  color: var(--lima);
+}
+.pie-pagina .volver-arriba {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pie-pagina .volver-arriba span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.pie-pagina .volver-arriba:hover {
+  color: var(--lima);
+}
+.pie-pagina a:focus-visible {
+  outline-color: var(--lima);
+}
+.pie-pagina .marca-pie {
+  font: 700 clamp(38px, 4vw, 65px) / 0.85 var(--fuente-titulos);
+  letter-spacing: -0.09em;
+  display: inline-block;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+.pie-pagina .marca-pie span {
+  color: var(--lima);
+  font-size: 0.9em;
+  margin-left: 5px;
+  position: static;
+}
+.pie-pagina .pie-identidad p {
+  font:
+    500 clamp(13px, 1.4vw, 20px) / 1.2 "Courier New",
+    monospace;
+  margin: 24px 0 0;
+  color: #fff;
+}
+.pie-pagina .pie-redes a {
+  place-items: center;
+  border-radius: 50%;
+  line-height: 1;
+  margin: 0;
+  font-size: 22px;
+}
+.pie-pagina .pie-columnas > .pie-grupo {
+  grid-column: auto;
+}
+/*
+ Adaptación responsive: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .pie-pagina .pie-identidad {
+    grid-column: 1/-1;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .pie-pagina .pie-grupo {
+    padding-left: 12px;
+  }
+  .pie-pagina .pie-grupo h2,
+  .pie-pagina .pie-grupo > a {
+    font-size: 12px;
+  }
+  .pie-pagina .pie-columnas > .pie-social {
+    grid-column: 1/-1;
+  }
+  .pie-pagina .pie-lema {
+    margin-top: 24px;
+  }
+  .pie-pagina .pie-inferior {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .pie-pagina .pie-identidad,
+  .pie-pagina .pie-columnas > .pie-social {
+    grid-column: auto;
+  }
+}
+.pie-pagina .pie-redes a {
+  width: 44px;
+  height: 44px;
+  transition:
+    background-color 0.18s,
+    color 0.18s,
+    border-color 0.18s;
+}
+.pie-pagina .pie-redes .bi {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+/*
+ Accesibilidad: respetar la preferencia de movimiento reducido.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .pie-pagina .pie-redes a {
+    transition: none;
+  }
+}
+.pie-pagina .pie-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0b0b;
+  color: #fff;
+  border: 1px solid #fff;
+  min-width: 44px;
+  min-height: 44px;
+}
+.pie-pagina .pie-redes img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 1;
+  visibility: visible;
+}
+.pie-pagina .pie-redes a:hover,
+.pie-pagina .pie-redes a:focus-visible {
+  background: var(--lima);
+  border-color: var(--lima);
+  color: #101010;
+}
+.pie-pagina .pie-redes a:hover img,
+.pie-pagina .pie-redes a:focus-visible img {
+  filter: brightness(0);
+}
+.pie-pagina {
+  background: #141412;
+  color: var(--crema);
+  padding: 40px 0 20px;
+}
+.pie-manifiesto {
+  text-align: center;
+  font:
+    clamp(30px, 4.4vw, 64px) / 1.2 Georgia,
+    serif;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f7f5ee77;
+  margin-bottom: 40px;
+}
+.pie-manifiesto em {
+  background: var(--rosa);
+  color: var(--negro);
+  font-style: normal;
+}
+.pie-pagina .pie-columnas {
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: 30px;
+}
+.pie-pagina .pie-inferior {
+  margin-top: 30px;
+}
+/*
+ Adaptación responsive: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .pie-pagina .pie-columnas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+  .pie-pagina .pie-identidad {
+    grid-column: 1/-1;
+  }
+  .pie-pagina .pie-inferior {
+    flex-direction: column;
+    align-items: start;
+  }
+  .pie-manifiesto {
+    font-size: 34px;
+  }
+}
+.pie-pagina .pie-grupo {
+  min-width: 0;
+}
+.pie-pagina .pie-redes {
+  flex-wrap: wrap;
+}
+.pie-pagina .pie-lema-subrayado {
+  width: calc(100% - 40px);
+  max-width: 145px;
+  margin-left: 20px;
+}
+.pie-pagina .marca.marca-capitulo {
+  width: 190px;
+  background: transparent;
+  padding: 12px;
+  display: block;
+  line-height: 1;
+}
+.pie-pagina .marca-capitulo img {
+  filter: invert(1) hue-rotate(180deg);
+}
+/*
+ Adaptación responsive: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .pie-pagina .marca.marca-capitulo {
+    width: 170px;
+    display: block;
+    line-height: 1;
+  }
+}
+
+/* ==========================================================
+   08. Accesibilidad y movimiento reducido
+   ========================================================== */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 5px;
+}
+[hidden] {
+  display: none !important;
+}
+.saltar-contenido {
+  position: fixed;
+  top: -100px;
+  z-index: 20;
+  background: var(--lima);
+  padding: 10px;
+}
+.saltar-contenido:focus {
+  top: 5px;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}

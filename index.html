@@ -1,377 +1,1934 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CAPÍTULO ABIERTO: un club de lectura abierto para descubrir historias, compartir ideas y conectar personas."
+    />
+    <title>CAPÍTULO ABIERTO · Libros que conectan</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/plan-mensual.js" defer></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="CAPÍTULO ABIERTO: un club de lectura abierto para descubrir historias, compartir ideas y conectar personas.">
-  <title>CAPÍTULO ABIERTO · Libros que conectan</title>
-  <link rel="stylesheet" href="styles.css?v=plan-mensual-14">
-  <script src="script.js?v=lecturas-4" defer></script>
-  <script src="plan-mensual.js?v=1" defer></script>
-  <link rel="stylesheet" href="eventos.css?v=2">
-  <link rel="stylesheet" href="diseno.css?v=lineas-secciones-1">
-</head>
+    <link rel="stylesheet" href="css/diseno.css" />
+  </head>
 
-<body>
-  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
 
-  <!-- 00 · CABECERA -->
-  <header class="cabecera" id="inicio">
-    <div class="contenedor cabecera-interior">
-      <a class="marca marca-referencia marca-capitulo" href="#inicio" aria-label="Capítulo Abierto, inicio"><img src="assets/logo-capitulo-abierto.svg" alt="Capítulo Abierto" width="146" height="86"></a>
-      <button class="boton-menu" type="button" aria-label="Abrir menú" aria-controls="navegacion"
-        aria-expanded="false">☰</button>
-      <nav class="navegacion" id="navegacion" aria-label="Navegación principal">
-        <a class="activo" href="#inicio" aria-current="location">INICIO</a><a href="#el-club">EL CLUB</a><a href="#libro-mes">LIBRO DEL
-          MES</a><a href="#lecturas">LECTURAS</a><a href="#comunidad">COMUNIDAD</a><a href="#inclusion">INCLUSIÓN</a><a
-          href="#eventos">EVENTOS</a>
-      </nav>
-      <button class="registro-cabecera" type="button" data-abrir-inscripcion aria-haspopup="dialog" aria-controls="dialogo-inscripcion"><svg class="registro-icono" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><circle cx="18" cy="12.2" r="4.3"/><path d="M8.7 29v-3.1a9.3 9.3 0 0 1 18.6 0V29"/></svg> REGISTRARSE</button>
-      <button class="boton boton-lima boton-marketplace" type="button" aria-haspopup="dialog" aria-controls="dialogo-marketplace" data-abrir-marketplace>MARKETPLACE <svg class="marketplace-flecha" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></button>
-    </div>
-  </header>
+    <!-- 00 · CABECERA -->
+    <header class="cabecera" id="inicio">
+      <div class="contenedor cabecera-interior">
+        <a
+          class="marca marca-referencia marca-capitulo"
+          href="#inicio"
+          aria-label="Capítulo Abierto, inicio"
+          ><img
+            src="assets/logo-capitulo-abierto.svg"
+            alt="Capítulo Abierto"
+            width="146"
+            height="86"
+        /></a>
+        <button
+          class="boton-menu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="navegacion"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav
+          class="navegacion"
+          id="navegacion"
+          aria-label="Navegación principal"
+        >
+          <a class="activo" href="#inicio" aria-current="location">INICIO</a
+          ><a href="#el-club">EL CLUB</a><a href="#libro-mes">LIBRO DEL MES</a
+          ><a href="#lecturas">LECTURAS</a><a href="#comunidad">COMUNIDAD</a
+          ><a href="#inclusion">INCLUSIÓN</a><a href="#eventos">EVENTOS</a>
+        </nav>
+        <button
+          class="registro-cabecera"
+          type="button"
+          data-abrir-inscripcion
+          aria-haspopup="dialog"
+          aria-controls="dialogo-inscripcion"
+        >
+          <svg
+            class="registro-icono"
+            viewBox="0 0 36 36"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <circle cx="18" cy="18" r="15.5" />
+            <circle cx="18" cy="12.2" r="4.3" />
+            <path d="M8.7 29v-3.1a9.3 9.3 0 0 1 18.6 0V29" />
+          </svg>
+          REGISTRARSE
+        </button>
+        <button
+          class="boton boton-lima boton-marketplace"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="dialogo-marketplace"
+          data-abrir-marketplace
+        >
+          MARKETPLACE
+          <svg
+            class="marketplace-flecha"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M5 15 15 5M5 5h10v10" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
-  <main id="contenido">
-    <!-- 01 · PORTADA -->
-    <section class="seccion portada" aria-labelledby="titulo-portada">
-      <div class="contenedor"><p class="etiqueta linea-seccion"><strong>01 /</strong> TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p></div>
-      <div class="contenedor cuadricula-portada">
-        <div class="portada-texto">
-          <h1 id="titulo-portada">Buenos libros.<br>Mejores<br><span>conversaciones.</span></h1>
-          <p>Un club de lectura para descubrir historias y compartir tu mirada.</p><p class="portada-detalle">Explora nuevas lecturas, conoce el libro del mes y descubre los próximos encuentros. Puedes empezar a tu ritmo.</p>
-          <div class="grupo-botones"><button class="boton boton-lima boton-telegram" type="button" data-abrir-inscripcion><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-</svg>ÚNETE AL CLUB
-              <span>→</span></button><a class="boton boton-contorno" href="#como-funciona">DESCUBRE CÓMO FUNCIONA</a>
+    <main id="contenido">
+      <!-- 01 · PORTADA -->
+      <section class="seccion portada" aria-labelledby="titulo-portada">
+        <div class="contenedor">
+          <p class="etiqueta linea-seccion">
+            <strong>01 /</strong> TU PRÓXIMA HISTORIA EMPIEZA AQUÍ
+          </p>
+        </div>
+        <div class="contenedor cuadricula-portada">
+          <div class="portada-texto">
+            <h1 id="titulo-portada">
+              Buenos libros.<br />Mejores<br /><span>conversaciones.</span>
+            </h1>
+            <p>
+              Un club de lectura para descubrir historias y compartir tu mirada.
+            </p>
+            <p class="portada-detalle">
+              Explora nuevas lecturas, conoce el libro del mes y descubre los
+              próximos encuentros. Puedes empezar a tu ritmo.
+            </p>
+            <div class="grupo-botones">
+              <button
+                class="boton boton-lima boton-telegram"
+                type="button"
+                data-abrir-inscripcion
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-telegram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+                  /></svg
+                >ÚNETE AL CLUB <span>→</span></button
+              ><a class="boton boton-contorno" href="#como-funciona"
+                >DESCUBRE CÓMO FUNCIONA</a
+              >
+            </div>
+          </div>
+          <div
+            class="composicion portada-composicion"
+            aria-label="Collage de una lectora con un libro y recortes azules, rosas y verdes"
+          >
+            <img
+              src="assets/portada-transparente.png"
+              alt="Lectora mirando sobre su libro, rodeada de recortes de colores"
+              loading="eager"
+            />
           </div>
         </div>
-        <div class="composicion portada-composicion" aria-label="Collage de una lectora con un libro y recortes azules, rosas y verdes">
-          
-          <img src="assets/portada-transparente.png" alt="Lectora mirando sobre su libro, rodeada de recortes de colores" loading="eager">
-          
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==================================================
+      <!-- ==================================================
          02. EL CLUB — MUCHO MÁS QUE UN CLUB DE LECTURA
          ================================================== -->
-    <section class="seccion seccion-negra club club-editorial club-refinado" id="el-club" aria-labelledby="titulo-club">
-      <div class="contenedor club-encabezado"><p class="etiqueta">02 / EL CLUB</p><span aria-hidden="true"></span></div>
-      <div class="contenedor club-distribucion">
-
-        <!-- Presentación -->
-        <div class="club-presentacion">
-          <h2 id="titulo-club"><span class="club-titulo-linea">MUCHO MÁS</span><span class="club-titulo-linea">QUE UN CLUB</span><span class="club-titulo-linea club-titulo-lima">DE LECTURA.</span></h2>
-          <p class="club-descripcion">
-            Un espacio para descubrir historias, compartir ideas y encontrar personas con quienes seguir la conversación.
-          </p>
-          <a class="club-conocer" href="#como-funciona">CONÓCENOS <span aria-hidden="true">→</span></a>
+      <section
+        class="seccion seccion-negra club club-editorial club-refinado"
+        id="el-club"
+        aria-labelledby="titulo-club"
+      >
+        <div class="contenedor club-encabezado">
+          <p class="etiqueta">02 / EL CLUB</p>
+          <span aria-hidden="true"></span>
         </div>
+        <div class="contenedor club-distribucion">
+          <!-- Presentación -->
+          <div class="club-presentacion">
+            <h2 id="titulo-club">
+              <span class="club-titulo-linea">MUCHO MÁS</span
+              ><span class="club-titulo-linea">QUE UN CLUB</span
+              ><span class="club-titulo-linea club-titulo-lima"
+                >DE LECTURA.</span
+              >
+            </h2>
+            <p class="club-descripcion">
+              Un espacio para descubrir historias, compartir ideas y encontrar
+              personas con quienes seguir la conversación.
+            </p>
+            <a class="club-conocer" href="#como-funciona"
+              >CONÓCENOS <span aria-hidden="true">→</span></a
+            >
+          </div>
 
-<div class="ventajas-club" aria-label="Qué ofrece el club"><div class="ventaja-club"><svg class="club-icono" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 8C12 4 7 4 3 5v22c5-1 9-1 13 2 4-3 8-3 13-2V5c-5-1-9-1-13 3ZM16 8v21M23 5v11l-3-2-3 2V7"/><path d="M3 7H1v22h11M29 7h2v22H20"/></svg><div><h3>Lecturas seleccionadas</h3><p>Historias que abren nuevas miradas.</p></div></div><div class="ventaja-club"><svg class="club-icono" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3H9a7 7 0 0 0-7 7v4a7 7 0 0 0 5 7v7l7-6h3M20 12h4a7 7 0 0 1 7 7v2a6 6 0 0 1-4 6v4l-5-4h-3a7 7 0 0 1-7-7v-1a7 7 0 0 1 8-7ZM24 12v-2a7 7 0 0 0-6-7"/></svg><div><h3>Conversaciones en comunidad</h3><p>Un espacio para escuchar y compartir.</p></div></div><div class="ventaja-club"><svg class="club-icono" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="6" width="26" height="24" rx="2"/><path d="M3 12h26M9 2v8M23 2v8"/><path d="M8 18h2v2H8zM15 18h2v2h-2zM22 18h2v2h-2zM8 24h2v2H8zM15 24h2v2h-2z" fill="currentColor" stroke="none"/></svg><div><h3>Encuentros para conectar</h3><p>La lectura continúa cuando nos encontramos.</p></div></div></div>
-        <!-- Imagen de libros extraída de la referencia proporcionada -->
-        <div class="club-imagen">
-          <img src="assets/libros-club-transparente.png"
-            alt="Libro abierto sobre una pila de libros, rodeado de recortes azules, rosas y lima" width="551" height="680" loading="lazy">
-          
-        </div>
-      </div><div class="contenedor club-market"><p>Más formas de leer.<br>Más historias por descubrir.</p><button type="button" data-abrir-marketplace aria-haspopup="dialog" aria-controls="dialogo-marketplace"><span class="club-market-texto">COMPRA, INTERCAMBIA Y ALQUILA LIBROS</span> <svg class="club-market-flecha" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M6 42 42 6M6 6h36v36"/></svg></button></div>
-    </section>
-
-    <!-- CÓMO FUNCIONA · SECCIÓN ADICIONAL -->
-    <section class="seccion funcionamiento bienvenida-club" id="como-funciona" aria-labelledby="titulo-funcionamiento">
-      <div class="contenedor">
-        <p class="etiqueta linea-seccion"><strong aria-hidden="true">✳︎ /</strong> CÓMO FUNCIONA</p>
-        <div class="bienvenida-cabecera">
-          <div>
-            <h2 id="titulo-funcionamiento">TU PRIMER CAPÍTULO<br><span>EN EL CLUB.</span></h2></div>
-          <p class="bienvenida-intro">Una historia. Tu ritmo.<br>Muchas formas de compartir.</p>
-        </div>
-        <ol class="bienvenida-pasos" aria-label="Tres pasos para empezar en el club">
-          <li class="bienvenida-paso"><span class="bienvenida-numero" aria-hidden="true">01</span>
-            <span class="bienvenida-icono"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7C9 4 5 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-3-1-7 0-10 3ZM12 7v14M5 7v9M19 7v9"/></svg></span>
-            <h3>ENCUENTRA<br> UNA HISTORIA.</h3>
-            <p>Explora la selección del club y elige lo que te apetece leer.</p>
-            <a class="bienvenida-enlace" href="#lecturas">Explorar lecturas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a>
-          </li>
-          <li class="bienvenida-paso"><span class="bienvenida-numero" aria-hidden="true">02</span>
-            <span class="bienvenida-icono"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-6-5-6 5V3Z"/><path d="m21 6 2-1m-2 5 2 1"/></svg></span>
-            <h3>HAZLA TUYA,<br> A TU RITMO.</h3>
-            <p>En papel, digital o audio. Quédate con una idea, una pregunta o una frase.</p>
-            <p class="bienvenida-nota">Cada forma de leer cuenta.</p>
-          </li>
-          <li class="bienvenida-paso"><span class="bienvenida-numero" aria-hidden="true">03</span>
-            <span class="bienvenida-icono"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 4C7 1 2 4 2 8c0 3 2 5 5 6l-1 4 5-3c5 0 8-3 8-6 0-2-2-4-6-5Z"/><path d="M20 12c2 1 3 3 2 5l-2 2 1 3-5-2c-2 0-4-1-5-2M20 4l1-2M22 7l2-1"/></svg></span>
-            <h3>TRAE TU MIRADA.</h3>
-            <p>Descubre los encuentros y comparte lo que te hizo pensar. También puedes empezar escuchando.</p>
-            <a class="bienvenida-enlace" href="#eventos">Ver encuentros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a>
-          </li>
-        </ol>
-        <div class="bienvenida-cierre">
-          <div class="bienvenida-confianza"><p>No hace falta ser experto.</p><span>La curiosidad es un buen comienzo.</span></div>
-          <a class="boton boton-lima bienvenida-cta" href="#lecturas">ENCUENTRA TU PRIMERA LECTURA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 · LIBRO DEL MES -->
-    <section class="seccion mes-editorial" id="libro-mes" aria-labelledby="titulo-libro">
-      <div class="contenedor">
-        <div class="mes-encabezado"><p class="etiqueta"><strong>03 /</strong> LIBRO DEL MES</p><span aria-hidden="true"></span></div>
-        <div class="mes-composicion">
-          <figure class="mes-collage"><div class="mes-papel" aria-hidden="true"></div><img src="assets/libro-mes-transparente.png" alt="Cubierta de Mañana, y mañana, y mañana, de Gabrielle Zevin" loading="lazy" width="1186" height="1326"></figure>
-          <div class="mes-contenido">
-            <h2 id="titulo-libro">UNA HISTORIA.<br><span>MUCHAS FORMAS</span><br>DE VIVIRLA.</h2>
-            <h3>Mañana, y mañana, y mañana</h3>
-            <p class="mes-autor">GABRIELLE ZEVIN</p>
-            <p class="mes-sinopsis">Dos amigos crean videojuegos. Entre proyectos, desencuentros y nuevos comienzos, construyen algo mucho más complejo: una vida compartida.</p>
-            <ul class="mes-temas" aria-label="Temas de la lectura"><li>Amistad</li><li>Creatividad</li><li>Segundas oportunidades</li></ul>
-            <p class="mes-pregunta">¿Qué significa crear algo con otra persona?</p>
-            <div class="mes-acciones"><a class="boton boton-lima" href="libro-del-mes.html">DESCUBRIR EL LIBRO <span aria-hidden="true">↗</span></a><a class="mes-cronograma" href="lectura-del-mes.html">Ver el cronograma de lectura <span aria-hidden="true">→</span></a></div>
+          <div class="ventajas-club" aria-label="Qué ofrece el club">
+            <div class="ventaja-club">
+              <svg
+                class="club-icono"
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.35"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M16 8C12 4 7 4 3 5v22c5-1 9-1 13 2 4-3 8-3 13-2V5c-5-1-9-1-13 3ZM16 8v21M23 5v11l-3-2-3 2V7"
+                />
+                <path d="M3 7H1v22h11M29 7h2v22H20" />
+              </svg>
+              <div>
+                <h3>Lecturas seleccionadas</h3>
+                <p>Historias que abren nuevas miradas.</p>
+              </div>
+            </div>
+            <div class="ventaja-club">
+              <svg
+                class="club-icono"
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.35"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M18 3H9a7 7 0 0 0-7 7v4a7 7 0 0 0 5 7v7l7-6h3M20 12h4a7 7 0 0 1 7 7v2a6 6 0 0 1-4 6v4l-5-4h-3a7 7 0 0 1-7-7v-1a7 7 0 0 1 8-7ZM24 12v-2a7 7 0 0 0-6-7"
+                />
+              </svg>
+              <div>
+                <h3>Conversaciones en comunidad</h3>
+                <p>Un espacio para escuchar y compartir.</p>
+              </div>
+            </div>
+            <div class="ventaja-club">
+              <svg
+                class="club-icono"
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.35"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="6" width="26" height="24" rx="2" />
+                <path d="M3 12h26M9 2v8M23 2v8" />
+                <path
+                  d="M8 18h2v2H8zM15 18h2v2h-2zM22 18h2v2h-2zM8 24h2v2H8zM15 24h2v2h-2z"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+              <div>
+                <h3>Encuentros para conectar</h3>
+                <p>La lectura continúa cuando nos encontramos.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Imagen de libros extraída de la referencia proporcionada -->
+          <div class="club-imagen">
+            <img
+              src="assets/libros-club-transparente.png"
+              alt="Libro abierto sobre una pila de libros, rodeado de recortes azules, rosas y lima"
+              width="551"
+              height="680"
+              loading="lazy"
+            />
           </div>
         </div>
-      </div>
-    </section>
+        <div class="contenedor club-market">
+          <p>Más formas de leer.<br />Más historias por descubrir.</p>
+          <button
+            type="button"
+            data-abrir-marketplace
+            aria-haspopup="dialog"
+            aria-controls="dialogo-marketplace"
+          >
+            <span class="club-market-texto"
+              >COMPRA, INTERCAMBIA Y ALQUILA LIBROS</span
+            >
+            <svg
+              class="club-market-flecha"
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              aria-hidden="true"
+            >
+              <path d="M6 42 42 6M6 6h36v36" />
+            </svg>
+          </button>
+        </div>
+      </section>
 
-    <!-- ==================================================
+      <!-- CÓMO FUNCIONA · SECCIÓN ADICIONAL -->
+      <section
+        class="seccion funcionamiento bienvenida-club"
+        id="como-funciona"
+        aria-labelledby="titulo-funcionamiento"
+      >
+        <div class="contenedor">
+          <p class="etiqueta linea-seccion">
+            <strong aria-hidden="true">✳︎ /</strong> CÓMO FUNCIONA
+          </p>
+          <div class="bienvenida-cabecera">
+            <div>
+              <h2 id="titulo-funcionamiento">
+                TU PRIMER CAPÍTULO<br /><span>EN EL CLUB.</span>
+              </h2>
+            </div>
+            <p class="bienvenida-intro">
+              Una historia. Tu ritmo.<br />Muchas formas de compartir.
+            </p>
+          </div>
+          <ol
+            class="bienvenida-pasos"
+            aria-label="Tres pasos para empezar en el club"
+          >
+            <li class="bienvenida-paso">
+              <span class="bienvenida-numero" aria-hidden="true">01</span>
+              <span class="bienvenida-icono"
+                ><svg
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M12 7C9 4 5 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-3-1-7 0-10 3ZM12 7v14M5 7v9M19 7v9"
+                  /></svg
+              ></span>
+              <h3>
+                ENCUENTRA<br />
+                UNA HISTORIA.
+              </h3>
+              <p>
+                Explora la selección del club y elige lo que te apetece leer.
+              </p>
+              <a class="bienvenida-enlace" href="#lecturas"
+                >Explorar lecturas
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M3 12h17m-7-7 7 7-7 7" /></svg
+              ></a>
+            </li>
+            <li class="bienvenida-paso">
+              <span class="bienvenida-numero" aria-hidden="true">02</span>
+              <span class="bienvenida-icono"
+                ><svg
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 3h12v18l-6-5-6 5V3Z" />
+                  <path d="m21 6 2-1m-2 5 2 1" /></svg
+              ></span>
+              <h3>
+                HAZLA TUYA,<br />
+                A TU RITMO.
+              </h3>
+              <p>
+                En papel, digital o audio. Quédate con una idea, una pregunta o
+                una frase.
+              </p>
+              <p class="bienvenida-nota">Cada forma de leer cuenta.</p>
+            </li>
+            <li class="bienvenida-paso">
+              <span class="bienvenida-numero" aria-hidden="true">03</span>
+              <span class="bienvenida-icono"
+                ><svg
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M13 4C7 1 2 4 2 8c0 3 2 5 5 6l-1 4 5-3c5 0 8-3 8-6 0-2-2-4-6-5Z"
+                  />
+                  <path
+                    d="M20 12c2 1 3 3 2 5l-2 2 1 3-5-2c-2 0-4-1-5-2M20 4l1-2M22 7l2-1"
+                  /></svg
+              ></span>
+              <h3>TRAE TU MIRADA.</h3>
+              <p>
+                Descubre los encuentros y comparte lo que te hizo pensar.
+                También puedes empezar escuchando.
+              </p>
+              <a class="bienvenida-enlace" href="#eventos"
+                >Ver encuentros
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M3 12h17m-7-7 7 7-7 7" /></svg
+              ></a>
+            </li>
+          </ol>
+          <div class="bienvenida-cierre">
+            <div class="bienvenida-confianza">
+              <p>No hace falta ser experto.</p>
+              <span>La curiosidad es un buen comienzo.</span>
+            </div>
+            <a class="boton boton-lima bienvenida-cta" href="#lecturas"
+              >ENCUENTRA TU PRIMERA LECTURA
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M3 12h17m-7-7 7 7-7 7" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · LIBRO DEL MES -->
+      <section
+        class="seccion mes-editorial"
+        id="libro-mes"
+        aria-labelledby="titulo-libro"
+      >
+        <div class="contenedor">
+          <div class="mes-encabezado">
+            <p class="etiqueta"><strong>03 /</strong> LIBRO DEL MES</p>
+            <span aria-hidden="true"></span>
+          </div>
+          <div class="mes-composicion">
+            <figure class="mes-collage">
+              <div class="mes-papel" aria-hidden="true"></div>
+              <img
+                src="assets/libro-mes-transparente.png"
+                alt="Cubierta de Mañana, y mañana, y mañana, de Gabrielle Zevin"
+                loading="lazy"
+                width="1186"
+                height="1326"
+              />
+            </figure>
+            <div class="mes-contenido">
+              <h2 id="titulo-libro">
+                UNA HISTORIA.<br /><span>MUCHAS FORMAS</span><br />DE VIVIRLA.
+              </h2>
+              <h3>Mañana, y mañana, y mañana</h3>
+              <p class="mes-autor">GABRIELLE ZEVIN</p>
+              <p class="mes-sinopsis">
+                Dos amigos crean videojuegos. Entre proyectos, desencuentros y
+                nuevos comienzos, construyen algo mucho más complejo: una vida
+                compartida.
+              </p>
+              <ul class="mes-temas" aria-label="Temas de la lectura">
+                <li>Amistad</li>
+                <li>Creatividad</li>
+                <li>Segundas oportunidades</li>
+              </ul>
+              <p class="mes-pregunta">
+                ¿Qué significa crear algo con otra persona?
+              </p>
+              <div class="mes-acciones">
+                <a class="boton boton-lima" href="libro-del-mes.html"
+                  >DESCUBRIR EL LIBRO <span aria-hidden="true">↗</span></a
+                ><a class="mes-cronograma" href="lectura-del-mes.html"
+                  >Ver el cronograma de lectura
+                  <span aria-hidden="true">→</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
          04. LECTURAS — DESCUBRE NUEVAS VOCES
          ================================================== -->
-    <section class="seccion seccion-negra lecturas biblioteca biblioteca-editorial" id="lecturas" aria-labelledby="titulo-lecturas">
-      <div class="contenedor">
-        <div class="biblioteca-regla"><p class="etiqueta">04 / LECTURAS</p><span aria-hidden="true"></span></div>
-        <div class="biblioteca-cabecera">
-          <div>
-          <h2 id="titulo-lecturas">UNA LECTURA.<br><span>MUCHAS CONVERSACIONES.</span></h2></div>
-          <div class="biblioteca-intro"><p>Encuentra una historia que te despierte curiosidad. Descubre por qué leerla y qué podemos conversar.</p></div>
-        </div>
-        <div class="biblioteca-herramientas">
-          <div class="filtros" role="group" aria-label="Filtrar lecturas">
-            <button class="filtro activo" type="button" data-filtro="todos" aria-pressed="true">Todas</button>
-            <button class="filtro" type="button" data-filtro="ficcion" aria-pressed="false">Ficción</button>
-            <button class="filtro" type="button" data-filtro="ensayo" aria-pressed="false">Ensayo</button>
-            <button class="filtro" type="button" data-filtro="ciencia-ficcion" aria-pressed="false">Ciencia ficción</button>
+      <section
+        class="seccion seccion-negra lecturas biblioteca biblioteca-editorial"
+        id="lecturas"
+        aria-labelledby="titulo-lecturas"
+      >
+        <div class="contenedor">
+          <div class="biblioteca-regla">
+            <p class="etiqueta">04 / LECTURAS</p>
+            <span aria-hidden="true"></span>
           </div>
-          <p class="aviso-filtros" role="status" aria-live="polite">5 lecturas para descubrir.</p>
+          <div class="biblioteca-cabecera">
+            <div>
+              <h2 id="titulo-lecturas">
+                UNA LECTURA.<br /><span>MUCHAS CONVERSACIONES.</span>
+              </h2>
+            </div>
+            <div class="biblioteca-intro">
+              <p>
+                Encuentra una historia que te despierte curiosidad. Descubre por
+                qué leerla y qué podemos conversar.
+              </p>
+            </div>
+          </div>
+          <div class="biblioteca-herramientas">
+            <div class="filtros" role="group" aria-label="Filtrar lecturas">
+              <button
+                class="filtro activo"
+                type="button"
+                data-filtro="todos"
+                aria-pressed="true"
+              >
+                Todas
+              </button>
+              <button
+                class="filtro"
+                type="button"
+                data-filtro="ficcion"
+                aria-pressed="false"
+              >
+                Ficción
+              </button>
+              <button
+                class="filtro"
+                type="button"
+                data-filtro="ensayo"
+                aria-pressed="false"
+              >
+                Ensayo
+              </button>
+              <button
+                class="filtro"
+                type="button"
+                data-filtro="ciencia-ficcion"
+                aria-pressed="false"
+              >
+                Ciencia ficción
+              </button>
+            </div>
+            <p class="aviso-filtros" role="status" aria-live="polite">
+              5 lecturas para descubrir.
+            </p>
+          </div>
+          <div class="rejilla-libros">
+            <article class="tarjeta-libro libro-destacado" data-genero="ensayo">
+              <div class="libro-abrir">
+                <span class="libro-visual"
+                  ><span class="libro-distintivo">PARA EMPEZAR</span
+                  ><img
+                    class="cubierta-lectura"
+                    src="assets/lectura-junco.webp"
+                    alt="Cubierta de El infinito en un junco"
+                    loading="lazy"
+                    width="267"
+                    height="360"
+                /></span>
+                <span class="libro-contenido"
+                  ><span class="libro-titulo">El infinito en un junco</span
+                  ><span class="libro-autor">Irene Vallejo</span
+                  ><span class="libro-genero">Ensayo</span
+                  ><span class="libro-gancho">La aventura de los libros.</span
+                  ><button
+                    class="libro-explorar"
+                    type="button"
+                    data-libro="junco"
+                    aria-haspopup="dialog"
+                    aria-controls="dialogo-lectura"
+                    aria-label="Explorar El infinito en un junco, de Irene Vallejo"
+                  >
+                    EXPLORAR LECTURA
+                    <span aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 19 19 5M5 5h14v14" /></svg
+                    ></span></button
+                  ><a class="libro-eventos" href="#proximos-eventos"
+                    >Próximos eventos
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+                ></span>
+              </div>
+            </article>
+            <article class="tarjeta-libro" data-genero="ensayo">
+              <div class="libro-abrir">
+                <span class="libro-visual"
+                  ><img
+                    class="cubierta-lectura"
+                    src="assets/lectura-sapiens.webp"
+                    alt="Cubierta de Sapiens"
+                    loading="lazy"
+                    width="267"
+                    height="360"
+                /></span>
+                <span class="libro-contenido"
+                  ><span class="libro-titulo">Sapiens</span
+                  ><span class="libro-autor">Yuval Noah Harari</span
+                  ><span class="libro-genero">Ensayo</span
+                  ><span class="libro-gancho"
+                    >Las historias que nos hacen humanos.</span
+                  ><button
+                    class="libro-explorar"
+                    type="button"
+                    data-libro="sapiens"
+                    aria-haspopup="dialog"
+                    aria-controls="dialogo-lectura"
+                    aria-label="Explorar Sapiens, de Yuval Noah Harari"
+                  >
+                    EXPLORAR LECTURA
+                    <span aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 19 19 5M5 5h14v14" /></svg
+                    ></span></button
+                  ><a class="libro-eventos" href="#proximos-eventos"
+                    >Próximos eventos
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+                ></span>
+              </div>
+            </article>
+            <article class="tarjeta-libro" data-genero="ficcion">
+              <div class="libro-abrir">
+                <span class="libro-visual"
+                  ><img
+                    class="cubierta-lectura"
+                    src="assets/lectura-vegetariana.webp"
+                    alt="Cubierta de La vegetariana"
+                    loading="lazy"
+                    width="267"
+                    height="360"
+                /></span>
+                <span class="libro-contenido"
+                  ><span class="libro-titulo">La vegetariana</span
+                  ><span class="libro-autor">Han Kang</span
+                  ><span class="libro-genero">Ficción</span
+                  ><span class="libro-gancho"
+                    >Una historia que lo cambia todo.</span
+                  ><button
+                    class="libro-explorar"
+                    type="button"
+                    data-libro="vegetariana"
+                    aria-haspopup="dialog"
+                    aria-controls="dialogo-lectura"
+                    aria-label="Explorar La vegetariana, de Han Kang"
+                  >
+                    EXPLORAR LECTURA
+                    <span aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 19 19 5M5 5h14v14" /></svg
+                    ></span></button
+                  ><a class="libro-eventos" href="#proximos-eventos"
+                    >Próximos eventos
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+                ></span>
+              </div>
+            </article>
+            <article class="tarjeta-libro" data-genero="ficcion">
+              <div class="libro-abrir">
+                <span class="libro-visual"
+                  ><img
+                    class="cubierta-lectura"
+                    src="assets/lectura-norwegian.webp"
+                    alt="Cubierta de Norwegian Wood"
+                    loading="lazy"
+                    width="267"
+                    height="360"
+                /></span>
+                <span class="libro-contenido"
+                  ><span class="libro-titulo">Norwegian Wood</span
+                  ><span class="libro-autor">Haruki Murakami</span
+                  ><span class="libro-genero">Ficción</span
+                  ><span class="libro-gancho"
+                    >Los recuerdos que nos acompañan.</span
+                  ><button
+                    class="libro-explorar"
+                    type="button"
+                    data-libro="norwegian"
+                    aria-haspopup="dialog"
+                    aria-controls="dialogo-lectura"
+                    aria-label="Explorar Norwegian Wood, de Haruki Murakami"
+                  >
+                    EXPLORAR LECTURA
+                    <span aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 19 19 5M5 5h14v14" /></svg
+                    ></span></button
+                  ><a class="libro-eventos" href="#proximos-eventos"
+                    >Próximos eventos
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+                ></span>
+              </div>
+            </article>
+            <article class="tarjeta-libro" data-genero="ficcion">
+              <div class="libro-abrir">
+                <span class="libro-visual"
+                  ><span class="libro-distintivo">LIBRO DEL MES</span
+                  ><img
+                    class="cubierta-lectura"
+                    src="assets/lectura-manana.webp"
+                    alt="Cubierta de Mañana, y mañana, y mañana"
+                    loading="lazy"
+                    width="267"
+                    height="360"
+                /></span>
+                <span class="libro-contenido"
+                  ><span class="libro-titulo">Mañana, y mañana, y mañana</span
+                  ><span class="libro-autor">Gabrielle Zevin</span
+                  ><span class="libro-genero">Ficción</span
+                  ><span class="libro-gancho"
+                    >Amistad y creatividad compartidas.</span
+                  ><button
+                    class="libro-explorar"
+                    type="button"
+                    data-libro="manana"
+                    aria-haspopup="dialog"
+                    aria-controls="dialogo-lectura"
+                    aria-label="Explorar Mañana, y mañana, y mañana, de Gabrielle Zevin"
+                  >
+                    EXPLORAR LECTURA
+                    <span aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 19 19 5M5 5h14v14" /></svg
+                    ></span></button
+                  ><a class="libro-eventos" href="#proximos-eventos"
+                    >Próximos eventos
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+                ></span>
+              </div>
+            </article>
+          </div>
+          <div class="biblioteca-vacia" hidden>
+            <span aria-hidden="true">↗</span>
+            <h3>La próxima historia está por llegar.</h3>
+            <p>
+              Aún no hay lecturas de ciencia ficción en esta selección. Explora
+              los otros géneros mientras preparamos nuevas propuestas.
+            </p>
+            <button
+              type="button"
+              class="boton boton-lima"
+              data-restablecer-lecturas
+            >
+              VER TODAS LAS LECTURAS <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <p class="biblioteca-cierre">
+            No tienes que leerlo todo. Solo encontrar por dónde empezar.
+          </p>
         </div>
-        <div class="rejilla-libros"><article class="tarjeta-libro libro-destacado" data-genero="ensayo">
-          <div class="libro-abrir">
-            <span class="libro-visual"><span class="libro-distintivo">PARA EMPEZAR</span><img class="cubierta-lectura" src="assets/lectura-junco.webp" alt="Cubierta de El infinito en un junco" loading="lazy" width="267" height="360"></span>
-            <span class="libro-contenido"><span class="libro-titulo">El infinito en un junco</span><span class="libro-autor">Irene Vallejo</span><span class="libro-genero">Ensayo</span><span class="libro-gancho">La aventura de los libros.</span><button class="libro-explorar" type="button" data-libro="junco" aria-haspopup="dialog" aria-controls="dialogo-lectura" aria-label="Explorar El infinito en un junco, de Irene Vallejo">EXPLORAR LECTURA <span aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button><a class="libro-eventos" href="#proximos-eventos">Próximos eventos <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a></span>
-          </div></article>
-<article class="tarjeta-libro " data-genero="ensayo">
-          <div class="libro-abrir">
-            <span class="libro-visual"><img class="cubierta-lectura" src="assets/lectura-sapiens.webp" alt="Cubierta de Sapiens" loading="lazy" width="267" height="360"></span>
-            <span class="libro-contenido"><span class="libro-titulo">Sapiens</span><span class="libro-autor">Yuval Noah Harari</span><span class="libro-genero">Ensayo</span><span class="libro-gancho">Las historias que nos hacen humanos.</span><button class="libro-explorar" type="button" data-libro="sapiens" aria-haspopup="dialog" aria-controls="dialogo-lectura" aria-label="Explorar Sapiens, de Yuval Noah Harari">EXPLORAR LECTURA <span aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button><a class="libro-eventos" href="#proximos-eventos">Próximos eventos <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a></span>
-          </div></article>
-<article class="tarjeta-libro " data-genero="ficcion">
-          <div class="libro-abrir">
-            <span class="libro-visual"><img class="cubierta-lectura" src="assets/lectura-vegetariana.webp" alt="Cubierta de La vegetariana" loading="lazy" width="267" height="360"></span>
-            <span class="libro-contenido"><span class="libro-titulo">La vegetariana</span><span class="libro-autor">Han Kang</span><span class="libro-genero">Ficción</span><span class="libro-gancho">Una historia que lo cambia todo.</span><button class="libro-explorar" type="button" data-libro="vegetariana" aria-haspopup="dialog" aria-controls="dialogo-lectura" aria-label="Explorar La vegetariana, de Han Kang">EXPLORAR LECTURA <span aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button><a class="libro-eventos" href="#proximos-eventos">Próximos eventos <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a></span>
-          </div></article>
-<article class="tarjeta-libro " data-genero="ficcion">
-          <div class="libro-abrir">
-            <span class="libro-visual"><img class="cubierta-lectura" src="assets/lectura-norwegian.webp" alt="Cubierta de Norwegian Wood" loading="lazy" width="267" height="360"></span>
-            <span class="libro-contenido"><span class="libro-titulo">Norwegian Wood</span><span class="libro-autor">Haruki Murakami</span><span class="libro-genero">Ficción</span><span class="libro-gancho">Los recuerdos que nos acompañan.</span><button class="libro-explorar" type="button" data-libro="norwegian" aria-haspopup="dialog" aria-controls="dialogo-lectura" aria-label="Explorar Norwegian Wood, de Haruki Murakami">EXPLORAR LECTURA <span aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button><a class="libro-eventos" href="#proximos-eventos">Próximos eventos <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a></span>
-          </div></article>
-<article class="tarjeta-libro " data-genero="ficcion">
-          <div class="libro-abrir">
-            <span class="libro-visual"><span class="libro-distintivo">LIBRO DEL MES</span><img class="cubierta-lectura" src="assets/lectura-manana.webp" alt="Cubierta de Mañana, y mañana, y mañana" loading="lazy" width="267" height="360"></span>
-            <span class="libro-contenido"><span class="libro-titulo">Mañana, y mañana, y mañana</span><span class="libro-autor">Gabrielle Zevin</span><span class="libro-genero">Ficción</span><span class="libro-gancho">Amistad y creatividad compartidas.</span><button class="libro-explorar" type="button" data-libro="manana" aria-haspopup="dialog" aria-controls="dialogo-lectura" aria-label="Explorar Mañana, y mañana, y mañana, de Gabrielle Zevin">EXPLORAR LECTURA <span aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button><a class="libro-eventos" href="#proximos-eventos">Próximos eventos <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></a></span>
-          </div></article></div>
-        <div class="biblioteca-vacia" hidden><span aria-hidden="true">↗</span><h3>La próxima historia está por llegar.</h3><p>Aún no hay lecturas de ciencia ficción en esta selección. Explora los otros géneros mientras preparamos nuevas propuestas.</p><button type="button" class="boton boton-lima" data-restablecer-lecturas>VER TODAS LAS LECTURAS <span aria-hidden="true">→</span></button></div>
-        <p class="biblioteca-cierre">No tienes que leerlo todo. Solo encontrar por dónde empezar.</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- 05 · COMUNIDAD -->
-    <section class="seccion comunidad comunidad-editorial" id="comunidad" aria-labelledby="titulo-comunidad">
-      <div class="contenedor">
-        <p class="etiqueta linea-seccion"><strong>05 /</strong> COMUNIDAD</p>
-<div class="comunidad-escena"><figure><img class="comunidad-collage" src="assets/comunidad-transparente.png" alt="Personas compartiendo una lectura en una librería, en un collage de papel azul y rosa" width="880" height="808" loading="lazy"></figure><div class="comunidad-relato"><h2 id="titulo-comunidad">LAS HISTORIAS<br><span>NOS UNEN.</span></h2><p>Un espacio para compartir lo que lees, descubrir otras miradas y seguir la conversación.</p><ul class="comunidad-formas" aria-label="Formas de participar en la comunidad">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 6C9 4 6 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-4-1-7 0-10 2ZM12 6v15"/></svg><div><h3>COMPARTE UNA IDEA</h3><p>Una frase, una pregunta o algo que te hizo pensar.</p></div></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M17 4a3 3 0 0 1 0 6M19 14a5 5 0 0 1 3 5v2"/></svg><div><h3>EMPIEZA ESCUCHANDO</h3><p>También puedes descubrir el club a tu ritmo.</p></div></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3C6 3 2 6 2 10c0 3 2 5 5 6l-1 5 6-4c6 0 10-3 10-7S18 3 12 3Z"/></svg><div><h3>ENCUENTRA OTRAS MIRADAS</h3><p>Una misma lectura puede abrir muchas conversaciones.</p></div></li>
-            </ul><p class="comunidad-pregunta">¿Qué libro te gustaría comentar con alguien?</p><button class="boton boton-lima comunidad-unirse" type="button" data-abrir-whatsapp aria-haspopup="dialog" aria-controls="dialogo-comunidad-whatsapp"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg>CONOCE LA COMUNIDAD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></button><p class="nota-acceso">Acceso por WhatsApp</p></div></div><p class="seccion-cierre">No hace falta tener la respuesta. A veces basta una buena pregunta.</p>
-      </div>
-    </section>
-
-    <!-- 06 · INCLUSIÓN -->
-    <section class="seccion inclusion inclusion-abierta" id="inclusion" aria-labelledby="titulo-inclusion">
-      <div class="contenedor">
-<p class="etiqueta linea-seccion"><strong>06 /</strong> INCLUSIÓN</p><div class="inclusion-grid"><div class="inclusion-cabecera"><div><h2 id="titulo-inclusion">MUCHAS FORMAS<br><span>DE LEER.</span><br>UN MISMO CLUB.</h2><p class="inclusion-intro">Cada persona se acerca a las historias de una manera. Queremos construir un espacio donde esas diferencias tengan lugar.</p></div><img class="inclusion-ilustracion" src="assets/inclusion-transparente.png" alt="Libro abierto junto a unos auriculares azules y recortes de papel: diferentes formas de disfrutar las historias" width="720" height="313" loading="lazy"></div><ul class="inclusion-compromisos"><li class="inclusion-compromiso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 13V10a7 7 0 0 1 14 0v3"/><rect x="3" y="11" width="3" height="7" rx="1.5"/><rect x="18" y="11" width="3" height="7" rx="1.5"/><path d="M8 11c1.5 0 3 .5 4 1.5 1-1 2.5-1.5 4-1.5v9c-1.5 0-3 .5-4 1.5-1-1-2.5-1.5-4-1.5zM12 12.5v9"/></svg><h3>TU FORMATO, TU ELECCIÓN</h3><p>Papel, digital o audio. Cada forma de leer cuenta.</p></li><li class="inclusion-compromiso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><h3>A TU RITMO</h3><p>Puedes incorporarte a la lectura sin llevar el mismo ritmo que el resto.</p></li><li class="inclusion-compromiso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/><circle cx="8.5" cy="11.5" r=".8" fill="currentColor" stroke="none"/><circle cx="12.5" cy="11.5" r=".8" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11.5" r=".8" fill="currentColor" stroke="none"/></svg><h3>PARTICIPAR TAMBIÉN ES ESCUCHAR</h3><p>Comparte cuando te apetezca. Escuchar otras miradas también forma parte del encuentro.</p></li></ul></div>
-        <div class="inclusion-escucha">
-          <p><span class="etiqueta">SEGUIMOS APRENDIENDO</span>¿Qué te ayudaría a participar mejor?<small>Queremos escuchar propuestas para hacer el club más acogedor.</small></p>
-          <div><button class="boton boton-negro inclusion-contacto" type="button" data-abrir-inclusion aria-haspopup="dialog" aria-controls="dialogo-inclusion">CUÉNTANOS TU IDEA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></button><p>Envíanos tus ideas para mejorar el club.</p></div>
+      <!-- 05 · COMUNIDAD -->
+      <section
+        class="seccion comunidad comunidad-editorial"
+        id="comunidad"
+        aria-labelledby="titulo-comunidad"
+      >
+        <div class="contenedor">
+          <p class="etiqueta linea-seccion"><strong>05 /</strong> COMUNIDAD</p>
+          <div class="comunidad-escena">
+            <figure>
+              <img
+                class="comunidad-collage"
+                src="assets/comunidad-transparente.png"
+                alt="Personas compartiendo una lectura en una librería, en un collage de papel azul y rosa"
+                width="880"
+                height="808"
+                loading="lazy"
+              />
+            </figure>
+            <div class="comunidad-relato">
+              <h2 id="titulo-comunidad">
+                LAS HISTORIAS<br /><span>NOS UNEN.</span>
+              </h2>
+              <p>
+                Un espacio para compartir lo que lees, descubrir otras miradas y
+                seguir la conversación.
+              </p>
+              <ul
+                class="comunidad-formas"
+                aria-label="Formas de participar en la comunidad"
+              >
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 6C9 4 6 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-4-1-7 0-10 2ZM12 6v15"
+                    />
+                  </svg>
+                  <div>
+                    <h3>COMPARTE UNA IDEA</h3>
+                    <p>Una frase, una pregunta o algo que te hizo pensar.</p>
+                  </div>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <circle cx="9" cy="7" r="3" />
+                    <path
+                      d="M2 21v-3a7 7 0 0 1 14 0v3M17 4a3 3 0 0 1 0 6M19 14a5 5 0 0 1 3 5v2"
+                    />
+                  </svg>
+                  <div>
+                    <h3>EMPIEZA ESCUCHANDO</h3>
+                    <p>También puedes descubrir el club a tu ritmo.</p>
+                  </div>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 3C6 3 2 6 2 10c0 3 2 5 5 6l-1 5 6-4c6 0 10-3 10-7S18 3 12 3Z"
+                    />
+                  </svg>
+                  <div>
+                    <h3>ENCUENTRA OTRAS MIRADAS</h3>
+                    <p>Una misma lectura puede abrir muchas conversaciones.</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="comunidad-pregunta">
+                ¿Qué libro te gustaría comentar con alguien?
+              </p>
+              <button
+                class="boton boton-lima comunidad-unirse"
+                type="button"
+                data-abrir-whatsapp
+                aria-haspopup="dialog"
+                aria-controls="dialogo-comunidad-whatsapp"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                  /></svg
+                >CONOCE LA COMUNIDAD
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M3 12h17m-7-7 7 7-7 7" />
+                </svg>
+              </button>
+              <p class="nota-acceso">Acceso por WhatsApp</p>
+            </div>
+          </div>
+          <p class="seccion-cierre">
+            No hace falta tener la respuesta. A veces basta una buena pregunta.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================
+      <!-- 06 · INCLUSIÓN -->
+      <section
+        class="seccion inclusion inclusion-abierta"
+        id="inclusion"
+        aria-labelledby="titulo-inclusion"
+      >
+        <div class="contenedor">
+          <p class="etiqueta linea-seccion"><strong>06 /</strong> INCLUSIÓN</p>
+          <div class="inclusion-grid">
+            <div class="inclusion-cabecera">
+              <div>
+                <h2 id="titulo-inclusion">
+                  MUCHAS FORMAS<br /><span>DE LEER.</span><br />UN MISMO CLUB.
+                </h2>
+                <p class="inclusion-intro">
+                  Cada persona se acerca a las historias de una manera. Queremos
+                  construir un espacio donde esas diferencias tengan lugar.
+                </p>
+              </div>
+              <img
+                class="inclusion-ilustracion"
+                src="assets/inclusion-transparente.png"
+                alt="Libro abierto junto a unos auriculares azules y recortes de papel: diferentes formas de disfrutar las historias"
+                width="720"
+                height="313"
+                loading="lazy"
+              />
+            </div>
+            <ul class="inclusion-compromisos">
+              <li class="inclusion-compromiso">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M5 13V10a7 7 0 0 1 14 0v3" />
+                  <rect x="3" y="11" width="3" height="7" rx="1.5" />
+                  <rect x="18" y="11" width="3" height="7" rx="1.5" />
+                  <path
+                    d="M8 11c1.5 0 3 .5 4 1.5 1-1 2.5-1.5 4-1.5v9c-1.5 0-3 .5-4 1.5-1-1-2.5-1.5-4-1.5zM12 12.5v9"
+                  />
+                </svg>
+                <h3>TU FORMATO, TU ELECCIÓN</h3>
+                <p>Papel, digital o audio. Cada forma de leer cuenta.</p>
+              </li>
+              <li class="inclusion-compromiso">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+                <h3>A TU RITMO</h3>
+                <p>
+                  Puedes incorporarte a la lectura sin llevar el mismo ritmo que
+                  el resto.
+                </p>
+              </li>
+              <li class="inclusion-compromiso">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"
+                  />
+                  <circle
+                    cx="8.5"
+                    cy="11.5"
+                    r=".8"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="12.5"
+                    cy="11.5"
+                    r=".8"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="16.5"
+                    cy="11.5"
+                    r=".8"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+                <h3>PARTICIPAR TAMBIÉN ES ESCUCHAR</h3>
+                <p>
+                  Comparte cuando te apetezca. Escuchar otras miradas también
+                  forma parte del encuentro.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="inclusion-escucha">
+            <p>
+              <span class="etiqueta">SEGUIMOS APRENDIENDO</span>¿Qué te ayudaría
+              a participar mejor?<small
+                >Queremos escuchar propuestas para hacer el club más
+                acogedor.</small
+              >
+            </p>
+            <div>
+              <button
+                class="boton boton-negro inclusion-contacto"
+                type="button"
+                data-abrir-inclusion
+                aria-haspopup="dialog"
+                aria-controls="dialogo-inclusion"
+              >
+                CUÉNTANOS TU IDEA
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M3 12h17m-7-7 7 7-7 7" />
+                </svg>
+              </button>
+              <p>Envíanos tus ideas para mejorar el club.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
          07. EVENTOS — DISEÑO EDITORIAL APROBADO
          ========================================================== -->
-    <section class="eventos eventos-referencia" id="eventos" aria-labelledby="titulo-eventos">
-      <div class="contenedor"><p class="etiqueta linea-seccion"><strong>07 /</strong> PRÓXIMOS EVENTOS</p></div>
-      <div class="contenedor eventos-nueva-cabecera">
-        <div class="eventos-nuevo-texto">
-          <h2 id="titulo-eventos">LAS HISTORIAS<br><span>SIGUEN FUERA</span><br>DEL LIBRO.</h2>
-          <p class="eventos-lema">Una lectura. Muchas formas de encontrarnos.</p>
-          <p class="eventos-descripcion">Elegimos un libro, leemos a nuestro ritmo y volvemos para compartirlo.</p>
-          <dl class="eventos-detalles"><div><dt>FECHA</dt><dd>Por confirmar</dd></div><div><dt>FORMATO</dt><dd>Por confirmar</dd></div><div><dt>ACCESO</dt><dd>En preparación</dd></div></dl>
-          <a class="boton boton-lima eventos-propuestas-boton" href="encuentro.html">PARTICIPA Y ELIGE LIBRO <span aria-hidden="true">↓</span></a>
+      <section
+        class="eventos eventos-referencia"
+        id="eventos"
+        aria-labelledby="titulo-eventos"
+      >
+        <div class="contenedor">
+          <p class="etiqueta linea-seccion">
+            <strong>07 /</strong> PRÓXIMOS EVENTOS
+          </p>
         </div>
-        <div class="eventos-nuevo-collage"><img src="assets/eventos-transparente.png" alt="Lectores compartiendo una conversación en una librería y detalle de escritura, en un collage de papel" loading="lazy" width="846" height="839"><p class="eventos-nota-papel">Las buenas historias<br>se comparten.</p></div>
-      </div>
-      <div class="contenedor eventos-seleccion" id="proximos-eventos" aria-labelledby="agenda-titulo">
-        <h3 id="agenda-titulo">Tres libros. ¿Cuál te apetece compartir?</h3>
-        <div class="eventos-tres-libros"><article class="evento-propuesta"><figure><img src="assets/evento-junco-transparente.png" width="1092" height="1441" alt="Cubierta de El infinito en un junco" loading="lazy"></figure><div class="evento-libro-texto"><h4>El infinito<br>en un junco</h4><p class="evento-autor">Irene Vallejo</p><p>Un viaje fascinante por la historia de los libros y las personas que los hicieron posibles.</p><button type="button" data-libro="junco" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article>
-<article class="evento-propuesta"><figure><img src="assets/evento-vegetariana-transparente.png" width="1024" height="1536" alt="Cubierta de La vegetariana" loading="lazy"></figure><div class="evento-libro-texto"><h4>La vegetariana</h4><p class="evento-autor">Han Kang</p><p>Una novela intensa y luminosa sobre el cuerpo, la libertad y lo que significa no encajar.</p><button type="button" data-libro="vegetariana" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article>
-<article class="evento-propuesta"><figure><img src="assets/evento-manana-frontal.png" width="1086" height="1448" alt="Cubierta de Mañana, y mañana, y mañana" loading="lazy"></figure><div class="evento-libro-texto"><h4>Mañana, y mañana,<br>y mañana</h4><p class="evento-autor">Gabrielle Zevin</p><p>Una historia inolvidable sobre la amistad, la creatividad y los videojuegos.</p><button type="button" data-libro="manana" aria-haspopup="dialog" aria-controls="dialogo-lectura">Explorar lectura <span aria-hidden="true">↗</span></button></div></article></div>
-      </div>
-      <div class="eventos-pasos-banda"><div class="contenedor"><ol class="eventos-tres-pasos"><li><span>01</span><span>Elegimos</span></li><li><span>02</span><span>Leemos</span></li><li><span>03</span><span>Nos encontramos</span></li></ol><a href="encuentro.html" class="eventos-demo-enlace"><span class="eventos-invitacion">El próximo encuentro empieza contigo.</span><span class="eventos-votar">¡VOTA POR TU PRÓXIMA LECTURA! <span aria-hidden="true">→</span></span></a></div></div>
-    </section>
-  </main>
-
-  <!-- NEWSLETTER -->
-<section class="boletin" aria-labelledby="titulo-boletin"><div class="contenedor"><div class="boletin-distribucion"><img class="boletin-collage" src="assets/newsletter-transparente.png" alt="Lectora en un sillón junto a una ventana, con recortes azules y rosas y la nota «Siempre hay otra historia»" loading="lazy" width="750" height="810"><div class="boletin-contenido"><h2 id="titulo-boletin">NO TE PIERDAS<br>LA PRÓXIMA<br><span>HISTORIA.</span></h2><p>Lecturas, novedades y próximos encuentros del club.<br>Un correo para seguir compartiendo historias.</p><form id="formulario-boletin" class="formulario-boletin"><label for="correo-boletin">Tu correo electrónico</label><input id="correo-boletin" name="correo" type="email" placeholder="tu@correo.com" autocomplete="email" required><button class="boton boton-negro" type="submit">QUIERO RECIBIR NOVEDADES <span aria-hidden="true">→</span></button><label class="aceptacion"><input type="checkbox" required> Quiero recibir novedades del club. Formulario de demostración: todavía no envía ni guarda datos.</label><p class="mensaje-boletin" role="status" aria-live="polite"></p></form></div></div><p class="seccion-cierre">Buenas historias. Sin prisa. A tu ritmo.</p></div></section>
-
-  <!-- FOOTER -->
-  <footer class="pie-pagina" id="pie-pagina">
-    <div class="contenedor">
-      <p class="pie-manifiesto">Las buenas historias siguen <em>en compañía.</em></p><div class="pie-columnas">
-        <div class="pie-identidad">
-          <a class="marca marca-pie marca-capitulo" href="#inicio" aria-label="Capítulo Abierto, volver al inicio"><img src="assets/logo-capitulo-abierto.svg" alt="Capítulo Abierto" width="146" height="86"></a>
-          <p>Buenos libros.<br>Mejores conversaciones.</p>
-          <span class="pie-subrayado" aria-hidden="true"></span>
-        </div>
-        <nav class="pie-grupo" aria-label="Explorar el sitio">
-          <h2>EXPLORA</h2>
-          <a href="#el-club">El club</a>
-          <a href="#como-funciona">Cómo funciona</a>
-          <a href="#lecturas">Lecturas</a>
-          <a href="#comunidad">Comunidad</a>
-          <a href="#inclusion">Inclusión</a>
-          <a href="#eventos">Eventos</a>
-        </nav>
-        <nav class="pie-grupo" aria-label="Recursos del club">
-          <h2>RECURSOS</h2>
-          <a href="#libro-mes">Libro del mes</a>
-          <a href="#lecturas">Recomendaciones</a>
-          <a href="#como-funciona">Guía para empezar</a>
-          <a href="#eventos">Actividades</a>
-        </nav>
-        <div class="pie-grupo">
-          <h2>SOBRE NOSOTROS</h2>
-          <a href="#el-club">Nuestra historia</a>
-          <a href="mailto:contacto@example.com">Contacto</a>
-          <a href="#inclusion">Accesibilidad</a>
-          <a href="#comunidad">La comunidad</a>
-        </div>
-        <div class="pie-grupo pie-social">
-          <h2>SÍGUENOS</h2>
-          <div class="pie-redes">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Visitar Instagram (abre en una pestaña nueva)"><img src="assets/icons/instagram.svg" alt="" width="24" height="24" loading="eager"></a>
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X" aria-label="Visitar X (abre en una pestaña nueva)"><img src="assets/icons/twitter-x.svg" alt="" width="24" height="24" loading="eager"></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="Visitar YouTube (abre en una pestaña nueva)"><img src="assets/icons/youtube.svg" alt="" width="24" height="24" loading="eager"></a>
+        <div class="contenedor eventos-nueva-cabecera">
+          <div class="eventos-nuevo-texto">
+            <h2 id="titulo-eventos">
+              LAS HISTORIAS<br /><span>SIGUEN FUERA</span><br />DEL LIBRO.
+            </h2>
+            <p class="eventos-lema">
+              Una lectura. Muchas formas de encontrarnos.
+            </p>
+            <p class="eventos-descripcion">
+              Elegimos un libro, leemos a nuestro ritmo y volvemos para
+              compartirlo.
+            </p>
+            <dl class="eventos-detalles">
+              <div>
+                <dt>FECHA</dt>
+                <dd>Por confirmar</dd>
+              </div>
+              <div>
+                <dt>FORMATO</dt>
+                <dd>Por confirmar</dd>
+              </div>
+              <div>
+                <dt>ACCESO</dt>
+                <dd>En preparación</dd>
+              </div>
+            </dl>
+            <a
+              class="boton boton-lima eventos-propuestas-boton"
+              href="encuentro.html"
+              >PARTICIPA Y ELIGE LIBRO <span aria-hidden="true">↓</span></a
+            >
           </div>
-          <p class="pie-lema">LEER NOS UNE.<br>LAS DIFERENCIAS<br>NOS ENRIQUECEN.</p>
-          <span class="pie-lema-subrayado" aria-hidden="true"></span>
+          <div class="eventos-nuevo-collage">
+            <img
+              src="assets/eventos-transparente.png"
+              alt="Lectores compartiendo una conversación en una librería y detalle de escritura, en un collage de papel"
+              loading="lazy"
+              width="846"
+              height="839"
+            />
+            <p class="eventos-nota-papel">
+              Las buenas historias<br />se comparten.
+            </p>
+          </div>
+        </div>
+        <div
+          class="contenedor eventos-seleccion"
+          id="proximos-eventos"
+          aria-labelledby="agenda-titulo"
+        >
+          <h3 id="agenda-titulo">Tres libros. ¿Cuál te apetece compartir?</h3>
+          <div class="eventos-tres-libros">
+            <article class="evento-propuesta">
+              <figure>
+                <img
+                  src="assets/evento-junco-transparente.png"
+                  width="1092"
+                  height="1441"
+                  alt="Cubierta de El infinito en un junco"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="evento-libro-texto">
+                <h4>El infinito<br />en un junco</h4>
+                <p class="evento-autor">Irene Vallejo</p>
+                <p>
+                  Un viaje fascinante por la historia de los libros y las
+                  personas que los hicieron posibles.
+                </p>
+                <button
+                  type="button"
+                  data-libro="junco"
+                  aria-haspopup="dialog"
+                  aria-controls="dialogo-lectura"
+                >
+                  Explorar lectura <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+            <article class="evento-propuesta">
+              <figure>
+                <img
+                  src="assets/evento-vegetariana-transparente.png"
+                  width="1024"
+                  height="1536"
+                  alt="Cubierta de La vegetariana"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="evento-libro-texto">
+                <h4>La vegetariana</h4>
+                <p class="evento-autor">Han Kang</p>
+                <p>
+                  Una novela intensa y luminosa sobre el cuerpo, la libertad y
+                  lo que significa no encajar.
+                </p>
+                <button
+                  type="button"
+                  data-libro="vegetariana"
+                  aria-haspopup="dialog"
+                  aria-controls="dialogo-lectura"
+                >
+                  Explorar lectura <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+            <article class="evento-propuesta">
+              <figure>
+                <img
+                  src="assets/evento-manana-frontal.png"
+                  width="1086"
+                  height="1448"
+                  alt="Cubierta de Mañana, y mañana, y mañana"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="evento-libro-texto">
+                <h4>Mañana, y mañana,<br />y mañana</h4>
+                <p class="evento-autor">Gabrielle Zevin</p>
+                <p>
+                  Una historia inolvidable sobre la amistad, la creatividad y
+                  los videojuegos.
+                </p>
+                <button
+                  type="button"
+                  data-libro="manana"
+                  aria-haspopup="dialog"
+                  aria-controls="dialogo-lectura"
+                >
+                  Explorar lectura <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="eventos-pasos-banda">
+          <div class="contenedor">
+            <ol class="eventos-tres-pasos">
+              <li><span>01</span><span>Elegimos</span></li>
+              <li><span>02</span><span>Leemos</span></li>
+              <li><span>03</span><span>Nos encontramos</span></li>
+            </ol>
+            <a href="encuentro.html" class="eventos-demo-enlace"
+              ><span class="eventos-invitacion"
+                >El próximo encuentro empieza contigo.</span
+              ><span class="eventos-votar"
+                >¡VOTA POR TU PRÓXIMA LECTURA!
+                <span aria-hidden="true">→</span></span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- NEWSLETTER -->
+    <section class="boletin" aria-labelledby="titulo-boletin">
+      <div class="contenedor">
+        <div class="boletin-distribucion">
+          <img
+            class="boletin-collage"
+            src="assets/newsletter-transparente.png"
+            alt="Lectora en un sillón junto a una ventana, con recortes azules y rosas y la nota «Siempre hay otra historia»"
+            loading="lazy"
+            width="750"
+            height="810"
+          />
+          <div class="boletin-contenido">
+            <h2 id="titulo-boletin">
+              NO TE PIERDAS<br />LA PRÓXIMA<br /><span>HISTORIA.</span>
+            </h2>
+            <p>
+              Lecturas, novedades y próximos encuentros del club.<br />Un correo
+              para seguir compartiendo historias.
+            </p>
+            <form id="formulario-boletin" class="formulario-boletin">
+              <label for="correo-boletin">Tu correo electrónico</label
+              ><input
+                id="correo-boletin"
+                name="correo"
+                type="email"
+                placeholder="tu@correo.com"
+                autocomplete="email"
+                required
+              /><button class="boton boton-negro" type="submit">
+                QUIERO RECIBIR NOVEDADES
+                <span aria-hidden="true">→</span></button
+              ><label class="aceptacion"
+                ><input type="checkbox" required /> Quiero recibir novedades del
+                club. Formulario de demostración: todavía no envía ni guarda
+                datos.</label
+              >
+              <p class="mensaje-boletin" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+        <p class="seccion-cierre">Buenas historias. Sin prisa. A tu ritmo.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina" id="pie-pagina">
+      <div class="contenedor">
+        <p class="pie-manifiesto">
+          Las buenas historias siguen <em>en compañía.</em>
+        </p>
+        <div class="pie-columnas">
+          <div class="pie-identidad">
+            <a
+              class="marca marca-pie marca-capitulo"
+              href="#inicio"
+              aria-label="Capítulo Abierto, volver al inicio"
+              ><img
+                src="assets/logo-capitulo-abierto.svg"
+                alt="Capítulo Abierto"
+                width="146"
+                height="86"
+            /></a>
+            <p>Buenos libros.<br />Mejores conversaciones.</p>
+            <span class="pie-subrayado" aria-hidden="true"></span>
+          </div>
+          <nav class="pie-grupo" aria-label="Explorar el sitio">
+            <h2>EXPLORA</h2>
+            <a href="#el-club">El club</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#lecturas">Lecturas</a>
+            <a href="#comunidad">Comunidad</a>
+            <a href="#inclusion">Inclusión</a>
+            <a href="#eventos">Eventos</a>
+          </nav>
+          <nav class="pie-grupo" aria-label="Recursos del club">
+            <h2>RECURSOS</h2>
+            <a href="#libro-mes">Libro del mes</a>
+            <a href="#lecturas">Recomendaciones</a>
+            <a href="#como-funciona">Guía para empezar</a>
+            <a href="#eventos">Actividades</a>
+          </nav>
+          <div class="pie-grupo">
+            <h2>SOBRE NOSOTROS</h2>
+            <a href="#el-club">Nuestra historia</a>
+            <a href="mailto:contacto@example.com">Contacto</a>
+            <a href="#inclusion">Accesibilidad</a>
+            <a href="#comunidad">La comunidad</a>
+          </div>
+          <div class="pie-grupo pie-social">
+            <h2>SÍGUENOS</h2>
+            <div class="pie-redes">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                aria-label="Visitar Instagram (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/instagram.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X"
+                aria-label="Visitar X (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/twitter-x.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="YouTube"
+                aria-label="Visitar YouTube (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/youtube.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+            </div>
+            <p class="pie-lema">
+              LEER NOS UNE.<br />LAS DIFERENCIAS<br />NOS ENRIQUECEN.
+            </p>
+            <span class="pie-lema-subrayado" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>© 2026 CAPÍTULO ABIERTO · Proyecto demostrativo</p>
+          <div class="pie-legal">
+            <span>Textos legales pendientes</span
+            ><a href="#inclusion">Accesibilidad</a
+            ><a href="mailto:contacto@example.com">Contacto</a>
+          </div>
+          <a class="volver-arriba" href="#inicio"
+            ><span aria-hidden="true">↑</span> VOLVER ARRIBA</a
+          >
         </div>
       </div>
-      <div class="pie-inferior">
-        <p>© 2026 CAPÍTULO ABIERTO · Proyecto demostrativo</p>
-        <div class="pie-legal"><span>Textos legales pendientes</span><a href="#inclusion">Accesibilidad</a><a href="mailto:contacto@example.com">Contacto</a></div>
-        <a class="volver-arriba" href="#inicio"><span aria-hidden="true">↑</span> VOLVER ARRIBA</a>
+    </footer>
+
+    <!-- ACCESO AL CLUB EN TELEGRAM · ENVÍO PENDIENTE DE CONFIGURAR -->
+    <dialog
+      id="dialogo-inscripcion"
+      class="dialogo-inscripcion dialogo-discord"
+      aria-labelledby="titulo-dialogo"
+      aria-describedby="discord-descripcion discord-aviso"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar inscripción al club"
+      >
+        ×
+      </button>
+      <p class="etiqueta">
+        <span class="telegram-marca"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telegram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+            /></svg
+          ><span>CAPÍTULO ABIERTO · TELEGRAM</span></span
+        >
+      </p>
+      <h2 id="titulo-dialogo">TU PRÓXIMA HISTORIA SE COMPARTE.</h2>
+      <p id="discord-descripcion">
+        Recibe en tu correo una invitación para unirte al club en Telegram.
+      </p>
+      <p class="discord-contexto" hidden></p>
+      <ol class="discord-pasos" aria-label="Cómo será el acceso al club">
+        <li>Deja tu correo</li>
+        <li>Recibe la invitación</li>
+        <li>Únete en Telegram</li>
+      </ol>
+      <p id="discord-aviso" class="discord-aviso">
+        Estamos preparando el envío automático. Puedes probar este formulario,
+        pero todavía no envía correos ni guarda tus datos.
+      </p>
+      <form id="formulario-inscripcion">
+        <label for="nombre-inscripcion"
+          >Tu nombre <span class="campo-opcional">(opcional)</span></label
+        >
+        <input
+          id="nombre-inscripcion"
+          name="nombre"
+          autocomplete="given-name"
+          maxlength="100"
+        />
+        <label for="correo-inscripcion">Tu correo electrónico</label>
+        <input
+          id="correo-inscripcion"
+          name="correo"
+          type="email"
+          required
+          autocomplete="email"
+          maxlength="254"
+          aria-describedby="discord-privacidad"
+        />
+        <button class="boton boton-lima boton-telegram" type="submit">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telegram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+            /></svg
+          >ENVIARME LA INVITACIÓN A TELEGRAM <span aria-hidden="true">→</span>
+        </button>
+        <p id="discord-privacidad" class="discord-ayuda">
+          Necesitarás una cuenta de Telegram. Cuando se active el envío,
+          usaremos tu correo para enviarte el acceso; la newsletter se solicita
+          por separado.
+        </p>
+      </form>
+      <div id="discord-confirmacion" hidden>
+        <p class="mensaje-inscripcion" role="status" aria-live="polite"></p>
+        <p>
+          Cuando activemos el envío, recibirás un email con el botón «Unirme al
+          club en Telegram». Si no lo encuentras, podrás revisar spam o
+          promociones.
+        </p>
+        <button type="button" class="boton boton-contorno" data-corregir-correo>
+          VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
+        </button>
       </div>
-    </div>
-  </footer>
-
-  <!-- ACCESO AL CLUB EN TELEGRAM · ENVÍO PENDIENTE DE CONFIGURAR -->
-  <dialog id="dialogo-inscripcion" class="dialogo-inscripcion dialogo-discord" aria-labelledby="titulo-dialogo" aria-describedby="discord-descripcion discord-aviso">
-    <button type="button" class="cerrar-dialogo" aria-label="Cerrar inscripción al club">×</button>
-    <p class="etiqueta"><span class="telegram-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-</svg><span>CAPÍTULO ABIERTO · TELEGRAM</span></span></p>
-    <h2 id="titulo-dialogo">TU PRÓXIMA HISTORIA SE COMPARTE.</h2>
-    <p id="discord-descripcion">Recibe en tu correo una invitación para unirte al club en Telegram.</p>
-    <p class="discord-contexto" hidden></p>
-    <ol class="discord-pasos" aria-label="Cómo será el acceso al club"><li>Deja tu correo</li><li>Recibe la invitación</li><li>Únete en Telegram</li></ol>
-    <p id="discord-aviso" class="discord-aviso">Estamos preparando el envío automático. Puedes probar este formulario, pero todavía no envía correos ni guarda tus datos.</p>
-    <form id="formulario-inscripcion">
-      <label for="nombre-inscripcion">Tu nombre <span class="campo-opcional">(opcional)</span></label>
-      <input id="nombre-inscripcion" name="nombre" autocomplete="given-name" maxlength="100">
-      <label for="correo-inscripcion">Tu correo electrónico</label>
-      <input id="correo-inscripcion" name="correo" type="email" required autocomplete="email" maxlength="254" aria-describedby="discord-privacidad">
-      <button class="boton boton-lima boton-telegram" type="submit"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-</svg>ENVIARME LA INVITACIÓN A TELEGRAM <span aria-hidden="true">→</span></button>
-      <p id="discord-privacidad" class="discord-ayuda">Necesitarás una cuenta de Telegram. Cuando se active el envío, usaremos tu correo para enviarte el acceso; la newsletter se solicita por separado.</p>
-    </form>
-    <div id="discord-confirmacion" hidden>
-      <p class="mensaje-inscripcion" role="status" aria-live="polite"></p>
-      <p>Cuando activemos el envío, recibirás un email con el botón «Unirme al club en Telegram». Si no lo encuentras, podrás revisar spam o promociones.</p>
-      <button type="button" class="boton boton-contorno" data-corregir-correo>VOLVER AL FORMULARIO <span aria-hidden="true">←</span></button>
-    </div>
-  </dialog>
-  <dialog id="dialogo-marketplace" class="dialogo-inscripcion" aria-labelledby="titulo-marketplace" aria-describedby="descripcion-marketplace">
-    <button type="button" class="cerrar-dialogo" aria-label="Cerrar marketplace">×</button>
-    <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
-    <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
-    <p id="descripcion-marketplace">Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás crear tu cuenta, acceder a la tienda y gestionar tus compras desde un mismo lugar.</p>
-    <p class="marketplace-estado">PRÓXIMAMENTE</p>
-    <button class="boton boton-lima" type="button" data-cerrar-marketplace>SEGUIR EXPLORANDO <span aria-hidden="true">→</span></button>
-  </dialog>
-<dialog id="dialogo-lectura" class="dialogo-lectura" aria-labelledby="lectura-titulo">
-    <button type="button" class="cerrar-dialogo" aria-label="Cerrar ficha de lectura">×</button>
-    <div class="lectura-ficha"><div class="lectura-portada"><img id="lectura-imagen" src="assets/cubierta-lectura-3.jpg" alt="" width="267" height="360"><span>CAPÍTULO ABIERTO / LECTURAS</span></div>
-    <div class="lectura-detalle"><p class="etiqueta" id="lectura-genero"></p><h2 id="lectura-titulo"></h2><p id="lectura-autor"></p><p id="lectura-sinopsis"></p><h3>POR QUÉ LEERLO EN EL CLUB</h3><p id="lectura-motivo"></p><h3>HABLEMOS DE…</h3><ul id="lectura-temas"></ul><blockquote id="lectura-pregunta"></blockquote><button type="button" class="boton boton-lima" data-lectura-comunidad>CONOCE LA COMUNIDAD <span aria-hidden="true">→</span></button></div></div>
-  </dialog>
-<dialog id="dialogo-inclusion" class="dialogo-inscripcion dialogo-inclusion" aria-labelledby="inclusion-dialogo-titulo" aria-describedby="inclusion-dialogo-aviso">
-    <button class="cerrar-dialogo" type="button" aria-label="Cerrar formulario de inclusión">×</button>
-    <p class="etiqueta">CAPÍTULO ABIERTO / TE ESCUCHAMOS</p><h2 id="inclusion-dialogo-titulo">¿QUÉ NECESITAS PARA PARTICIPAR?</h2>
-    <p id="inclusion-dialogo-aviso">Este formulario es una demostración: todavía no envía ni guarda mensajes. El canal de contacto estará disponible próximamente.</p>
-    <form id="formulario-inclusion"><label for="inclusion-mensaje">¿Qué te ayudaría a disfrutar del club?</label><textarea id="inclusion-mensaje" name="mensaje" rows="4" maxlength="2000" required placeholder="Por ejemplo, información sobre los formatos de lectura…"></textarea><p class="inclusion-privacidad">Evita incluir datos personales o información de salud.</p><button class="boton boton-lima" type="submit">PROBAR FORMULARIO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-7-7 7 7-7 7"/></svg></button><p class="mensaje-inclusion" role="status" aria-live="polite"></p></form>
-  </dialog>
-<dialog id="dialogo-eventos-discord" class="dialogo-inscripcion dialogo-discord" aria-labelledby="eventos-discord-titulo" aria-describedby="eventos-discord-descripcion eventos-discord-aviso">
-    <button class="cerrar-dialogo" type="button" aria-label="Cerrar invitación a Discord">×</button>
-    <p class="etiqueta eventos-discord-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-</svg><span>CAPÍTULO ABIERTO · DISCORD</span></p>
-    <h2 id="eventos-discord-titulo">LEEMOS Y CONVERSAMOS EN <span>DISCORD.</span></h2>
-    <p id="eventos-discord-descripcion">Las lecturas online del club se realizarán mediante <strong>videollamadas en Discord</strong>. Para participar, necesitarás una cuenta gratuita de Discord e incorporarte al servidor del club.</p>
-    <p>Déjanos tu correo y te enviaremos la invitación para unirte.</p>
-    <p class="eventos-discord-contexto" hidden></p>
-    <ol class="discord-pasos" aria-label="Cómo será el acceso a las lecturas online"><li>Deja tu correo</li><li>Recibe la invitación</li><li>Entra en Discord</li></ol>
-    <p id="eventos-discord-aviso" class="discord-aviso">Estamos preparando el envío automático. Puedes probar este formulario, pero todavía no envía correos ni guarda tus datos.</p>
-    <form id="formulario-eventos-discord">
-      <label for="eventos-discord-nombre">Tu nombre <span class="campo-opcional">(opcional)</span></label><input id="eventos-discord-nombre" name="nombre" autocomplete="given-name" maxlength="100">
-      <label for="eventos-discord-correo">Tu correo electrónico</label><input id="eventos-discord-correo" name="correo" type="email" autocomplete="email" required maxlength="254" aria-describedby="eventos-discord-ayuda">
-      <button type="submit" class="boton boton-lima eventos-discord-enviar"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-</svg>ENVIARME LA INVITACIÓN A DISCORD <span aria-hidden="true">→</span></button>
-      <p class="discord-ayuda" id="eventos-discord-ayuda">Necesitarás una cuenta de Discord para participar en las lecturas online por videollamada. Esta invitación no reserva plaza en un evento. La newsletter se solicita por separado.</p>
-    </form>
-    <div id="eventos-discord-confirmacion" hidden><p class="eventos-discord-resultado" role="status" aria-live="polite"></p><p>Cuando activemos el envío, recibirás un correo con la invitación al servidor del club. Podrás crear tu cuenta de Discord o entrar con la que ya tengas.</p><button type="button" class="boton boton-contorno" data-corregir-eventos-discord>VOLVER AL FORMULARIO <span aria-hidden="true">←</span></button></div>
-  </dialog>
-<dialog id="dialogo-comunidad-whatsapp" class="dialogo-inscripcion dialogo-whatsapp" aria-labelledby="whatsapp-titulo" aria-describedby="whatsapp-descripcion whatsapp-aviso">
-    <button type="button" class="cerrar-dialogo" aria-label="Cerrar comunidad de WhatsApp">×</button>
-    <p class="etiqueta whatsapp-marca"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg><span>CAPÍTULO ABIERTO · WHATSAPP</span></p>
-    <h2 id="whatsapp-titulo">UNA COMUNIDAD.<br><span>MUCHAS CONVERSACIONES.</span></h2>
-    <p id="whatsapp-descripcion">Únete a nuestra comunidad de WhatsApp y encuentra tu espacio para leer, conversar y conectar.</p>
-    <ul class="whatsapp-espacios" aria-label="Espacios de la comunidad"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8h13v7a6 6 0 0 1-12 0V8Zm13 1h2a3 3 0 0 1 0 6h-2M2 22h17M6 2v3M10 1v4M14 2v3"/></svg><div><h3>Café, brunch y charla libre</h3><p>Conversaciones más allá de los libros.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="17" rx="2"/><path d="M7 2v6M17 2v6M3 11h18"/></svg><div><h3>Organización y quedadas</h3><p>Propuestas para encontrarnos.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 9C8 7 5 7 2 8v13c3-1 6-1 9 1 3-2 6-2 9-1V11M11 9v13M20 2c-3 0-5 2-5 4s2 4 5 4l3 2-1-3c1-1 1-2 1-3 0-2-1-4-3-4Z"/></svg><div><h3>El debate de la lectura</h3><p>Comparte tu mirada sobre la lectura del club.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="6" r="4"/><path d="M2 22v-3a6 6 0 0 1 12 0v3H2Zm12-8a7 7 0 0 1 9 6v2h-9"/></svg><div><h3>Lectura inclusiva</h3><p>Distintas formas de leer y participar.</p></div></li></ul>
-    <div class="whatsapp-pie"><p id="whatsapp-aviso" class="whatsapp-aviso">Elige tu espacio y sigue la conversación en WhatsApp.</p>
-    <a class="boton boton-lima whatsapp-acceso" href="https://chat.whatsapp.com/GvemBjoFZEq87zTIDi66ek" target="_blank" rel="noopener noreferrer" aria-describedby="whatsapp-aviso"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg><span>UNIRME A LA COMUNIDAD</span></a>
-    <p class="whatsapp-ayuda">Se abre en una pestaña nueva. Necesitarás una cuenta de WhatsApp.</p>
-    </div>
-</dialog>
-</body>
-
+    </dialog>
+    <dialog
+      id="dialogo-marketplace"
+      class="dialogo-inscripcion"
+      aria-labelledby="titulo-marketplace"
+      aria-describedby="descripcion-marketplace"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar marketplace"
+      >
+        ×
+      </button>
+      <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
+      <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
+      <p id="descripcion-marketplace">
+        Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás
+        crear tu cuenta, acceder a la tienda y gestionar tus compras desde un
+        mismo lugar.
+      </p>
+      <p class="marketplace-estado">PRÓXIMAMENTE</p>
+      <button class="boton boton-lima" type="button" data-cerrar-marketplace>
+        SEGUIR EXPLORANDO <span aria-hidden="true">→</span>
+      </button>
+    </dialog>
+    <dialog
+      id="dialogo-lectura"
+      class="dialogo-lectura"
+      aria-labelledby="lectura-titulo"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar ficha de lectura"
+      >
+        ×
+      </button>
+      <div class="lectura-ficha">
+        <div class="lectura-portada">
+          <img
+            id="lectura-imagen"
+            src="assets/cubierta-lectura-3.jpg"
+            alt=""
+            width="267"
+            height="360"
+          /><span>CAPÍTULO ABIERTO / LECTURAS</span>
+        </div>
+        <div class="lectura-detalle">
+          <p class="etiqueta" id="lectura-genero"></p>
+          <h2 id="lectura-titulo"></h2>
+          <p id="lectura-autor"></p>
+          <p id="lectura-sinopsis"></p>
+          <h3>POR QUÉ LEERLO EN EL CLUB</h3>
+          <p id="lectura-motivo"></p>
+          <h3>HABLEMOS DE…</h3>
+          <ul id="lectura-temas"></ul>
+          <blockquote id="lectura-pregunta"></blockquote>
+          <button type="button" class="boton boton-lima" data-lectura-comunidad>
+            CONOCE LA COMUNIDAD <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <dialog
+      id="dialogo-inclusion"
+      class="dialogo-inscripcion dialogo-inclusion"
+      aria-labelledby="inclusion-dialogo-titulo"
+      aria-describedby="inclusion-dialogo-aviso"
+    >
+      <button
+        class="cerrar-dialogo"
+        type="button"
+        aria-label="Cerrar formulario de inclusión"
+      >
+        ×
+      </button>
+      <p class="etiqueta">CAPÍTULO ABIERTO / TE ESCUCHAMOS</p>
+      <h2 id="inclusion-dialogo-titulo">¿QUÉ NECESITAS PARA PARTICIPAR?</h2>
+      <p id="inclusion-dialogo-aviso">
+        Este formulario es una demostración: todavía no envía ni guarda
+        mensajes. El canal de contacto estará disponible próximamente.
+      </p>
+      <form id="formulario-inclusion">
+        <label for="inclusion-mensaje"
+          >¿Qué te ayudaría a disfrutar del club?</label
+        ><textarea
+          id="inclusion-mensaje"
+          name="mensaje"
+          rows="4"
+          maxlength="2000"
+          required
+          placeholder="Por ejemplo, información sobre los formatos de lectura…"
+        ></textarea>
+        <p class="inclusion-privacidad">
+          Evita incluir datos personales o información de salud.
+        </p>
+        <button class="boton boton-lima" type="submit">
+          PROBAR FORMULARIO
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M3 12h17m-7-7 7 7-7 7" />
+          </svg>
+        </button>
+        <p class="mensaje-inclusion" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+    <dialog
+      id="dialogo-eventos-discord"
+      class="dialogo-inscripcion dialogo-discord"
+      aria-labelledby="eventos-discord-titulo"
+      aria-describedby="eventos-discord-descripcion eventos-discord-aviso"
+    >
+      <button
+        class="cerrar-dialogo"
+        type="button"
+        aria-label="Cerrar invitación a Discord"
+      >
+        ×
+      </button>
+      <p class="etiqueta eventos-discord-marca">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-discord"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
+          /></svg
+        ><span>CAPÍTULO ABIERTO · DISCORD</span>
+      </p>
+      <h2 id="eventos-discord-titulo">
+        LEEMOS Y CONVERSAMOS EN <span>DISCORD.</span>
+      </h2>
+      <p id="eventos-discord-descripcion">
+        Las lecturas online del club se realizarán mediante
+        <strong>videollamadas en Discord</strong>. Para participar, necesitarás
+        una cuenta gratuita de Discord e incorporarte al servidor del club.
+      </p>
+      <p>Déjanos tu correo y te enviaremos la invitación para unirte.</p>
+      <p class="eventos-discord-contexto" hidden></p>
+      <ol
+        class="discord-pasos"
+        aria-label="Cómo será el acceso a las lecturas online"
+      >
+        <li>Deja tu correo</li>
+        <li>Recibe la invitación</li>
+        <li>Entra en Discord</li>
+      </ol>
+      <p id="eventos-discord-aviso" class="discord-aviso">
+        Estamos preparando el envío automático. Puedes probar este formulario,
+        pero todavía no envía correos ni guarda tus datos.
+      </p>
+      <form id="formulario-eventos-discord">
+        <label for="eventos-discord-nombre"
+          >Tu nombre <span class="campo-opcional">(opcional)</span></label
+        ><input
+          id="eventos-discord-nombre"
+          name="nombre"
+          autocomplete="given-name"
+          maxlength="100"
+        />
+        <label for="eventos-discord-correo">Tu correo electrónico</label
+        ><input
+          id="eventos-discord-correo"
+          name="correo"
+          type="email"
+          autocomplete="email"
+          required
+          maxlength="254"
+          aria-describedby="eventos-discord-ayuda"
+        />
+        <button type="submit" class="boton boton-lima eventos-discord-enviar">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-discord"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
+            /></svg
+          >ENVIARME LA INVITACIÓN A DISCORD <span aria-hidden="true">→</span>
+        </button>
+        <p class="discord-ayuda" id="eventos-discord-ayuda">
+          Necesitarás una cuenta de Discord para participar en las lecturas
+          online por videollamada. Esta invitación no reserva plaza en un
+          evento. La newsletter se solicita por separado.
+        </p>
+      </form>
+      <div id="eventos-discord-confirmacion" hidden>
+        <p
+          class="eventos-discord-resultado"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <p>
+          Cuando activemos el envío, recibirás un correo con la invitación al
+          servidor del club. Podrás crear tu cuenta de Discord o entrar con la
+          que ya tengas.
+        </p>
+        <button
+          type="button"
+          class="boton boton-contorno"
+          data-corregir-eventos-discord
+        >
+          VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      id="dialogo-comunidad-whatsapp"
+      class="dialogo-inscripcion dialogo-whatsapp"
+      aria-labelledby="whatsapp-titulo"
+      aria-describedby="whatsapp-descripcion whatsapp-aviso"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar comunidad de WhatsApp"
+      >
+        ×
+      </button>
+      <p class="etiqueta whatsapp-marca">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-whatsapp"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+          /></svg
+        ><span>CAPÍTULO ABIERTO · WHATSAPP</span>
+      </p>
+      <h2 id="whatsapp-titulo">
+        UNA COMUNIDAD.<br /><span>MUCHAS CONVERSACIONES.</span>
+      </h2>
+      <p id="whatsapp-descripcion">
+        Únete a nuestra comunidad de WhatsApp y encuentra tu espacio para leer,
+        conversar y conectar.
+      </p>
+      <ul class="whatsapp-espacios" aria-label="Espacios de la comunidad">
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M3 8h13v7a6 6 0 0 1-12 0V8Zm13 1h2a3 3 0 0 1 0 6h-2M2 22h17M6 2v3M10 1v4M14 2v3"
+            />
+          </svg>
+          <div>
+            <h3>Café, brunch y charla libre</h3>
+            <p>Conversaciones más allá de los libros.</p>
+          </div>
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="5" width="18" height="17" rx="2" />
+            <path d="M7 2v6M17 2v6M3 11h18" />
+          </svg>
+          <div>
+            <h3>Organización y quedadas</h3>
+            <p>Propuestas para encontrarnos.</p>
+          </div>
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M11 9C8 7 5 7 2 8v13c3-1 6-1 9 1 3-2 6-2 9-1V11M11 9v13M20 2c-3 0-5 2-5 4s2 4 5 4l3 2-1-3c1-1 1-2 1-3 0-2-1-4-3-4Z"
+            />
+          </svg>
+          <div>
+            <h3>El debate de la lectura</h3>
+            <p>Comparte tu mirada sobre la lectura del club.</p>
+          </div>
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="8" cy="7" r="3" />
+            <circle cx="17" cy="6" r="4" />
+            <path d="M2 22v-3a6 6 0 0 1 12 0v3H2Zm12-8a7 7 0 0 1 9 6v2h-9" />
+          </svg>
+          <div>
+            <h3>Lectura inclusiva</h3>
+            <p>Distintas formas de leer y participar.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="whatsapp-pie">
+        <p id="whatsapp-aviso" class="whatsapp-aviso">
+          Elige tu espacio y sigue la conversación en WhatsApp.
+        </p>
+        <a
+          class="boton boton-lima whatsapp-acceso"
+          href="https://chat.whatsapp.com/GvemBjoFZEq87zTIDi66ek"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-describedby="whatsapp-aviso"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-whatsapp"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+            /></svg
+          ><span>UNIRME A LA COMUNIDAD</span></a
+        >
+        <p class="whatsapp-ayuda">
+          Se abre en una pestaña nueva. Necesitarás una cuenta de WhatsApp.
+        </p>
+      </div>
+    </dialog>
+  </body>
 </html>
