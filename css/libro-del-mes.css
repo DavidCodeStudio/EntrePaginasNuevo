@@ -1,0 +1,264 @@
+/*
+ * libro-del-mes.css — Diseños de libro-del-mes.html.
+ * ÍNDICE
+ * 01. Enlace de ficha y cabecera
+ * 02. Portada, sinopsis y etiquetas
+ * 03. Temas y capítulos
+ * 04. Adaptaciones responsive y acabados editoriales
+ * Incluye las media queries de esta página.
+ * Cargar después de styles.css.
+ */
+
+/* ==========================================================
+   01. Enlace de ficha y cabecera
+   ========================================================== */
+.ficha-enlace {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid;
+  padding-bottom: 4px;
+  margin-bottom: 20px;
+}
+.fiche-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 105px;
+  border-bottom: 1px solid;
+}
+.fiche-cabecera > a:last-child {
+  text-decoration: underline;
+}
+/* ==========================================================
+   02. Portada, sinopsis y etiquetas
+   ========================================================== */
+.fiche-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.fiche-visuel {
+  background: var(--azul);
+  padding: 65px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.fiche-visuel:before {
+  content: "";
+  position: absolute;
+  inset: 18% 4%;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: rotate(-28deg);
+  z-index: -1;
+}
+.fiche-visuel:after {
+  content: "";
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 50%;
+  z-index: -1;
+  transform: rotate(30deg);
+  inset: 8% 20%;
+}
+.fiche-visuel img {
+  height: 540px;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(12px 18px 10px #0005);
+}
+.fiche-intro {
+  padding: 45px;
+}
+.fiche-intro h1 {
+  font:
+    clamp(40px, 4.5vw, 66px) / 1.05 Georgia,
+    serif;
+  letter-spacing: -0.04em;
+}
+.fiche-auteur {
+  font:
+    30px/1.3 Georgia,
+    serif;
+  color: var(--azul);
+}
+.fiche-intro > p:not(.etiqueta) {
+  font:
+    23px/1.4 Georgia,
+    serif;
+}
+.fiche-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+.fiche-tags span {
+  border: 1px solid #14141288;
+  padding: 8px 12px;
+}
+/* ==========================================================
+   03. Temas y capítulos
+   ========================================================== */
+.fiche-bande {
+  background: var(--rosa);
+  padding: 30px;
+  text-align: center;
+  font:
+    clamp(28px, 3.8vw, 55px) / 1.2 Georgia,
+    serif;
+  margin: 0;
+}
+.fiche-chapitre {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  padding: 50px 0;
+}
+.fiche-chapitre h2 {
+  font:
+    clamp(36px, 4.5vw, 60px) / 1.05 "Barlow Condensed",
+    sans-serif;
+}
+.fiche-chapitre > div + div {
+  border-left: 1px solid #14141266;
+  padding-left: 50px;
+}
+.fiche-chapitre p,
+.fiche-chapitre li {
+  font:
+    22px/1.5 Georgia,
+    serif;
+}
+.fiche-themes {
+  background: var(--negro);
+  color: var(--crema);
+  padding: 45px 0;
+}
+.fiche-themes > .contenedor {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 30px;
+}
+.fiche-themes h2 {
+  font:
+    48px/1 "Barlow Condensed",
+    sans-serif;
+}
+.fiche-themes article {
+  border-left: 1px solid #fff8;
+  padding-left: 25px;
+}
+.fiche-themes article > span {
+  color: var(--lima);
+  font-size: 40px;
+}
+.fiche-themes h3 {
+  font:
+    24px/1.2 Georgia,
+    serif;
+  margin: 20px 0 15px;
+}
+.fiche-themes p {
+  font:
+    18px/1.4 Georgia,
+    serif;
+}
+.fiche-chapitre ol {
+  padding-left: 25px;
+}
+.fiche-chapitre li {
+  padding: 15px 0;
+  border-bottom: 1px solid #14141266;
+}
+/* ==========================================================
+   04. Adaptaciones responsive y acabados editoriales
+   ========================================================== */
+/* Adaptación responsive: (max-width: 1150px). */
+@media (max-width: 1150px) {
+  .fiche-visuel {
+    padding: 35px;
+  }
+  .fiche-visuel img {
+    height: 440px;
+  }
+  .fiche-intro {
+    padding: 30px;
+  }
+}
+/* Adaptación responsive: (max-width: 760px). */
+@media (max-width: 760px) {
+  .fiche-hero {
+    grid-template-columns: 1fr;
+  }
+  .fiche-visuel {
+    padding: 35px;
+  }
+  .fiche-visuel img {
+    height: 380px;
+  }
+  .fiche-intro {
+    padding: 30px 20px;
+  }
+  .fiche-intro h1 {
+    font-size: 42px;
+  }
+  .fiche-chapitre {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 35px 0;
+  }
+  .fiche-chapitre > div + div {
+    padding: 0;
+    border: 0;
+  }
+  .fiche-chapitre p,
+  .fiche-chapitre li {
+    font-size: 19px;
+  }
+  .fiche-themes > .contenedor {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .fiche-themes article {
+    border: 0;
+    border-top: 1px solid #fff8;
+    padding: 20px 0 0;
+  }
+  .fiche-themes article > span {
+    font-size: 28px;
+  }
+  .fiche-cabecera {
+    gap: 20px;
+  }
+  .fiche-cabecera > a:last-child {
+    font-size: 12px;
+  }
+}
+.pagina-ficha .fiche-auteur {
+  color: var(--azul);
+  font-size: 32px;
+}
+.pagina-ficha .fiche-chapitre:has(ol) h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.pagina-ficha .fiche-appel .boton {
+  font:
+    700 23px/1.2 "Barlow Condensed",
+    sans-serif;
+}
+/* Adaptación responsive: (max-width: 760px). */
+@media (max-width: 760px) {
+  .pagina-ficha footer.fiche-cabecera {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 18px;
+  }
+  .pagina-ficha footer.fiche-cabecera p {
+    font-size: 12px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,691 @@
+/*
+ * lectura-del-mes.css — Diseños de lectura-del-mes.html.
+ * ÍNDICE
+ * 01. Cabecera y presentación del plan
+ * 02. Estado actual, meta y pregunta
+ * 03. Cronología y semanas de lectura
+ * 04. Canales de participación y pie
+ * 05. Adaptaciones responsive
+ * 06. Diseño editorial del plan
+ * 07. Cuidados y encuentro final
+ * Incluye las media queries de esta página.
+ * Cargar después de styles.css.
+ */
+
+/* ==========================================================
+   01. Cabecera y presentación del plan
+   ========================================================== */
+.pagina-plan {
+  background: #f7f5ee;
+}
+.plan-cabecera {
+  background: #101010;
+  color: #f7f5ee;
+  padding: 24px 0;
+}
+.plan-cabecera > .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.plan-cabecera .marca span {
+  color: var(--lima);
+}
+.plan-volver {
+  font-size: 13px;
+  padding: 10px 0;
+}
+.plan-principal {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.plan-presentacion {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 50px;
+  align-items: center;
+}
+.plan-presentacion h1 {
+  font:
+    700 clamp(42px, 5vw, 72px) / 1.03 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+}
+.plan-presentacion h1 > span {
+  color: var(--azul);
+}
+.plan-presentacion .etiqueta {
+  margin-bottom: 22px;
+}
+.plan-presentacion .plan-libro {
+  font-size: 21px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.plan-libro span {
+  color: #59594f;
+}
+.plan-presentacion p:last-child {
+  font-size: 16px;
+  max-width: 700px;
+  color: #55554a;
+}
+.plan-presentacion > img {
+  width: 100%;
+  height: 215px;
+  object-fit: contain;
+  transform: rotate(4deg);
+}
+.plan-ejemplo {
+  font-size: 13px;
+  line-height: 1.6;
+  border-left: 3px solid var(--azul);
+  background: #e8e6df;
+  padding: 12px 16px;
+  margin: 25px 0 30px;
+}
+/* ==========================================================
+   02. Estado actual, meta y pregunta
+   ========================================================== */
+.plan-ahora {
+  border: 1px solid #141412;
+  border-radius: 10px;
+  padding: 30px;
+  background: #fffdf6;
+}
+.plan-ahora-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+.pagina-plan .plan-estado {
+  display: inline-block;
+  background: var(--lima);
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+.plan-fecha {
+  font-size: 12px;
+  color: #55554a;
+}
+.plan-ahora h2 {
+  font:
+    700 clamp(30px, 3.6vw, 46px) / 1.08 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.02em;
+  margin-bottom: 26px;
+}
+.plan-ahora-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 35px;
+  border-top: 1px solid #14141233;
+  padding-top: 25px;
+}
+.plan-micro {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.plan-meta {
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.plan-flexible {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #55554a;
+  max-width: 350px;
+}
+.plan-pregunta {
+  border-left: 1px solid #14141233;
+  padding-left: 35px;
+}
+.plan-pregunta > [data-plan-pregunta] {
+  font-size: 23px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+.plan-spoilers {
+  display: inline-block;
+  background: var(--rosa);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.plan-ahora-accion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 26px;
+  border-top: 1px solid #14141222;
+  padding-top: 24px;
+}
+.plan-ahora-accion p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #55554a;
+  max-width: 450px;
+  margin: 0;
+}
+.plan-ahora-accion .boton {
+  font:
+    700 20px/1.2 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  flex-shrink: 0;
+}
+/* ==========================================================
+   03. Cronología y semanas de lectura
+   ========================================================== */
+.plan-ritmo {
+  padding-top: 60px;
+}
+.plan-ritmo > .etiqueta {
+  margin-bottom: 15px;
+}
+.plan-ritmo > h2,
+.plan-canales > h2 {
+  font:
+    700 36px/1.1 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.02em;
+}
+.plan-semanas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+}
+.plan-semanas li {
+  position: relative;
+  border: 1px solid #14141244;
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.plan-semanas .semana-destacada {
+  border: 2px solid var(--azul);
+  padding: 23px 19px;
+  background: #ecedff;
+}
+.plan-semana-numero {
+  font:
+    700 35px/1 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  color: #55554a;
+  margin-bottom: 18px;
+}
+.semana-destacada .plan-semana-numero {
+  color: var(--azul);
+}
+.plan-semanas h3 {
+  font:
+    700 26px/1.1 "Barlow Condensed",
+    Arial,
+    sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 13px;
+}
+.plan-semanas .plan-semana-fase {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.plan-semanas p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.plan-semanas a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-top: auto;
+}
+.plan-semanas a:hover,
+.plan-volver:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+/* ==========================================================
+   04. Canales de participación y pie
+   ========================================================== */
+.plan-canales {
+  margin-top: 50px;
+  border-top: 1px solid #14141233;
+  padding-top: 30px;
+}
+.plan-canales-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin: 25px 0;
+}
+.plan-canales-grid a {
+  padding: 10px 20px 10px 0;
+}
+.plan-canales-grid a + a {
+  padding-left: 25px;
+  border-left: 1px solid #14141233;
+}
+.plan-canales-grid strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.plan-canales-grid span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #55554a;
+}
+.plan-canales-grid a:hover strong {
+  color: var(--azul);
+  text-decoration: underline;
+}
+.plan-canales > p {
+  font-size: 12px;
+  color: #55554a;
+  max-width: 650px;
+}
+.plan-pie {
+  background: #101010;
+  color: var(--crema);
+  padding: 30px 0;
+}
+.plan-pie > .contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+.plan-pie p {
+  font:
+    22px/1.3 Georgia,
+    serif;
+  margin: 0;
+}
+.plan-pie a {
+  color: var(--lima);
+  font-size: 14px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+/* ==========================================================
+   05. Adaptaciones responsive
+   ========================================================== */
+/* Adaptación responsive: (max-width: 1050px). */
+@media (max-width: 1050px) {
+  .plan-semanas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .plan-ahora-accion {
+    align-items: start;
+    flex-direction: column;
+  }
+  .plan-presentacion h1 {
+    font-size: 58px;
+  }
+}
+/* Adaptación responsive: (max-width: 700px). */
+@media (max-width: 700px) {
+  .plan-principal {
+    padding-top: 40px;
+  }
+  .plan-presentacion {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .plan-presentacion > img {
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
+  }
+  .plan-presentacion h1 {
+    font-size: clamp(40px, 10vw, 58px);
+  }
+  .plan-presentacion .plan-libro {
+    font-size: 19px;
+  }
+  .plan-libro span {
+    display: block;
+  }
+  .plan-ahora {
+    padding: 24px 20px;
+  }
+  .plan-ahora-cabecera {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .plan-ahora-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .plan-pregunta {
+    padding: 20px 0 0;
+    border-left: 0;
+    border-top: 1px solid #14141233;
+  }
+  .plan-ahora-accion .boton {
+    width: 100%;
+    font-size: 19px;
+    padding: 16px;
+  }
+  .plan-semanas {
+    grid-template-columns: 1fr;
+    margin-left: 18px;
+    gap: 20px;
+    border-left: 2px solid #14141233;
+    padding-left: 18px;
+  }
+  .plan-semanas li:before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: #14141255;
+    position: absolute;
+    left: -19px;
+    top: 35px;
+  }
+  .plan-semanas .semana-destacada:before {
+    left: -20px;
+    background: var(--azul);
+  }
+  .plan-canales-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .plan-canales-grid a + a {
+    border-left: 0;
+    border-top: 1px solid #14141233;
+    padding: 20px 0 0;
+  }
+  .plan-canales-grid a {
+    padding: 0;
+    min-height: 60px;
+  }
+  .plan-pie > .contenedor {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+  .plan-volver {
+    font-size: 11px;
+  }
+  .plan-cabecera .marca {
+    font-size: 19px;
+  }
+  .plan-ritmo {
+    padding-top: 45px;
+  }
+}
+/* ==========================================================
+   06. Diseño editorial del plan
+   ========================================================== */
+.pagina-plan .plan-cabecera {
+  background: var(--crema);
+  color: var(--negro);
+  border-bottom: 1px solid #14141280;
+}
+.pagina-plan .plan-presentacion h1 {
+  font:
+    clamp(40px, 4.8vw, 70px) / 1.02 Georgia,
+    serif;
+  letter-spacing: -0.04em;
+}
+.pagina-plan .plan-presentacion h1 span {
+  color: inherit;
+}
+.pagina-plan .plan-presentacion {
+  grid-template-columns: 1fr 210px;
+}
+.pagina-plan .plan-presentacion > img {
+  height: 290px;
+  transform: none;
+}
+.pagina-plan .plan-ahora {
+  background: var(--azul);
+  color: var(--crema);
+  border: 0;
+  border-radius: 0;
+  padding: 45px;
+  margin-top: 30px;
+}
+.pagina-plan .plan-ahora h2 {
+  font:
+    clamp(38px, 4.6vw, 65px) / 1.05 Georgia,
+    serif;
+  max-width: 900px;
+}
+.pagina-plan .plan-fecha,
+.pagina-plan .plan-flexible,
+.pagina-plan .plan-ahora-accion p {
+  color: var(--crema);
+}
+.pagina-plan .plan-meta {
+  display: inline-block;
+  background: var(--lima);
+  color: var(--negro);
+  padding: 5px 10px;
+  font:
+    25px/1.2 Georgia,
+    serif;
+}
+.pagina-plan .plan-ahora-grid {
+  grid-template-columns: 1fr;
+  border-color: #fff8;
+}
+.pagina-plan .plan-pregunta {
+  border: 0;
+  border-top: 1px solid #fff8;
+  padding: 22px 0 0;
+}
+.pagina-plan .plan-pregunta > [data-plan-pregunta] {
+  font:
+    28px/1.3 Georgia,
+    serif;
+  max-width: 850px;
+}
+.pagina-plan .plan-ahora-accion {
+  border-color: #fff8;
+}
+.pagina-plan .plan-ahora-accion .boton {
+  background: var(--crema);
+  color: var(--negro);
+}
+.pagina-plan .plan-ritmo > h2,
+.pagina-plan .plan-canales > h2 {
+  font:
+    clamp(32px, 4vw, 55px) / 1.1 Georgia,
+    serif;
+}
+.pagina-plan .plan-semanas {
+  gap: 18px;
+  margin-top: 65px;
+}
+.pagina-plan .plan-semanas li {
+  border-radius: 0;
+  padding: 25px 20px;
+  background: transparent;
+}
+.pagina-plan .plan-semanas .semana-destacada {
+  background: var(--lima);
+  border: 1px solid var(--lima);
+}
+.pagina-plan .plan-semana-numero {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 22px);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--azul);
+  background: var(--crema);
+  color: var(--azul);
+  font-size: 25px;
+}
+.pagina-plan .semana-destacada .plan-semana-numero {
+  background: var(--lima);
+  color: var(--negro);
+  border-color: var(--negro);
+}
+.pagina-plan .plan-semanas h3 {
+  font:
+    25px/1.1 Georgia,
+    serif;
+}
+/* ==========================================================
+   07. Cuidados y encuentro final
+   ========================================================== */
+.plan-cuidados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 35px 0;
+  border-top: 1px solid #14141266;
+  margin-top: 35px;
+}
+.plan-cuidados h2 {
+  font:
+    30px/1.2 Georgia,
+    serif;
+}
+.plan-cuidados p {
+  font:
+    18px/1.5 Georgia,
+    serif;
+}
+.plan-final {
+  background: var(--negro);
+  color: var(--crema);
+  padding: 35px;
+  margin-top: 25px;
+}
+.plan-final h2 {
+  font:
+    40px/1.1 Georgia,
+    serif;
+}
+.plan-final dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.plan-final dt {
+  font-weight: bold;
+}
+.plan-final dd {
+  margin: 0;
+}
+.plan-final a {
+  color: var(--lima);
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding: 10px 0;
+}
+/* Adaptación responsive: (max-width: 760px). */
+@media (max-width: 760px) {
+  .pagina-plan .plan-presentacion {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .pagina-plan .plan-ahora {
+    padding: 25px 20px;
+  }
+  .pagina-plan .plan-presentacion h1 {
+    font-size: 42px;
+  }
+  .pagina-plan .plan-semanas {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 30px 0 0 20px;
+    padding-left: 25px;
+    gap: 20px;
+  }
+  .pagina-plan .plan-semana-numero {
+    top: 18px;
+    left: -48px;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+  .pagina-plan .plan-semanas li:before {
+    display: none;
+  }
+  .plan-cuidados {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .plan-final {
+    padding: 25px 20px;
+  }
+  .plan-final h2 {
+    font-size: 32px;
+  }
+  .plan-final dl {
+    grid-template-columns: 1fr;
+  }
+}
+.pagina-plan .plan-cabecera .marca span {
+  color: var(--azul);
+}
+.pagina-plan .plan-spoilers {
+  color: var(--negro);
+}
+.pagina-plan .plan-semanas {
+  position: relative;
+}
+.pagina-plan .plan-semanas:before {
+  content: "";
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: -29px;
+  height: 1px;
+  background: var(--azul);
+}
+.pagina-plan .plan-semana-numero {
+  z-index: 1;
+}
+.pagina-plan .plan-ejemplo {
+  background: var(--rosa);
+  border: 0;
+  color: var(--negro);
+}
+/* Adaptación responsive: (max-width: 760px). */
+@media (max-width: 760px) {
+  .pagina-plan .plan-semanas:before {
+    display: none;
+  }
+}
