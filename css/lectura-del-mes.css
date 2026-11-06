@@ -16,11 +16,11 @@
    01. Cabecera y presentación del plan
    ========================================================== */
 .pagina-plan {
-  background: #f7f5ee;
+  background: var(--crema);
 }
 .plan-cabecera {
   background: #101010;
-  color: #f7f5ee;
+  color: var(--crema);
   padding: 24px 0;
 }
 .plan-cabecera > .contenedor {
