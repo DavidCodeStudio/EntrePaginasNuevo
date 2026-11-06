@@ -15,9 +15,9 @@ python3 -m http.server 8000
 
 ## Organización del código
 
-- `css/styles.css`: variables, tipografía, etiquetas base, componentes generales, cabecera, footer y accesibilidad.
+- `css/styles.css`: variables, tipografía, etiquetas base, componentes generales, cabecera, footer, accesibilidad y diálogos compartidos de registro y marketplace.
 - `css/index.css`: diseños exclusivos de la portada. No se carga en las páginas provisionales.
-- `css/proximamente.css`: contenido provisional responsive y estilos de sus diálogos de cabecera; se comparte entre las tres páginas secundarias.
+- `css/proximamente.css`: contenido provisional responsive; se comparte entre las tres páginas secundarias. Los diálogos de cabecera utilizan los estilos comunes de `styles.css`.
 - `js/script.js`: interacciones de la portada.
 - `js/plan-mensual.js`: estado editorial de la lectura que sigue utilizándose en la portada. No se carga en las páginas provisionales.
 - `js/proximamente.js`: menú y diálogos de las páginas provisionales.

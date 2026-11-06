@@ -18,6 +18,9 @@
 /* ==========================================================
    01. Portada y composición gráfica
    ========================================================== */
+.portada {
+  padding: 32px 0 60px;
+}
 .cuadricula-portada {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -25,74 +28,14 @@
   align-items: center;
 }
 .portada h1 {
-  font-size: clamp(48px, 5.6vw, 83px);
-  line-height: 0.98;
   letter-spacing: -0.075em;
   margin-bottom: 30px;
-}
-.portada h1 span {
-  color: var(--azul);
-}
-.composicion {
-  position: relative;
-  padding: 24px 8px 35px;
-  isolation: isolate;
-}
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  .portada {
-    padding-top: 45px;
-  }
-  .portada h1 {
-    font-size: clamp(40px, 10.2vw, 70px);
-  }
-  .portada-composicion {
-    max-width: 500px;
-  }
-  .portada h1 span {
-    overflow-wrap: anywhere;
-  }
-}
-.portada-composicion {
-  padding: 0;
-  margin: 0;
-  transform: none !important;
-}
-.portada-composicion img {
-  transform: none;
-  border: 0;
-  border: 0 !important;
-  transform: none !important;
-  width: 100%;
-  height: auto;
-  max-height: 820px;
-  object-fit: contain;
-}
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  .portada-composicion {
-    width: 100%;
-  }
-}
-.portada .boton-telegram > .bi-telegram {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-  fill: currentColor;
-}
-/* Adaptación responsive: (max-width: 380px). */
-@media (max-width: 380px) {
-  .portada .boton-telegram {
-    gap: 16px;
-  }
-}
-.portada {
-  padding: 32px 0 60px;
-}
-.portada h1 {
   font:
     800 clamp(52px, 6.15vw, 94px) / 0.99 Arial,
     sans-serif;
+}
+.portada h1 span {
+  color: var(--azul);
 }
 .portada-texto .etiqueta {
   font-size: 12px;
@@ -120,14 +63,45 @@
   min-height: 55px;
   padding: 14px 18px;
 }
+.portada .boton-telegram > .bi-telegram {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+.composicion {
+  position: relative;
+  isolation: isolate;
+}
 .portada-composicion {
+  margin: 0;
+  transform: none !important;
   padding: 0 !important;
+}
+.portada-composicion img {
+  border: 0 !important;
+  transform: none !important;
+  max-height: 820px;
+  object-fit: contain;
 }
 .portada-composicion:before,
 .portada-composicion:after {
   display: none;
 }
-/* Adaptación responsive: (max-width: 1150px). */
+/*
+ Adaptación responsive: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .portada h1 span {
+    overflow-wrap: anywhere;
+  }
+  .portada-composicion {
+    width: 100%;
+  }
+}
+/*
+ Adaptación responsive: (max-width: 1150px).
+ */
 @media (max-width: 1150px) {
   .portada h1 {
     font-size: 6.2vw;
@@ -136,7 +110,9 @@
     flex-wrap: wrap;
   }
 }
-/* Adaptación responsive: (max-width: 760px). */
+/*
+ Adaptación responsive: (max-width: 760px).
+ */
 @media (max-width: 760px) {
   .cuadricula-portada {
     grid-template-columns: 1fr;
@@ -167,7 +143,9 @@
     margin-top: 20px;
   }
 }
-/* Adaptación responsive: (max-width: 380px). */
+/*
+ Adaptación responsive: (max-width: 380px).
+ */
 @media (max-width: 380px) {
   .portada h1 {
     font-size: 44px;
@@ -567,44 +545,6 @@
 /* ==========================================================
    03. Cómo funciona
    ========================================================== */
-.funcionamiento h2 span {
-  color: var(--azul);
-}
-.pasos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 40px;
-  border-top: 1px solid #141412;
-}
-.paso {
-  padding: 28px 30px 0 0;
-}
-.paso + .paso {
-  border-left: 1px solid #14141233;
-  padding-left: 30px;
-}
-.paso h3 {
-  font-size: 20px;
-}
-.paso p {
-  max-width: 270px;
-  color: #626259;
-}
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  .pasos {
-    grid-template-columns: 1fr;
-  }
-  .paso,
-  .paso + .paso {
-    border-left: 0;
-    border-bottom: 1px solid #14141233;
-    padding: 25px 0;
-  }
-  .paso h3 {
-    margin-top: 20px;
-  }
-}
 .bienvenida-cabecera {
   display: grid;
   grid-template-columns: 1.65fr 1fr;
@@ -935,31 +875,6 @@
 /* ==========================================================
    04. Libro del mes
    ========================================================== */
-#libro-mes h2 {
-  font:
-    700 clamp(44px, 5.6vw, 80px) / 0.99 Georgia,
-    serif;
-  letter-spacing: -0.055em;
-  margin: 0 0 22px;
-}
-/* Adaptación responsive: (max-width: 1000px). */
-@media (max-width: 1000px) {
-  #libro-mes h2 {
-    font-size: clamp(40px, 5.8vw, 58px);
-  }
-}
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  #libro-mes h2 {
-    font-size: clamp(44px, 10vw, 66px);
-  }
-}
-#libro-mes #titulo-libro {
-  font:
-    clamp(38px, 4.5vw, 66px) / 1.04 Georgia,
-    serif;
-  letter-spacing: -0.04em;
-}
 #libro-mes.mes-editorial {
   background: var(--crema);
   padding: 48px 0 50px;
@@ -1025,20 +940,10 @@
   );
 }
 #libro-mes.mes-editorial .mes-collage img {
-  width: 100%;
   max-width: 390px;
-  height: auto;
   max-height: 620px;
   object-fit: contain;
   filter: drop-shadow(8px 12px 7px #14141235);
-}
-#libro-mes.mes-editorial figcaption {
-  font:
-    10px/1.5 Georgia,
-    serif;
-  letter-spacing: 1px;
-  margin: 20px 0 0;
-  align-self: flex-start;
 }
 #libro-mes.mes-editorial .mes-contenido {
   min-width: 0;
@@ -1179,17 +1084,8 @@
 /* ==========================================================
    05. Biblioteca, filtros y fichas de lectura
    ========================================================== */
-.rejilla-libros {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
-  align-items: start;
-}
 .cubierta-lectura {
-  aspect-ratio: 0.72;
   transition: transform 0.25s;
-  margin-bottom: 20px;
-  object-fit: contain;
   object-position: bottom;
 }
 .tarjeta-libro:hover img {
@@ -1211,71 +1107,21 @@
   padding: 4px 8px;
   display: inline-block;
 }
-.filtros {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.filtro {
-  border: 1px solid #fff5;
-  background: transparent;
-  color: var(--blanco);
-  padding: 10px 18px;
-  font-size: 11px;
-}
 .filtro.activo {
   background: var(--lima);
   color: var(--negro);
 }
-.aviso-filtros {
-  font-size: 12px;
-  margin-top: 15px;
-}
 /* Adaptación responsive: (max-width: 700px). */
 @media (max-width: 700px) {
-  .rejilla-libros {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 20px;
-  }
   .tarjeta-libro:last-child {
     grid-column: auto;
   }
 }
-.biblioteca-cabecera {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 70px;
-  align-items: end;
-}
 .biblioteca h2 {
-  font-size: clamp(32px, 3.7vw, 56px);
   letter-spacing: -0.055em;
-  line-height: 1.03;
-}
-.biblioteca-intro {
-  max-width: 330px;
-  padding-bottom: 20px;
-}
-.biblioteca-intro p {
-  color: #d1d1c6;
-  font-size: 16px;
-}
-.biblioteca-herramientas {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  margin: 40px 0 30px;
-  padding: 25px 0;
-  border-top: 1px solid #fff4;
-  border-bottom: 1px solid #fff4;
 }
 .biblioteca .filtro {
   text-transform: none;
-  font-size: 13px;
-  border-radius: 30px;
-  padding: 10px 22px;
-  min-height: 44px;
   transition:
     background 0.2s,
     color 0.2s;
@@ -1284,159 +1130,33 @@
   border-color: var(--lima);
 }
 .biblioteca .aviso-filtros {
-  margin: 0;
   color: #bdbdb2;
-  font-size: 12px;
-  white-space: nowrap;
-}
-.biblioteca .rejilla-libros {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-.biblioteca .tarjeta-libro {
-  min-width: 0;
-  background: #20201d;
-  border: 1px solid #fff2;
 }
 .libro-abrir {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   text-align: left;
   width: 100%;
-  height: 100%;
   border: 0;
   background: none;
   color: inherit;
-  padding: 0;
-  cursor: pointer;
 }
 .libro-visual {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 30px 25px;
-  background: #2c2c27;
-  min-height: 260px;
   width: 100%;
-}
-.biblioteca .cubierta-lectura {
-  width: auto;
-  max-width: 100%;
-  height: 220px;
-  aspect-ratio: auto;
-  object-fit: contain;
-  margin: 0;
-  box-shadow: 7px 12px 20px #0004;
 }
 .biblioteca .tarjeta-libro:hover .cubierta-lectura {
   transform: translateY(-5px) rotate(-2deg);
 }
 .libro-contenido {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  flex: 1;
   width: 100%;
-}
-.libro-genero {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1.7px;
-  color: var(--lima);
-  margin-bottom: 15px;
 }
 .libro-titulo {
   display: block;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.1;
   letter-spacing: -0.045em;
-  margin-bottom: 10px;
-}
-.libro-autor {
-  font-size: 13px;
-  color: #c4c4b9;
-  margin-bottom: 18px;
 }
 .libro-gancho {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #d1d1c6;
-  margin-bottom: 28px;
   display: block;
 }
-.libro-explorar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: auto;
-  border-top: 1px solid #fff3;
-  padding-top: 18px;
-  font-size: 10px;
-  letter-spacing: 0.7px;
-  font-weight: 700;
-}
-.libro-explorar > span {
-  font-size: 24px;
-  color: var(--lima);
-}
-.libro-distintivo {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: var(--rosa);
-  color: var(--negro);
-  padding: 7px 12px;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  z-index: 1;
-  transform: rotate(-3deg);
-}
-.biblioteca .libro-destacado {
-  grid-column: span 2;
-  background: var(--crema);
-  color: var(--negro);
-  border: 0;
-}
 .libro-destacado .libro-abrir {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.libro-destacado .libro-visual {
-  background: var(--rosa);
-  height: 100%;
-  padding: 65px 35px;
-}
-.libro-destacado .cubierta-lectura {
-  height: 300px;
-}
-.libro-destacado .libro-distintivo {
-  background: var(--lima);
-}
-.libro-destacado .libro-contenido {
-  padding: 38px 30px;
-}
-.libro-destacado .libro-titulo {
-  font-size: clamp(28px, 3vw, 42px);
-}
-.libro-destacado .libro-genero {
-  color: #293aaf;
-}
-.libro-destacado .libro-autor,
-.libro-destacado .libro-gancho {
-  color: #52524b;
-}
-.libro-destacado .libro-explorar {
-  border-color: #14141244;
-}
-.libro-destacado .libro-explorar > span {
-  color: var(--azul);
 }
 .biblioteca .libro-abrir:focus-visible {
   outline: 3px solid var(--lima);
@@ -1444,17 +1164,9 @@
   z-index: 2;
 }
 .biblioteca-cierre {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  border-top: 1px solid #fff3;
-  padding-top: 24px;
-  margin: 35px 0 0;
-  font:
-    13px/1.5 "Courier New",
-    monospace;
-  color: #bdbdb2;
 }
 .biblioteca-cierre span {
   font-size: 30px;
@@ -1548,109 +1260,13 @@
 .lectura-detalle .boton {
   width: 100%;
 }
-/* Adaptación responsive: (max-width: 1000px). */
-@media (max-width: 1000px) {
-  .biblioteca-cabecera {
-    gap: 35px;
-  }
-  .biblioteca .rejilla-libros {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .biblioteca .libro-destacado {
-    grid-column: span 2;
-  }
-  .biblioteca-intro {
-    max-width: 270px;
-  }
-}
 /* Adaptación responsive: (max-width: 700px). */
 @media (max-width: 700px) {
-  .biblioteca-cabecera {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .biblioteca h2 {
-    font-size: clamp(29px, 7.4vw, 44px);
-  }
   .biblioteca-intro {
-    max-width: none;
     position: relative;
-    padding-right: 45px;
-    padding-bottom: 0;
-  }
-  .biblioteca-intro p {
-    font-size: 14px;
-  }
-  .biblioteca-herramientas {
-    flex-direction: column;
-    align-items: start;
-    gap: 16px;
-    margin-top: 25px;
-    padding: 20px 0;
-  }
-  .biblioteca .filtros {
-    gap: 8px;
-  }
-  .biblioteca .filtro {
-    padding: 10px 14px;
-    font-size: 12px;
-  }
-  .biblioteca .rejilla-libros {
-    gap: 14px;
-  }
-  .biblioteca .libro-destacado {
-    grid-column: 1/-1;
   }
   .libro-destacado .libro-abrir {
     grid-template-columns: 0.85fr 1fr;
-  }
-  .libro-destacado .libro-visual {
-    padding: 55px 12px 30px;
-  }
-  .libro-destacado .cubierta-lectura {
-    height: 190px;
-  }
-  .libro-destacado .libro-contenido {
-    padding: 25px 16px;
-  }
-  .libro-destacado .libro-titulo {
-    font-size: 25px;
-  }
-  .libro-visual {
-    padding: 45px 12px 20px;
-    min-height: 200px;
-  }
-  .biblioteca .cubierta-lectura {
-    height: 165px;
-    max-width: 100%;
-  }
-  .libro-contenido {
-    padding: 16px 12px;
-  }
-  .libro-titulo {
-    font-size: 21px;
-  }
-  .libro-autor {
-    font-size: 12px;
-  }
-  .libro-gancho {
-    font-size: 12px;
-    margin-bottom: 20px;
-  }
-  .libro-explorar {
-    font-size: 9px;
-    letter-spacing: 0;
-    gap: 4px;
-  }
-  .libro-distintivo {
-    font-size: 8px;
-    left: 9px;
-    top: 12px;
-    padding: 6px 8px;
-  }
-  .libro-genero {
-    font-size: 9px;
-    letter-spacing: 1px;
   }
   .lectura-ficha {
     grid-template-columns: 1fr;
@@ -1668,52 +1284,21 @@
   .lectura-detalle h2 {
     font-size: 32px;
   }
-  .biblioteca-cierre {
-    font-size: 12px;
-  }
 }
 /* Adaptación responsive: (max-width: 380px). */
 @media (max-width: 380px) {
   .libro-destacado .libro-abrir {
     grid-template-columns: 1fr;
   }
-  .libro-destacado .libro-visual {
-    padding: 45px 20px 25px;
-  }
-  .libro-destacado .cubierta-lectura {
-    height: 205px;
-  }
-  .biblioteca .cubierta-lectura {
-    height: 145px;
-  }
-  .libro-titulo {
-    font-size: 19px;
-  }
-  .libro-visual {
-    min-height: 185px;
-  }
-  .libro-explorar {
-    font-size: 8px;
-  }
 }
 #lecturas .tarjeta-libro {
   position: relative;
 }
 #lecturas .libro-abrir {
-  position: static;
   cursor: default;
 }
 #lecturas .libro-explorar {
-  border-right: 0;
-  border-left: 0;
-  border-bottom: 0;
-  border-radius: 0;
-  background: transparent;
-  color: inherit;
-  width: 100%;
   text-align: left;
-  font-family: Arial, sans-serif;
-  min-height: 44px;
   cursor: pointer;
 }
 #lecturas .libro-explorar:after {
@@ -1726,24 +1311,10 @@
 #lecturas .libro-eventos {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  min-height: 44px;
-  margin-top: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--lima);
   width: 100%;
 }
 #lecturas .libro-eventos svg {
-  width: 20px;
-  height: 20px;
   flex-shrink: 0;
-}
-#lecturas .libro-destacado .libro-eventos {
-  color: var(--azul);
 }
 #lecturas .libro-eventos:hover {
   text-decoration: underline;
@@ -1760,30 +1331,10 @@
 #lecturas .libro-destacado .libro-eventos:focus-visible {
   outline-color: var(--azul);
 }
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  #lecturas .libro-eventos {
-    font-size: 12px;
-    gap: 5px;
-  }
-}
 #lecturas.biblioteca-editorial h2 {
-  font:
-    700 clamp(44px, 5.2vw, 76px) / 1 "Barlow Condensed",
-    Arial,
-    sans-serif;
   letter-spacing: -0.025em;
-  margin: 0;
-  font-size: clamp(44px, 5.2vw, 78px);
-  line-height: 1;
-  margin-bottom: 20px;
-}
-#lecturas.biblioteca-editorial .biblioteca-intro {
-  padding-bottom: 4px;
 }
 #lecturas.biblioteca-editorial .biblioteca-intro p {
-  font-size: 17px;
-  line-height: 1.5;
   margin: 0;
 }
 #lecturas.biblioteca-editorial .libro-destacado {
@@ -1802,15 +1353,6 @@
   position: relative;
   height: 300px;
 }
-#lecturas.biblioteca-editorial .tarjeta-libro:nth-child(2) .libro-visual {
-  background: var(--azul);
-}
-#lecturas.biblioteca-editorial .tarjeta-libro:nth-child(4) .libro-visual {
-  background: #a5bcc2;
-}
-#lecturas.biblioteca-editorial .tarjeta-libro:nth-child(5) .libro-visual {
-  background: #b7c5ef;
-}
 #lecturas.biblioteca-editorial .cubierta-lectura {
   aspect-ratio: auto;
   height: 292px;
@@ -1824,17 +1366,10 @@
   z-index: 1;
 }
 #lecturas.biblioteca-editorial .libro-titulo {
-  font-size: 26px;
-  line-height: 1.12;
   min-height: 32px;
 }
 #lecturas.biblioteca-editorial .libro-autor {
-  line-height: 1.4;
   text-transform: uppercase;
-}
-#lecturas.biblioteca-editorial .libro-gancho {
-  font-size: 15px;
-  line-height: 1.5;
 }
 #lecturas.biblioteca-editorial .libro-destacado .libro-autor,
 #lecturas.biblioteca-editorial .libro-destacado .libro-gancho {
@@ -1853,24 +1388,8 @@
   color: var(--lima);
 }
 #lecturas.biblioteca-editorial .biblioteca-cierre {
-  margin-top: 28px;
   padding: 0;
-  font-size: 11px;
   text-align: center;
-}
-/* Adaptación responsive: (max-width: 600px). */
-@media (max-width: 600px) {
-  #lecturas.biblioteca-editorial .libro-titulo {
-    font-size: 28px;
-  }
-  #lecturas.biblioteca-editorial .libro-gancho {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  #lecturas.biblioteca-editorial .biblioteca-cierre {
-    font-size: 10px;
-    line-height: 1.7;
-  }
 }
 #lecturas.biblioteca-editorial .biblioteca-intro {
   font-size: 17px;
@@ -1897,43 +1416,15 @@
 #lecturas.biblioteca-editorial .libro-visual:after {
   display: none;
 }
-#lecturas.biblioteca-editorial .libro-autor {
-  font-size: 9px;
-}
 #lecturas.biblioteca-editorial .libro-genero {
-  font-size: 10px;
-  padding-left: 16px;
   text-transform: uppercase;
 }
 #lecturas.biblioteca-editorial .libro-explorar {
-  font-size: 10px;
   min-height: 44px;
 }
 #lecturas.biblioteca-editorial .libro-eventos {
-  font-size: 12px;
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-#lecturas.biblioteca-editorial .libro-distintivo {
-  font-size: 9px;
-}
-/* Adaptación responsive: (max-width: 760px). */
-@media (max-width: 760px) {
-  #lecturas.biblioteca-editorial h2 {
-    font-size: 45px;
-  }
-  #lecturas.biblioteca-editorial .libro-titulo {
-    font-size: 21px;
-  }
-  #lecturas.biblioteca-editorial .libro-gancho {
-    font-size: 16px;
-  }
-  #lecturas.biblioteca-editorial .libro-explorar {
-    font-size: 9px;
-  }
-  #lecturas.biblioteca-editorial .libro-eventos {
-    font-size: 10px;
-  }
 }
 #lecturas.biblioteca-editorial {
   padding: 40px 0 30px;
@@ -2045,8 +1536,6 @@
   background: transparent;
 }
 #lecturas.biblioteca-editorial .libro-destacado {
-  background: #f5f2e8;
-  color: var(--negro);
   border-color: #f5f2e8;
 }
 #lecturas.biblioteca-editorial .libro-abrir {
@@ -2061,7 +1550,6 @@
   justify-content: center;
   padding: 3px 0 0;
   margin: 0;
-  background: none;
 }
 #lecturas.biblioteca-editorial .cubierta-lectura {
   width: auto;
@@ -2377,17 +1865,8 @@
 /* ==========================================================
    06. Comunidad
    ========================================================== */
-.comunidad-editorial {
-  padding: 90px 0 80px;
-}
 .comunidad-editorial > .contenedor > .etiqueta {
   margin-bottom: 30px;
-}
-.comunidad-escena {
-  display: grid;
-  grid-template-columns: 0.8fr 1.7fr;
-  gap: 40px;
-  align-items: center;
 }
 .comunidad-editorial .comunidad-relato h2 {
   font:
@@ -2395,65 +1874,27 @@
     Arial,
     sans-serif;
   letter-spacing: -0.025em;
-  margin: 0 0 24px;
-}
-.comunidad-relato h2 span {
-  color: var(--azul);
 }
 .comunidad-relato > p {
-  font-size: clamp(16px, 1.5vw, 20px);
   line-height: 1.5;
   margin: 0;
-  max-width: 360px;
 }
 .comunidad-collage {
-  width: 100%;
-  height: auto;
   object-fit: contain;
 }
 .comunidad-formas {
-  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  list-style: none;
-  margin: 30px 0 0;
-  padding: 0;
 }
 .comunidad-formas li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
   min-width: 0;
 }
-.comunidad-formas li + li {
-  border-left: 1px solid #14141244;
-  padding-left: 18px;
-}
 .comunidad-formas svg {
-  width: 32px;
-  height: 32px;
   flex-shrink: 0;
 }
-.comunidad-formas h3 {
-  font:
-    700 18px/1.12 "Barlow Condensed",
-    Arial,
-    sans-serif;
-  letter-spacing: 0;
-  margin: 0 0 10px;
-}
-.comunidad-formas p {
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0;
-}
 .comunidad-pregunta {
-  background: var(--rosa);
   transform: rotate(1.2deg);
-  padding: 35px 30px 28px;
   text-align: center;
   width: 94%;
-  margin: 50px auto 40px;
 }
 .comunidad-pregunta p {
   font:
@@ -2473,113 +1914,25 @@
   min-width: 340px;
   min-height: 65px;
   justify-content: space-between;
-  font:
-    700 27px/1.2 "Barlow Condensed",
-    Arial,
-    sans-serif;
   letter-spacing: 0.4px;
-  padding: 17px 25px;
 }
 .comunidad-unirse svg {
   width: 26px;
   height: 26px;
 }
-/* Adaptación responsive: (max-width: 1100px). */
-@media (max-width: 1100px) {
-  .comunidad-escena {
-    grid-template-columns: 0.9fr 1.6fr;
-    gap: 30px;
-  }
-  .comunidad-formas {
-    gap: 12px;
-  }
-  .comunidad-formas li {
-    gap: 8px;
-  }
-  .comunidad-formas li + li {
-    padding-left: 12px;
-  }
-  .comunidad-formas svg {
-    width: 24px;
-    height: 24px;
-  }
-  .comunidad-formas h3 {
-    font-size: 17px;
-  }
-  .comunidad-formas p {
-    font-size: 12px;
-  }
-}
 /* Adaptación responsive: (max-width: 900px). */
 @media (max-width: 900px) {
-  .comunidad-escena {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
   .comunidad-editorial .comunidad-relato h2 {
-    font-size: 64px;
     max-width: 600px;
-  }
-  .comunidad-relato > p {
-    max-width: 600px;
-    font-size: 18px;
-  }
-  .comunidad-formas {
-    gap: 22px;
-  }
-  .comunidad-formas li + li {
-    padding-left: 22px;
-  }
-  .comunidad-formas svg {
-    width: 30px;
-    height: 30px;
-  }
-  .comunidad-formas p {
-    font-size: 14px;
-  }
-  .comunidad-formas h3 {
-    font-size: 20px;
   }
 }
 /* Adaptación responsive: (max-width: 600px). */
 @media (max-width: 600px) {
-  .comunidad-editorial {
-    padding: 65px 0;
-  }
-  .comunidad-editorial .comunidad-relato h2 {
-    font-size: clamp(44px, 12vw, 65px);
-  }
-  .comunidad-relato > p {
-    font-size: 16px;
-  }
   .comunidad-formas {
     grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 25px;
-  }
-  .comunidad-formas li {
-    gap: 16px;
-  }
-  .comunidad-formas li + li {
-    border-left: 0;
-    border-top: 1px solid #14141233;
-    padding: 20px 0 0;
-  }
-  .comunidad-formas svg {
-    width: 34px;
-    height: 34px;
-  }
-  .comunidad-formas h3 {
-    font-size: 22px;
-    margin-bottom: 6px;
-  }
-  .comunidad-formas p {
-    font-size: 14px;
   }
   .comunidad-pregunta {
-    margin: 35px auto 30px;
     width: 98%;
-    padding: 27px 20px;
   }
   .comunidad-pregunta p {
     font-size: 32px;
@@ -2593,7 +1946,6 @@
   .comunidad-unirse {
     width: 100%;
     min-width: 0;
-    font-size: 26px;
   }
 }
 #comunidad .comunidad-unirse > .bi-whatsapp {
@@ -2700,7 +2052,6 @@
   max-width: none;
   width: 100%;
   text-align: center;
-  margin: 12px 0 0;
 }
 /* Adaptación responsive: (max-width: 760px). */
 @media (max-width: 760px) {
@@ -2727,17 +2078,8 @@
 .inclusion {
   border-top: 1px solid #14141222;
 }
-.inclusion h2 span {
-  color: var(--azul);
-}
-.inclusion-abierta {
-  padding: 85px 0 75px;
-}
 .inclusion-cabecera {
-  display: grid;
   grid-template-columns: 1.04fr 1.1fr;
-  gap: 35px;
-  align-items: center;
 }
 .inclusion-cabecera h2 {
   font:
@@ -2745,35 +2087,20 @@
     Arial,
     sans-serif;
   letter-spacing: -0.025em;
-  margin: 0 0 25px;
-}
-.inclusion-cabecera h2 span {
-  color: var(--azul);
 }
 .inclusion-abierta .inclusion-intro {
-  font-size: clamp(16px, 1.5vw, 20px);
-  line-height: 1.5;
-  max-width: 570px;
   margin: 0;
 }
 .inclusion-ilustracion {
-  width: 100%;
   height: auto;
-  max-height: 430px;
   object-fit: contain;
 }
 .inclusion-compromisos {
-  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
   list-style: none;
-  margin: 40px 0 30px;
-  padding: 0;
 }
 .inclusion-compromiso {
   position: relative;
-  border: 2px solid var(--negro);
-  padding: 66px 26px 26px;
   min-width: 0;
 }
 .inclusion-compromiso:before {
@@ -2793,37 +2120,13 @@
 }
 .inclusion-compromiso > svg {
   display: block;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 18px;
 }
 .inclusion-compromiso h3 {
-  font:
-    700 29px/1.1 "Barlow Condensed",
-    Arial,
-    sans-serif;
   letter-spacing: -0.015em;
   margin: 0 0 15px;
 }
-.inclusion-compromiso p {
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 0;
-}
-.inclusion-escucha {
-  border-top: 1px solid var(--negro);
-  padding-top: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
 .inclusion-escucha > p {
-  font:
-    bold clamp(26px, 3vw, 42px) / 1.15 Georgia,
-    serif;
   letter-spacing: -0.04em;
-  margin: 0;
 }
 .inclusion-contacto {
   font:
@@ -2832,96 +2135,33 @@
     sans-serif;
   min-height: 64px;
   padding: 18px 27px;
-  white-space: normal;
 }
 .inclusion-contacto svg {
   width: 24px;
   height: 24px;
 }
 .inclusion-escucha > div > p {
-  font-size: 12px;
   text-align: center;
-  margin: 10px 0 0;
 }
 /* Adaptación responsive: (max-width: 1000px). */
 @media (max-width: 1000px) {
-  .inclusion-cabecera {
-    gap: 25px;
-  }
-  .inclusion-cabecera h2 {
-    font-size: clamp(39px, 4.8vw, 60px);
-  }
-  .inclusion-compromisos {
-    gap: 16px;
-  }
-  .inclusion-compromiso {
-    padding: 60px 20px 24px;
-  }
-  .inclusion-compromiso h3 {
-    font-size: 26px;
-  }
-  .inclusion-compromiso p {
-    font-size: 15px;
-  }
   .inclusion-contacto {
-    font-size: 21px;
     padding: 16px 20px;
   }
 }
 /* Adaptación responsive: (max-width: 700px). */
 @media (max-width: 700px) {
-  .inclusion-abierta {
-    padding: 65px 0;
-  }
   .inclusion-cabecera {
     grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  .inclusion-cabecera h2 {
-    font-size: clamp(40px, 10.5vw, 65px);
-  }
-  .inclusion-ilustracion {
-    max-height: 300px;
-    max-width: 480px;
-    margin: auto;
-  }
-  .inclusion-abierta .inclusion-intro {
-    font-size: 16px;
   }
   .inclusion-compromisos {
     grid-template-columns: 1fr;
-    margin: 25px 0 30px;
-    gap: 20px;
-  }
-  .inclusion-compromiso {
-    padding: 56px 24px 25px;
-  }
-  .inclusion-compromiso > svg {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 16px;
-  }
-  .inclusion-compromiso h3 {
-    font-size: 30px;
-  }
-  .inclusion-compromiso p {
-    font-size: 16px;
   }
   .inclusion-compromiso:before {
     height: 28px;
   }
-  .inclusion-escucha {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 25px;
-  }
-  .inclusion-escucha > p {
-    font-size: 30px;
-  }
   .inclusion-contacto {
-    width: 100%;
     justify-content: space-between;
-    font-size: 23px;
   }
 }
 #inclusion.inclusion-abierta {
@@ -3143,24 +2383,8 @@
     left: 0;
   }
 }
-#eventos {
-  padding-top: 50px;
-  background: var(--crema);
-}
 #eventos h2 {
-  font:
-    700 clamp(52px, 5.8vw, 88px) / 0.96 "Barlow Condensed",
-    sans-serif;
   letter-spacing: -0.02em;
-}
-#eventos h2 span {
-  color: var(--azul);
-}
-/* Adaptación responsive: (max-width: 760px). */
-@media (max-width: 760px) {
-  #eventos h2 {
-    font-size: 65px;
-  }
 }
 #eventos.eventos-referencia {
   padding: 30px 0 0;
@@ -3566,52 +2790,16 @@
   padding: 42px 0 32px;
   overflow: hidden;
 }
-.boletin-distribucion {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr 1.15fr;
-  align-items: center;
-}
 .formulario-boletin {
   position: relative;
   z-index: 1;
 }
 .formulario-boletin > label {
-  font-size: 14px;
   display: block;
   margin-bottom: 20px;
 }
 .mensaje-boletin {
-  font-size: 13px;
   margin-top: 16px;
-}
-.boletin-distribucion {
-  gap: 35px;
-}
-.boletin-collage {
-  transform: rotate(-4deg);
-}
-/* Adaptación responsive: (max-width: 1100px). */
-@media (max-width: 1100px) {
-  .boletin-distribucion {
-    grid-template-columns: 0.8fr 1fr;
-  }
-  .boletin-distribucion .formulario-boletin {
-    grid-column: 1/-1;
-  }
-}
-/* Adaptación responsive: (max-width: 700px). */
-@media (max-width: 700px) {
-  .boletin-distribucion {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .boletin-collage {
-    max-width: 360px;
-    margin: auto;
-  }
-  .boletin-distribucion .formulario-boletin {
-    grid-column: auto;
-  }
 }
 .boletin > .contenedor > .etiqueta {
   border-bottom: 1px solid;
@@ -3673,10 +2861,8 @@
   letter-spacing: 2px;
 }
 .boletin .aceptacion {
-  display: flex;
   align-items: start;
   gap: 12px;
-  font-size: 13px;
   line-height: 1.5;
   margin-top: 18px;
 }
@@ -3723,22 +2909,6 @@
 /* ==========================================================
    10. Diálogos específicos
    ========================================================== */
-.marketplace-estado {
-  display: inline-block;
-  background: var(--rosa);
-  padding: 6px 12px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-#dialogo-marketplace h2 {
-  font-size: clamp(28px, 5vw, 35px);
-  overflow-wrap: break-word;
-}
-#dialogo-marketplace [data-cerrar-marketplace] {
-  width: 100%;
-  margin-top: 12px;
-}
 .dialogo-lectura {
   border: 0;
   padding: 0;
@@ -3817,107 +2987,6 @@
     font-size: 30px;
   }
 }
-.dialogo-discord {
-  width: min(560px, calc(100% - 32px));
-}
-.dialogo-discord h2 {
-  font:
-    700 40px/1.03 "Barlow Condensed",
-    Arial,
-    sans-serif;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-.dialogo-discord .etiqueta {
-  margin-top: 8px;
-  font-size: 10px;
-  letter-spacing: 1.3px;
-  padding-right: 18px;
-}
-.dialogo-discord > p:not(.etiqueta) {
-  font-size: 15px;
-  line-height: 1.5;
-}
-.discord-pasos {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  list-style: none;
-  counter-reset: discord;
-  padding: 18px 0;
-  margin: 20px 0;
-  border-block: 1px solid #14141233;
-}
-.discord-pasos li {
-  font-size: 11px;
-  line-height: 1.5;
-  flex: 1;
-  counter-increment: discord;
-}
-.discord-pasos li:before {
-  content: counter(discord);
-  display: block;
-  font-weight: bold;
-  color: var(--azul);
-  font-size: 19px;
-  margin-bottom: 4px;
-}
-.dialogo-discord .discord-aviso {
-  background: #e8e6df;
-  border-left: 3px solid var(--azul);
-  padding: 12px 14px;
-  font-size: 12px !important;
-  line-height: 1.5;
-}
-.dialogo-discord .discord-ayuda {
-  font-size: 12px;
-  line-height: 1.5;
-  color: #55554e;
-  margin: 16px 0 0;
-}
-.dialogo-discord input {
-  font-size: 16px;
-}
-.dialogo-discord .boton {
-  font:
-    700 20px/1.2 "Barlow Condensed",
-    Arial,
-    sans-serif;
-  min-height: 56px;
-  letter-spacing: 0.3px;
-  white-space: normal;
-  text-align: left;
-}
-.dialogo-discord .mensaje-inscripcion {
-  background: var(--lima);
-  padding: 15px;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 600;
-}
-.dialogo-discord #discord-confirmacion > p:not(.mensaje-inscripcion) {
-  font-size: 14px;
-  line-height: 1.6;
-}
-.discord-contexto {
-  border-left: 3px solid var(--rosa);
-  padding-left: 12px;
-}
-/* Adaptación responsive: (max-width: 380px). */
-@media (max-width: 380px) {
-  .dialogo-discord h2 {
-    font-size: 33px;
-  }
-  .dialogo-discord .boton {
-    font-size: 18px;
-  }
-  .discord-pasos {
-    gap: 8px;
-  }
-  .discord-pasos li {
-    font-size: 10px;
-  }
-}
 #dialogo-eventos-discord .bi-discord {
   width: 24px;
   height: 24px;
@@ -3939,8 +3008,6 @@
 #dialogo-eventos-discord .eventos-discord-resultado {
   background: var(--lima);
   padding: 15px;
-  font-size: 14px;
-  line-height: 1.5;
   font-weight: 600;
 }
 #dialogo-eventos-discord .eventos-discord-contexto {
@@ -3980,17 +3047,12 @@
     Arial,
     sans-serif;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
   font-size: clamp(32px, 4vw, 46px);
   margin: 0 0 14px;
   line-height: 1.02;
 }
 #whatsapp-titulo > span {
   color: var(--azul);
-}
-#whatsapp-descripcion {
-  font-size: 16px;
-  line-height: 1.5;
 }
 #dialogo-comunidad-whatsapp .whatsapp-espacios {
   list-style: none;
@@ -3999,7 +3061,6 @@
 }
 #dialogo-comunidad-whatsapp .whatsapp-espacios li {
   display: flex;
-  border-bottom: 1px solid #14141233;
   align-items: flex-start;
   gap: 12px;
   padding: 16px;
@@ -4019,8 +3080,6 @@
 }
 #dialogo-comunidad-whatsapp .whatsapp-aviso {
   line-height: 1.5;
-  border-left: 3px solid var(--azul);
-  margin-bottom: 18px;
 }
 #dialogo-comunidad-whatsapp .whatsapp-acceso {
   width: 100%;
@@ -4054,18 +3113,6 @@
   line-height: 1.5;
   text-align: center;
   color: #55554c;
-}
-/* Adaptación responsive: (max-width: 600px). */
-@media (max-width: 600px) {
-  #dialogo-comunidad-whatsapp .whatsapp-espacios h3 {
-    font-size: 17px;
-  }
-}
-/* Adaptación responsive: (max-width: 380px). */
-@media (max-width: 380px) {
-  #dialogo-comunidad-whatsapp .whatsapp-marca {
-    gap: 8px;
-  }
 }
 #dialogo-comunidad-whatsapp {
   width: min(740px, calc(100% - 32px));
