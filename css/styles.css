@@ -9,7 +9,15 @@
  * 06. Diálogos y formularios compartidos
  * 07. Footer y redes sociales
  * 08. Accesibilidad y movimiento reducido
- * Cada bloque incluye sus media queries junto a los estilos que adapta.
+ * 09. Media queries
+ * 09.01. Base: documento y etiquetas
+ * 09.02. Estructura y utilidades compartidas
+ * 09.03. Botones y acciones
+ * 09.04. Cabecera, marca y menú
+ * 09.05. Diálogos y formularios compartidos
+ * 09.06. Footer y redes sociales
+ * 09.07. Accesibilidad y movimiento reducido
+ * Las media queries se agrupan al final, conservando su orden de cascada.
  * Cargar styles.css antes de la hoja específica de cada página.
  */
 
@@ -98,14 +106,6 @@ svg {
   height: 28px;
   flex-shrink: 0;
 }
-/*
- Adaptación responsive: (max-width: 700px).
- */
-@media (max-width: 700px) {
-  html {
-    scroll-padding-top: 82px;
-  }
-}
 main h2 {
   font-family: "Barlow Condensed", Arial, sans-serif;
   font-weight: 700;
@@ -139,14 +139,6 @@ main h2 {
 .seccion-negra h2 span {
   color: var(--lima);
 }
-/*
- Adaptación responsive: (max-width: 700px).
- */
-@media (max-width: 700px) {
-  .etiqueta {
-    margin-bottom: 24px;
-  }
-}
 .seccion-cierre {
   border-top: 1px solid #14141270;
   padding-top: 24px;
@@ -162,25 +154,6 @@ main h2 {
   text-align: center;
   margin: 12px 0 !important;
 }
-/*
- Adaptación responsive: (max-width: 760px).
- */
-@media (max-width: 760px) {
-  .contenedor {
-    width: calc(100% - 40px);
-  }
-  .seccion {
-    padding: 40px 0;
-  }
-}
-/*
- Adaptación responsive: (max-width: 380px).
- */
-@media (max-width: 380px) {
-  .contenedor {
-    width: calc(100% - 32px);
-  }
-}
 body .linea-seccion {
   display: flex;
   align-items: center;
@@ -195,17 +168,6 @@ body .linea-seccion strong {
 }
 body .linea-seccion:after {
   content: none;
-}
-/*
- Adaptación responsive: (max-width: 600px).
- */
-@media (max-width: 600px) {
-  body .linea-seccion {
-    gap: 10px;
-    font-size: 10px;
-    letter-spacing: 1.4px;
-    margin-bottom: 24px;
-  }
 }
 
 /* ==========================================================
@@ -250,19 +212,6 @@ body .linea-seccion:after {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
-}
-/*
- Adaptación responsive: (max-width: 700px).
- */
-@media (max-width: 700px) {
-  .grupo-botones {
-    gap: 10px;
-  }
-  .boton {
-    font-size: 10px;
-    padding: 14px 16px;
-    gap: 14px;
-  }
 }
 .boton-marketplace {
   white-space: nowrap;
@@ -434,194 +383,6 @@ body .linea-seccion:after {
   box-shadow: 3px 3px 0 var(--negro);
 }
 
-/* Escritorio amplio y compacto. */
-
-@media (min-width: 1400px) {
-  .cabecera .navegacion {
-    width: 588px;
-    flex-shrink: 0;
-    justify-content: space-between;
-    gap: 0;
-  }
-  .cabecera .navegacion a {
-    font-size: 13px;
-    letter-spacing: 0;
-  }
-  .cabecera .registro-cabecera {
-    width: 125px;
-    font-size: 12px;
-  }
-  .cabecera .registro-icono {
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width: 1101px) and (max-width: 1399px) {
-  .cabecera .cabecera-interior {
-    gap: 16px;
-    padding-inline: 32px;
-  }
-  .cabecera .navegacion {
-    gap: 22px;
-    margin-right: 12px;
-  }
-  .cabecera .navegacion a,
-  .cabecera .registro-cabecera {
-    font-size: 12px;
-  }
-  .cabecera .boton-marketplace {
-    width: 166px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1150px) {
-  .cabecera .navegacion {
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1101px) {
-  .cabecera .navegacion,
-  .cabecera .registro-cabecera,
-  .cabecera .boton-marketplace {
-    position: relative;
-    top: 3px;
-  }
-}
-
-/* Menú plegable: conservar .abierta, utilizada por JavaScript. */
-
-@media (max-width: 1100px) {
-  .cabecera .cabecera-interior {
-    min-height: 92px;
-    flex-wrap: wrap;
-    padding: 12px 24px;
-    gap: 16px;
-  }
-  .cabecera .marca-referencia,
-  .cabecera .marca-referencia img {
-    width: 115px;
-    height: 60px;
-  }
-  .cabecera .marca-referencia {
-    flex-basis: 115px;
-  }
-  .cabecera .boton-menu {
-    display: block;
-    order: 4;
-    margin: 0;
-    padding: 6px 12px;
-    background: transparent;
-    color: var(--negro);
-    border: 1px solid;
-    font-size: 22px;
-    min-width: 44px;
-    min-height: 44px;
-  }
-  .cabecera .navegacion {
-    display: none;
-    order: 5;
-    width: 100%;
-    margin: 0;
-    padding: 10px 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-  .cabecera .navegacion.abierta {
-    display: flex;
-  }
-  .cabecera .navegacion a {
-    font-size: 14px;
-    padding: 14px 0;
-  }
-  .cabecera .navegacion a.activo::after {
-    bottom: 6px;
-    right: auto;
-    width: 44px;
-  }
-  .cabecera .boton-marketplace {
-    width: 170px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 700px) {
-  .marca {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 760px) {
-  .cabecera .marca {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 600px) {
-  .cabecera .cabecera-interior {
-    padding: 10px 16px;
-    gap: 12px;
-  }
-  .cabecera .marca-referencia,
-  .cabecera .marca-referencia img {
-    width: 96px;
-    height: 50px;
-  }
-  .cabecera .marca-referencia {
-    flex-basis: 96px;
-  }
-  .cabecera .registro-icono {
-    width: 30px;
-    height: 30px;
-  }
-  .cabecera .registro-cabecera {
-    font-size: 0;
-    gap: 0;
-    position: relative;
-  }
-  .cabecera .boton-marketplace {
-    width: 132px;
-    font-size: 10px;
-    padding: 10px;
-    gap: 8px;
-    min-height: 42px;
-  }
-  .cabecera .boton-menu {
-    padding: 4px 9px;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 380px) {
-  .cabecera .cabecera-interior {
-    gap: 8px;
-    padding-inline: 12px;
-  }
-  .cabecera .marca {
-    font-size: 24px;
-  }
-  .cabecera .marca-referencia,
-  .cabecera .marca-referencia img {
-    width: 82px;
-    height: 43px;
-  }
-  .cabecera .marca-referencia {
-    flex-basis: 82px;
-  }
-  .cabecera .boton-marketplace {
-    width: 120px;
-    font-size: 9px;
-  }
-  .cabecera .registro-icono {
-    width: 26px;
-    height: 26px;
-  }
-}
-
 /* Logotipo común: se aplica también a las páginas secundarias. */
 
 .marca.marca-capitulo {
@@ -642,12 +403,6 @@ body .linea-seccion:after {
 .marca.marca-capitulo::before,
 .marca.marca-capitulo::after {
   content: none;
-}
-
-@media (max-width: 600px) {
-  .marca.marca-capitulo {
-    width: 116px;
-  }
 }
 
 /* ==========================================================
@@ -706,17 +461,6 @@ body .linea-seccion:after {
 .dialogo-inscripcion .boton {
   width: 100%;
 }
-/*
- Adaptación responsive: (max-width: 700px).
- */
-@media (max-width: 700px) {
-  .dialogo-inscripcion {
-    padding: 32px 24px;
-  }
-  .dialogo-inscripcion h2 {
-    font-size: 30px;
-  }
-}
 .campo-opcional {
   font-size: 11px;
   color: #626259;
@@ -741,21 +485,6 @@ body .linea-seccion:after {
 }
 #dialogo-inscripcion .boton-telegram {
   gap: 12px;
-}
-/*
- Adaptación responsive: (max-width: 380px).
- */
-@media (max-width: 380px) {
-  #dialogo-inscripcion .telegram-marca {
-    gap: 8px;
-  }
-  #dialogo-inscripcion .telegram-marca > span {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-  #dialogo-inscripcion .boton-telegram {
-    gap: 8px;
-  }
 }
 
 /*
@@ -873,26 +602,6 @@ body .linea-seccion:after {
 .dialogo-discord #discord-confirmacion > p:not(.mensaje-inscripcion) {
   font-size: 14px;
   line-height: 1.6;
-}
-
-.discord-contexto {
-  border-left: 3px solid var(--rosa);
-  padding-left: 12px;
-}
-
-@media (max-width: 380px) {
-  .dialogo-discord h2 {
-    font-size: 33px;
-  }
-  .dialogo-discord .boton {
-    font-size: 18px;
-  }
-  .discord-pasos {
-    gap: 8px;
-  }
-  .discord-pasos li {
-    font-size: 10px;
-  }
 }
 
 /* ==========================================================
@@ -1152,91 +861,9 @@ body .linea-seccion:after {
   filter: invert(1) hue-rotate(180deg);
 }
 
-/*
- Adaptación del footer: (max-width: 1100px).
- */
-
-@media (max-width: 1100px) {
-  .pie-pagina .pie-identidad {
-    grid-column: 1/-1;
-  }
-}
-
-/*
- Adaptación del footer: (max-width: 600px).
- */
-
-@media (max-width: 600px) {
-  .pie-pagina .pie-grupo {
-    padding-left: 12px;
-  }
-  .pie-pagina .pie-grupo h2,
-  .pie-pagina .pie-grupo > a {
-    font-size: 12px;
-  }
-  .pie-pagina .pie-columnas > .pie-social {
-    grid-column: 1/-1;
-  }
-  .pie-pagina .pie-lema {
-    margin-top: 24px;
-  }
-}
-
-/*
- Adaptación del footer: (max-width: 380px).
- */
-
-@media (max-width: 380px) {
-  .pie-pagina .pie-columnas > .pie-social {
-    grid-column: auto;
-  }
-}
-
-/*
- Adaptación del footer: (max-width: 760px).
- */
-
-@media (max-width: 760px) {
-  .pie-pagina .pie-columnas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .pie-pagina .pie-identidad {
-    grid-column: 1/-1;
-  }
-  .pie-pagina .pie-inferior {
-    flex-direction: column;
-    align-items: start;
-  }
-  .pie-manifiesto {
-    font-size: 34px;
-  }
-}
-
-/*
- Adaptación del footer: (max-width: 600px).
- */
-
-@media (max-width: 600px) {
-  .pie-pagina .marca.marca-capitulo {
-    width: 170px;
-  }
-}
-
 /* ==========================================================
    08. Accesibilidad y movimiento reducido
    ========================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
@@ -1258,4 +885,410 @@ input:focus-visible {
 }
 body:has(dialog[open]) {
   overflow: hidden;
+}
+/*
+ ==========================================================
+   09. Media queries
+   ==========================================================
+ */
+/*
+ 09.01. Base: documento y etiquetas
+ */
+/*
+ Condición: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+}
+/*
+ 09.02. Estructura y utilidades compartidas
+ */
+/*
+ Condición: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .etiqueta {
+    margin-bottom: 24px;
+  }
+}
+/*
+ Condición: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .contenedor {
+    width: calc(100% - 40px);
+  }
+  .seccion {
+    padding: 40px 0;
+  }
+}
+/*
+ Condición: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .contenedor {
+    width: calc(100% - 32px);
+  }
+}
+/*
+ Condición: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  body .linea-seccion {
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    margin-bottom: 24px;
+  }
+}
+/*
+ 09.03. Botones y acciones
+ */
+/*
+ Condición: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .grupo-botones {
+    gap: 10px;
+  }
+  .boton {
+    font-size: 10px;
+    padding: 14px 16px;
+    gap: 14px;
+  }
+}
+/*
+ 09.04. Cabecera, marca y menú
+ */
+/*
+ Condición: (min-width: 1400px).
+ */
+@media (min-width: 1400px) {
+  .cabecera .navegacion {
+    width: 588px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .cabecera .navegacion a {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .cabecera .registro-cabecera {
+    width: 125px;
+    font-size: 12px;
+  }
+  .cabecera .registro-icono {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+}
+/*
+ Condición: (min-width: 1101px) and (max-width: 1399px).
+ */
+@media (min-width: 1101px) and (max-width: 1399px) {
+  .cabecera .cabecera-interior {
+    gap: 16px;
+    padding-inline: 32px;
+  }
+  .cabecera .navegacion {
+    gap: 22px;
+    margin-right: 12px;
+  }
+  .cabecera .navegacion a,
+  .cabecera .registro-cabecera {
+    font-size: 12px;
+  }
+  .cabecera .boton-marketplace {
+    width: 166px;
+    font-size: 12px;
+  }
+}
+/*
+ Condición: (max-width: 1150px).
+ */
+@media (max-width: 1150px) {
+  .cabecera .navegacion {
+    justify-content: center;
+  }
+}
+/*
+ Condición: (min-width: 1101px).
+ */
+@media (min-width: 1101px) {
+  .cabecera .navegacion,
+  .cabecera .registro-cabecera,
+  .cabecera .boton-marketplace {
+    position: relative;
+    top: 3px;
+  }
+}
+/*
+ Condición: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .cabecera .cabecera-interior {
+    min-height: 92px;
+    flex-wrap: wrap;
+    padding: 12px 24px;
+    gap: 16px;
+  }
+  .cabecera .marca-referencia {
+    width: 115px;
+    height: 60px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 115px;
+  }
+  .cabecera .boton-menu {
+    display: block;
+    order: 4;
+    margin: 0;
+    padding: 6px 12px;
+    background: transparent;
+    color: var(--negro);
+    border: 1px solid;
+    font-size: 22px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .cabecera .navegacion {
+    display: none;
+    order: 5;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .cabecera .navegacion.abierta {
+    display: flex;
+  }
+  .cabecera .navegacion a {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+  .cabecera .navegacion a.activo::after {
+    bottom: 6px;
+    right: auto;
+    width: 44px;
+  }
+  .cabecera .boton-marketplace {
+    width: 170px;
+    font-size: 12px;
+  }
+}
+/*
+ Condición: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .marca {
+    font-size: 19px;
+  }
+}
+/*
+ Condición: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .cabecera .marca {
+    font-size: 28px;
+  }
+}
+/*
+ Condición: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .cabecera .cabecera-interior {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .cabecera .marca-referencia {
+    width: 96px;
+    height: 50px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 96px;
+  }
+  .cabecera .registro-icono {
+    width: 30px;
+    height: 30px;
+  }
+  .cabecera .registro-cabecera {
+    font-size: 0;
+    gap: 0;
+    position: relative;
+  }
+  .cabecera .boton-marketplace {
+    width: 132px;
+    font-size: 10px;
+    padding: 10px;
+    gap: 8px;
+    min-height: 42px;
+  }
+  .cabecera .boton-menu {
+    padding: 4px 9px;
+    font-size: 20px;
+  }
+}
+/*
+ Condición: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .cabecera .cabecera-interior {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+  .cabecera .marca {
+    font-size: 24px;
+  }
+  .cabecera .marca-referencia {
+    width: 82px;
+    height: 43px;
+  }
+  .cabecera .marca-referencia {
+    flex-basis: 82px;
+  }
+  .cabecera .boton-marketplace {
+    width: 120px;
+    font-size: 9px;
+  }
+  .cabecera .registro-icono {
+    width: 26px;
+    height: 26px;
+  }
+}
+/*
+ Condición: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .marca.marca-capitulo {
+    width: 116px;
+  }
+}
+/*
+ 09.05. Diálogos y formularios compartidos
+ */
+/*
+ Condición: (max-width: 700px).
+ */
+@media (max-width: 700px) {
+  .dialogo-inscripcion {
+    padding: 32px 24px;
+  }
+}
+/*
+ Condición: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  #dialogo-inscripcion .telegram-marca {
+    gap: 8px;
+  }
+  #dialogo-inscripcion .telegram-marca > span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  #dialogo-inscripcion .boton-telegram {
+    gap: 8px;
+  }
+}
+/*
+ Condición: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .dialogo-discord h2 {
+    font-size: 33px;
+  }
+  .dialogo-discord .boton {
+    font-size: 18px;
+  }
+  .discord-pasos {
+    gap: 8px;
+  }
+  .discord-pasos li {
+    font-size: 10px;
+  }
+}
+/*
+ 09.06. Footer y redes sociales
+ */
+/*
+ Condición: (max-width: 1100px).
+ */
+@media (max-width: 1100px) {
+  .pie-pagina .pie-identidad {
+    grid-column: 1/-1;
+  }
+}
+/*
+ Condición: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .pie-pagina .pie-grupo {
+    padding-left: 12px;
+  }
+  .pie-pagina .pie-grupo h2,
+  .pie-pagina .pie-grupo > a {
+    font-size: 12px;
+  }
+  .pie-pagina .pie-columnas > .pie-social {
+    grid-column: 1/-1;
+  }
+  .pie-pagina .pie-lema {
+    margin-top: 24px;
+  }
+}
+/*
+ Condición: (max-width: 380px).
+ */
+@media (max-width: 380px) {
+  .pie-pagina .pie-columnas > .pie-social {
+    grid-column: auto;
+  }
+}
+/*
+ Condición: (max-width: 760px).
+ */
+@media (max-width: 760px) {
+  .pie-pagina .pie-columnas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pie-pagina .pie-identidad {
+    grid-column: 1/-1;
+  }
+  .pie-pagina .pie-inferior {
+    flex-direction: column;
+    align-items: start;
+  }
+  .pie-manifiesto {
+    font-size: 34px;
+  }
+}
+/*
+ Condición: (max-width: 600px).
+ */
+@media (max-width: 600px) {
+  .pie-pagina .marca.marca-capitulo {
+    width: 170px;
+  }
+}
+/*
+ 09.07. Accesibilidad y movimiento reducido
+ */
+/*
+ Condición: (prefers-reduced-motion: reduce).
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

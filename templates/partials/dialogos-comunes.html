@@ -1,0 +1,117 @@
+<dialog
+  id="dialogo-inscripcion"
+  class="dialogo-inscripcion dialogo-discord"
+  aria-labelledby="titulo-dialogo"
+  aria-describedby="discord-descripcion discord-aviso"
+>
+  <button
+    type="button"
+    class="cerrar-dialogo"
+    aria-label="Cerrar inscripción al club"
+  >
+    ×
+  </button>
+  <p class="etiqueta">
+    <span class="telegram-marca"
+      ><svg
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-telegram"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+        /></svg
+      ><span>CAPÍTULO ABIERTO · TELEGRAM</span></span
+    >
+  </p>
+  <h2 id="titulo-dialogo">TU PRÓXIMA HISTORIA SE COMPARTE.</h2>
+  <p id="discord-descripcion">
+    Recibe en tu correo una invitación para unirte al club en Telegram.
+  </p>
+  <ol class="discord-pasos" aria-label="Cómo será el acceso al club">
+    <li>Deja tu correo</li>
+    <li>Recibe la invitación</li>
+    <li>Únete en Telegram</li>
+  </ol>
+  <p id="discord-aviso" class="discord-aviso">
+    Estamos preparando el envío automático. Puedes probar este formulario, pero
+    todavía no envía correos ni guarda tus datos.
+  </p>
+  <form id="formulario-inscripcion">
+    <label for="nombre-inscripcion"
+      >Tu nombre <span class="campo-opcional">(opcional)</span></label
+    >
+    <input
+      id="nombre-inscripcion"
+      name="nombre"
+      autocomplete="given-name"
+      maxlength="100"
+    />
+    <label for="correo-inscripcion">Tu correo electrónico</label>
+    <input
+      id="correo-inscripcion"
+      name="correo"
+      type="email"
+      required
+      autocomplete="email"
+      maxlength="254"
+      aria-describedby="discord-privacidad"
+    />
+    <button class="boton boton-lima boton-telegram" type="submit">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-telegram"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+        /></svg
+      >ENVIARME LA INVITACIÓN A TELEGRAM <span aria-hidden="true">→</span>
+    </button>
+    <p id="discord-privacidad" class="discord-ayuda">
+      Necesitarás una cuenta de Telegram. Cuando se active el envío, usaremos tu
+      correo para enviarte el acceso; la newsletter se solicita por separado.
+    </p>
+  </form>
+  <div id="discord-confirmacion" hidden>
+    <p class="mensaje-inscripcion" role="status" aria-live="polite"></p>
+    <p>
+      Cuando activemos el envío, recibirás un email con el botón «Unirme al club
+      en Telegram». Si no lo encuentras, podrás revisar spam o promociones.
+    </p>
+    <button type="button" class="boton boton-contorno" data-corregir-correo>
+      VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
+    </button>
+  </div>
+</dialog>
+<dialog
+  id="dialogo-marketplace"
+  class="dialogo-inscripcion"
+  aria-labelledby="titulo-marketplace"
+  aria-describedby="descripcion-marketplace"
+>
+  <button type="button" class="cerrar-dialogo" aria-label="Cerrar marketplace">
+    ×
+  </button>
+  <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
+  <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
+  <p id="descripcion-marketplace">
+    Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás
+    crear tu cuenta, acceder a la tienda y gestionar tus compras desde un mismo
+    lugar.
+  </p>
+  <p class="marketplace-estado">PRÓXIMAMENTE</p>
+  <button class="boton boton-lima" type="button" data-cerrar-marketplace>
+    SEGUIR EXPLORANDO <span aria-hidden="true">→</span>
+  </button>
+</dialog>

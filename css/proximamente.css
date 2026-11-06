@@ -2,7 +2,9 @@
  * proximamente.css — Páginas provisionales de lectura, libro y encuentro.
  * ÍNDICE
  * 01. Mensaje y acción principal
- * 02. Adaptación móvil
+ * 02. Media queries
+ * 02.01. Página provisional
+ * Las media queries se agrupan al final, conservando su orden de cascada.
  * Cargar después de styles.css. La portada conserva index.css.
  */
 /* 01. Mensaje y acción principal */
@@ -42,7 +44,17 @@
 .proximamente .boton {
   min-width: 210px;
 }
-/* 02. Adaptación móvil */
+/*
+ ==========================================================
+   02. Media queries
+   ==========================================================
+ */
+/*
+ 02.01. Página provisional
+ */
+/*
+ Condición: (max-width: 600px).
+ */
 @media (max-width: 600px) {
   .proximamente {
     min-height: 480px;

@@ -9,8 +9,8 @@
     />
     <title>CAPÍTULO ABIERTO · Libros que conectan</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/comun.js" defer></script>
     <script src="js/script.js" defer></script>
-    <script src="js/plan-mensual.js" defer></script>
 
     <link rel="stylesheet" href="css/index.css" />
   </head>
@@ -40,11 +40,7 @@
         >
           ☰
         </button>
-        <nav
-          class="navegacion"
-          id="navegacion"
-          aria-label="Navegación principal"
-        >
+        <nav class="navegacion" id="navegacion" aria-label="Navegación principal">
           <a class="activo" href="#inicio" aria-current="location">INICIO</a
           ><a href="#el-club">EL CLUB</a><a href="#libro-mes">LIBRO DEL MES</a
           ><a href="#lecturas">LECTURAS</a><a href="#comunidad">COMUNIDAD</a
@@ -1493,15 +1489,14 @@
       <p id="discord-descripcion">
         Recibe en tu correo una invitación para unirte al club en Telegram.
       </p>
-      <p class="discord-contexto" hidden></p>
       <ol class="discord-pasos" aria-label="Cómo será el acceso al club">
         <li>Deja tu correo</li>
         <li>Recibe la invitación</li>
         <li>Únete en Telegram</li>
       </ol>
       <p id="discord-aviso" class="discord-aviso">
-        Estamos preparando el envío automático. Puedes probar este formulario,
-        pero todavía no envía correos ni guarda tus datos.
+        Estamos preparando el envío automático. Puedes probar este formulario, pero
+        todavía no envía correos ni guarda tus datos.
       </p>
       <form id="formulario-inscripcion">
         <label for="nombre-inscripcion"
@@ -1540,17 +1535,15 @@
           >ENVIARME LA INVITACIÓN A TELEGRAM <span aria-hidden="true">→</span>
         </button>
         <p id="discord-privacidad" class="discord-ayuda">
-          Necesitarás una cuenta de Telegram. Cuando se active el envío,
-          usaremos tu correo para enviarte el acceso; la newsletter se solicita
-          por separado.
+          Necesitarás una cuenta de Telegram. Cuando se active el envío, usaremos tu
+          correo para enviarte el acceso; la newsletter se solicita por separado.
         </p>
       </form>
       <div id="discord-confirmacion" hidden>
         <p class="mensaje-inscripcion" role="status" aria-live="polite"></p>
         <p>
-          Cuando activemos el envío, recibirás un email con el botón «Unirme al
-          club en Telegram». Si no lo encuentras, podrás revisar spam o
-          promociones.
+          Cuando activemos el envío, recibirás un email con el botón «Unirme al club
+          en Telegram». Si no lo encuentras, podrás revisar spam o promociones.
         </p>
         <button type="button" class="boton boton-contorno" data-corregir-correo>
           VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
@@ -1563,19 +1556,15 @@
       aria-labelledby="titulo-marketplace"
       aria-describedby="descripcion-marketplace"
     >
-      <button
-        type="button"
-        class="cerrar-dialogo"
-        aria-label="Cerrar marketplace"
-      >
+      <button type="button" class="cerrar-dialogo" aria-label="Cerrar marketplace">
         ×
       </button>
       <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
       <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
       <p id="descripcion-marketplace">
         Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás
-        crear tu cuenta, acceder a la tienda y gestionar tus compras desde un
-        mismo lugar.
+        crear tu cuenta, acceder a la tienda y gestionar tus compras desde un mismo
+        lugar.
       </p>
       <p class="marketplace-estado">PRÓXIMAMENTE</p>
       <button class="boton boton-lima" type="button" data-cerrar-marketplace>
@@ -1598,7 +1587,7 @@
         <div class="lectura-portada">
           <img
             id="lectura-imagen"
-            src="assets/cubierta-lectura-3.jpg"
+            src="assets/lectura-junco.webp"
             alt=""
             width="267"
             height="360"
@@ -1670,118 +1659,6 @@
         </button>
         <p class="mensaje-inclusion" role="status" aria-live="polite"></p>
       </form>
-    </dialog>
-    <dialog
-      id="dialogo-eventos-discord"
-      class="dialogo-inscripcion dialogo-discord"
-      aria-labelledby="eventos-discord-titulo"
-      aria-describedby="eventos-discord-descripcion eventos-discord-aviso"
-    >
-      <button
-        class="cerrar-dialogo"
-        type="button"
-        aria-label="Cerrar invitación a Discord"
-      >
-        ×
-      </button>
-      <p class="etiqueta eventos-discord-marca">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-discord"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
-          /></svg
-        ><span>CAPÍTULO ABIERTO · DISCORD</span>
-      </p>
-      <h2 id="eventos-discord-titulo">
-        LEEMOS Y CONVERSAMOS EN <span>DISCORD.</span>
-      </h2>
-      <p id="eventos-discord-descripcion">
-        Las lecturas online del club se realizarán mediante
-        <strong>videollamadas en Discord</strong>. Para participar, necesitarás
-        una cuenta gratuita de Discord e incorporarte al servidor del club.
-      </p>
-      <p>Déjanos tu correo y te enviaremos la invitación para unirte.</p>
-      <p class="eventos-discord-contexto" hidden></p>
-      <ol
-        class="discord-pasos"
-        aria-label="Cómo será el acceso a las lecturas online"
-      >
-        <li>Deja tu correo</li>
-        <li>Recibe la invitación</li>
-        <li>Entra en Discord</li>
-      </ol>
-      <p id="eventos-discord-aviso" class="discord-aviso">
-        Estamos preparando el envío automático. Puedes probar este formulario,
-        pero todavía no envía correos ni guarda tus datos.
-      </p>
-      <form id="formulario-eventos-discord">
-        <label for="eventos-discord-nombre"
-          >Tu nombre <span class="campo-opcional">(opcional)</span></label
-        ><input
-          id="eventos-discord-nombre"
-          name="nombre"
-          autocomplete="given-name"
-          maxlength="100"
-        />
-        <label for="eventos-discord-correo">Tu correo electrónico</label
-        ><input
-          id="eventos-discord-correo"
-          name="correo"
-          type="email"
-          autocomplete="email"
-          required
-          maxlength="254"
-          aria-describedby="eventos-discord-ayuda"
-        />
-        <button type="submit" class="boton boton-lima eventos-discord-enviar">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-discord"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
-            /></svg
-          >ENVIARME LA INVITACIÓN A DISCORD <span aria-hidden="true">→</span>
-        </button>
-        <p class="discord-ayuda" id="eventos-discord-ayuda">
-          Necesitarás una cuenta de Discord para participar en las lecturas
-          online por videollamada. Esta invitación no reserva plaza en un
-          evento. La newsletter se solicita por separado.
-        </p>
-      </form>
-      <div id="eventos-discord-confirmacion" hidden>
-        <p
-          class="eventos-discord-resultado"
-          role="status"
-          aria-live="polite"
-        ></p>
-        <p>
-          Cuando activemos el envío, recibirás un correo con la invitación al
-          servidor del club. Podrás crear tu cuenta de Discord o entrar con la
-          que ya tengas.
-        </p>
-        <button
-          type="button"
-          class="boton boton-contorno"
-          data-corregir-eventos-discord
-        >
-          VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
-        </button>
-      </div>
     </dialog>
     <dialog
       id="dialogo-comunidad-whatsapp"
