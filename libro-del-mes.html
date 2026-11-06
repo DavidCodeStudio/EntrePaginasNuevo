@@ -2,149 +2,336 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mañana, y mañana, y mañana de Gabrielle Zevin: sinopsis sin spoilers y preguntas para compartir en Capítulo Abierto."
+      content="Libro del mes de Capítulo Abierto. Próximamente."
     />
-    <title>Mañana, y mañana, y mañana · Capítulo Abierto</title>
+    <title>Libro del mes · Próximamente · Capítulo Abierto</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/libro-del-mes.css" />
+    <link rel="stylesheet" href="css/proximamente.css" />
+    <script src="js/proximamente.js" defer></script>
   </head>
-  <body class="pagina-ficha">
+  <body class="pagina-proximamente">
     <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
-    <header class="contenedor fiche-cabecera">
-      <a class="marca marca-capitulo" href="index.html"
-        ><img
-          src="assets/logo-capitulo-abierto.svg"
-          alt="Capítulo Abierto"
-          width="146"
-          height="86" /></a
-      ><a href="index.html#libro-mes">← Volver al club</a>
-    </header>
-    <main id="contenido">
-      <section class="fiche-hero" aria-labelledby="titulo-ficha">
-        <div class="fiche-visuel">
-          <img
-            src="assets/libro-mes-editorial.webp"
-            width="850"
-            height="1100"
-            alt="Cubierta de Mañana, y mañana, y mañana, de Gabrielle Zevin"
-          />
-        </div>
-        <div class="fiche-intro">
-          <p class="etiqueta">LA LECTURA QUE COMPARTIMOS</p>
-          <h1 id="titulo-ficha">Mañana, y mañana,<br />y mañana</h1>
-          <p class="fiche-auteur">Gabrielle Zevin</p>
-          <p class="etiqueta">NOVELA CONTEMPORÁNEA</p>
-          <p>
-            Una historia sobre amistad, creatividad y las vidas que construimos
-            juntos.
-          </p>
-          <div class="fiche-tags" aria-label="Temas del libro">
-            <span>Amistad</span><span>Creatividad</span
-            ><span>Segundas oportunidades</span>
-          </div>
-          <a class="boton boton-negro" href="lectura-del-mes.html"
-            >VER EL PLAN MENSUAL <span aria-hidden="true">→</span></a
-          >
-          <p>
-            <a class="ficha-enlace" href="index.html#lecturas"
-              >Explorar otras lecturas →</a
-            >
-          </p>
-        </div>
-      </section>
-      <p class="fiche-bande">
-        Una historia para leer. Muchas miradas para compartir.
-      </p>
-      <section
-        class="contenedor fiche-chapitre"
-        aria-labelledby="historia-titulo"
-      >
-        <div>
-          <p class="etiqueta">01 / LA HISTORIA</p>
-          <h2 id="historia-titulo">¿DE QUÉ VA?</h2>
-          <p class="etiqueta">SINOPSIS SIN SPOILERS</p>
-        </div>
-        <div>
-          <p>
-            Sam y Sadie se conocen siendo jóvenes y vuelven a encontrarse años
-            después. Su pasión por los videojuegos los lleva a crear juntos.
-          </p>
-          <p>
-            La novela recorre su amistad, sus ambiciones y los vínculos que
-            cambian mientras construyen nuevos mundos.
-          </p>
-        </div>
-      </section>
-      <section class="fiche-themes" aria-labelledby="temas-titulo">
-        <div class="contenedor">
-          <div>
-            <p class="etiqueta">02 / POR QUÉ LEERLA JUNTOS</p>
-            <h2 id="temas-titulo">LO QUE NOS PUEDE HACER CONVERSAR.</h2>
-          </div>
-          <article>
-            <span aria-hidden="true">♧</span>
-            <h3>Crear en compañía</h3>
-            <p>Las ideas que nacen al compartir una visión.</p>
-          </article>
-          <article>
-            <span aria-hidden="true">⌘</span>
-            <h3>Amistades que cambian</h3>
-            <p>Lo que esperamos de quienes nos conocen mejor.</p>
-          </article>
-          <article>
-            <span aria-hidden="true">⟳</span>
-            <h3>Volver a empezar</h3>
-            <p>Los errores, las pérdidas y las nuevas oportunidades.</p>
-          </article>
-        </div>
-      </section>
-      <section
-        class="contenedor fiche-chapitre"
-        aria-labelledby="preguntas-titulo"
-      >
-        <div>
-          <p class="etiqueta">03 / ABRIMOS LA CONVERSACIÓN</p>
-          <h2 id="preguntas-titulo">
-            Tres preguntas<br />para traer tu mirada.
-          </h2>
-        </div>
-        <div>
-          <ol>
-            <li>
-              ¿Qué hace que una amistad se convierta en una buena colaboración?
-            </li>
-            <li>¿Podemos separar lo que creamos de lo que sentimos?</li>
-            <li>¿Qué significa empezar de nuevo para ti?</li>
-          </ol>
-          <p>
-            Puedes reflexionar sin haber terminado la novela. Evita adelantar la
-            trama.
-          </p>
-        </div>
-      </section>
-      <div class="contenedor fiche-appel">
-        <p>
-          <mark>Cada forma de leer cuenta.</mark><br />En papel, digital o
-          audio. A tu ritmo.
-        </p>
-        <a class="boton boton-lima" href="lectura-del-mes.html"
-          >CONSULTAR EL PLAN MENSUAL <span aria-hidden="true">→</span></a
+    <header class="cabecera" id="inicio">
+      <div class="contenedor cabecera-interior">
+        <a
+          class="marca marca-referencia marca-capitulo"
+          href="index.html#inicio"
+          aria-label="Capítulo Abierto, inicio"
+          ><img
+            src="assets/logo-capitulo-abierto.svg"
+            alt="Capítulo Abierto"
+            width="146"
+            height="86"
+        /></a>
+        <button
+          class="boton-menu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="navegacion"
+          aria-expanded="false"
         >
+          ☰
+        </button>
+        <nav
+          class="navegacion"
+          id="navegacion"
+          aria-label="Navegación principal"
+        >
+          <a href="index.html#inicio">INICIO</a
+          ><a href="index.html#el-club">EL CLUB</a
+          ><a href="index.html#libro-mes">LIBRO DEL MES</a
+          ><a href="index.html#lecturas">LECTURAS</a
+          ><a href="index.html#comunidad">COMUNIDAD</a
+          ><a href="index.html#inclusion">INCLUSIÓN</a
+          ><a href="index.html#eventos">EVENTOS</a>
+        </nav>
+        <button
+          class="registro-cabecera"
+          type="button"
+          data-abrir-inscripcion
+          aria-haspopup="dialog"
+          aria-controls="dialogo-inscripcion"
+        >
+          <svg
+            class="registro-icono"
+            viewBox="0 0 36 36"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <circle cx="18" cy="18" r="15.5" />
+            <circle cx="18" cy="12.2" r="4.3" />
+            <path d="M8.7 29v-3.1a9.3 9.3 0 0 1 18.6 0V29" />
+          </svg>
+          REGISTRARSE
+        </button>
+        <button
+          class="boton boton-lima boton-marketplace"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="dialogo-marketplace"
+          data-abrir-marketplace
+        >
+          MARKETPLACE
+          <svg
+            class="marketplace-flecha"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M5 15 15 5M5 5h10v10" />
+          </svg>
+        </button>
       </div>
+    </header>
+    <main
+      id="contenido"
+      class="proximamente"
+      aria-labelledby="titulo-proximamente"
+    >
+      <p class="proximamente-etiqueta">LIBRO DEL MES</p>
+      <h1 id="titulo-proximamente">PRÓXIMAMENTE</h1>
+      <p class="proximamente-texto">
+        Estamos preparando la próxima historia que compartiremos.
+      </p>
+      <a class="boton boton-lima" href="index.html"
+        >VOLVER AL INICIO <span aria-hidden="true">→</span></a
+      >
     </main>
-    <footer class="contenedor fiche-cabecera">
-      <a class="marca marca-capitulo" href="index.html"
-        ><img
-          src="assets/logo-capitulo-abierto.svg"
-          alt="Capítulo Abierto"
-          width="146"
-          height="86"
-      /></a>
-      <p>Comunidad y accesos en preparación.</p>
-      <a href="index.html#libro-mes">Volver al club ↑</a>
+    <footer class="pie-pagina" id="pie-pagina">
+      <div class="contenedor">
+        <p class="pie-manifiesto">
+          Las buenas historias siguen <em>en compañía.</em>
+        </p>
+        <div class="pie-columnas">
+          <div class="pie-identidad">
+            <a
+              class="marca marca-pie marca-capitulo"
+              href="index.html#inicio"
+              aria-label="Capítulo Abierto, volver al inicio"
+              ><img
+                src="assets/logo-capitulo-abierto.svg"
+                alt="Capítulo Abierto"
+                width="146"
+                height="86"
+            /></a>
+            <p>Buenos libros.<br />Mejores conversaciones.</p>
+            <span class="pie-subrayado" aria-hidden="true"></span>
+          </div>
+          <nav class="pie-grupo" aria-label="Explorar el sitio">
+            <h2>EXPLORA</h2>
+            <a href="index.html#el-club">El club</a>
+            <a href="index.html#como-funciona">Cómo funciona</a>
+            <a href="index.html#lecturas">Lecturas</a>
+            <a href="index.html#comunidad">Comunidad</a>
+            <a href="index.html#inclusion">Inclusión</a>
+            <a href="index.html#eventos">Eventos</a>
+          </nav>
+          <nav class="pie-grupo" aria-label="Recursos del club">
+            <h2>RECURSOS</h2>
+            <a href="index.html#libro-mes">Libro del mes</a>
+            <a href="index.html#lecturas">Recomendaciones</a>
+            <a href="index.html#como-funciona">Guía para empezar</a>
+            <a href="index.html#eventos">Actividades</a>
+          </nav>
+          <div class="pie-grupo">
+            <h2>SOBRE NOSOTROS</h2>
+            <a href="index.html#el-club">Nuestra historia</a>
+            <a href="mailto:contacto@example.com">Contacto</a>
+            <a href="index.html#inclusion">Accesibilidad</a>
+            <a href="index.html#comunidad">La comunidad</a>
+          </div>
+          <div class="pie-grupo pie-social">
+            <h2>SÍGUENOS</h2>
+            <div class="pie-redes">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                aria-label="Visitar Instagram (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/instagram.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X"
+                aria-label="Visitar X (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/twitter-x.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="YouTube"
+                aria-label="Visitar YouTube (abre en una pestaña nueva)"
+                ><img
+                  src="assets/icons/youtube.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="eager"
+              /></a>
+            </div>
+            <p class="pie-lema">
+              LEER NOS UNE.<br />LAS DIFERENCIAS<br />NOS ENRIQUECEN.
+            </p>
+            <span class="pie-lema-subrayado" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>© 2026 CAPÍTULO ABIERTO · Proyecto demostrativo</p>
+          <div class="pie-legal">
+            <span>Textos legales pendientes</span
+            ><a href="index.html#inclusion">Accesibilidad</a
+            ><a href="mailto:contacto@example.com">Contacto</a>
+          </div>
+          <a class="volver-arriba" href="#inicio"
+            ><span aria-hidden="true">↑</span> VOLVER ARRIBA</a
+          >
+        </div>
+      </div>
     </footer>
+    <dialog
+      id="dialogo-inscripcion"
+      class="dialogo-inscripcion dialogo-discord"
+      aria-labelledby="titulo-dialogo"
+      aria-describedby="discord-descripcion discord-aviso"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar inscripción al club"
+      >
+        ×
+      </button>
+      <p class="etiqueta">
+        <span class="telegram-marca"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telegram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+            /></svg
+          ><span>CAPÍTULO ABIERTO · TELEGRAM</span></span
+        >
+      </p>
+      <h2 id="titulo-dialogo">TU PRÓXIMA HISTORIA SE COMPARTE.</h2>
+      <p id="discord-descripcion">
+        Recibe en tu correo una invitación para unirte al club en Telegram.
+      </p>
+      <p class="discord-contexto" hidden></p>
+      <ol class="discord-pasos" aria-label="Cómo será el acceso al club">
+        <li>Deja tu correo</li>
+        <li>Recibe la invitación</li>
+        <li>Únete en Telegram</li>
+      </ol>
+      <p id="discord-aviso" class="discord-aviso">
+        Estamos preparando el envío automático. Puedes probar este formulario,
+        pero todavía no envía correos ni guarda tus datos.
+      </p>
+      <form id="formulario-inscripcion">
+        <label for="nombre-inscripcion"
+          >Tu nombre <span class="campo-opcional">(opcional)</span></label
+        >
+        <input
+          id="nombre-inscripcion"
+          name="nombre"
+          autocomplete="given-name"
+          maxlength="100"
+        />
+        <label for="correo-inscripcion">Tu correo electrónico</label>
+        <input
+          id="correo-inscripcion"
+          name="correo"
+          type="email"
+          required
+          autocomplete="email"
+          maxlength="254"
+          aria-describedby="discord-privacidad"
+        />
+        <button class="boton boton-lima boton-telegram" type="submit">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telegram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+            /></svg
+          >ENVIARME LA INVITACIÓN A TELEGRAM <span aria-hidden="true">→</span>
+        </button>
+        <p id="discord-privacidad" class="discord-ayuda">
+          Necesitarás una cuenta de Telegram. Cuando se active el envío,
+          usaremos tu correo para enviarte el acceso; la newsletter se solicita
+          por separado.
+        </p>
+      </form>
+      <div id="discord-confirmacion" hidden>
+        <p class="mensaje-inscripcion" role="status" aria-live="polite"></p>
+        <p>
+          Cuando activemos el envío, recibirás un email con el botón «Unirme al
+          club en Telegram». Si no lo encuentras, podrás revisar spam o
+          promociones.
+        </p>
+        <button type="button" class="boton boton-contorno" data-corregir-correo>
+          VOLVER AL FORMULARIO <span aria-hidden="true">←</span>
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      id="dialogo-marketplace"
+      class="dialogo-inscripcion"
+      aria-labelledby="titulo-marketplace"
+      aria-describedby="descripcion-marketplace"
+    >
+      <button
+        type="button"
+        class="cerrar-dialogo"
+        aria-label="Cerrar marketplace"
+      >
+        ×
+      </button>
+      <p class="etiqueta"><strong>✳︎ /</strong> CAPÍTULO ABIERTO</p>
+      <h2 id="titulo-marketplace">TU PRÓXIMO DESCUBRIMIENTO.</h2>
+      <p id="descripcion-marketplace">
+        Estamos preparando el marketplace de Capítulo Abierto. Muy pronto podrás
+        crear tu cuenta, acceder a la tienda y gestionar tus compras desde un
+        mismo lugar.
+      </p>
+      <p class="marketplace-estado">PRÓXIMAMENTE</p>
+      <button class="boton boton-lima" type="button" data-cerrar-marketplace>
+        SEGUIR EXPLORANDO <span aria-hidden="true">→</span>
+      </button>
+    </dialog>
   </body>
 </html>
